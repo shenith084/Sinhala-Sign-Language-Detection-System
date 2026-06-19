@@ -1,0 +1,384 @@
+class_id,category,class_name_english,class_name_sinhala
+0,Adjectives,Bad,Class_0
+1,Adjectives,Beautiful,Class_1
+2,Adjectives,Careful,Class_2
+3,Adjectives,Cold,Class_3
+4,Adjectives,Deaf,Class_4
+5,Adjectives,Deep,Class_5
+6,Adjectives,Different,Class_6
+7,Adjectives,Difficult,Class_7
+8,Adjectives,Double,Class_8
+9,Adjectives,Fast,Class_9
+10,Adjectives,Fat,Class_10
+11,Adjectives,Free,Class_11
+12,Adjectives,Full,Class_12
+13,Adjectives,Good,Class_13
+14,Adjectives,Happy,Class_14
+15,Adjectives,Hard,Class_15
+16,Adjectives,Healthy,Class_16
+17,Adjectives,High,Class_17
+18,Adjectives,Independent,Class_18
+19,Adjectives,Less,Class_19
+20,Adjectives,Loose,Class_20
+21,Adjectives,Low,Class_21
+22,Adjectives,Next,Class_22
+23,Adjectives,Nice,Class_23
+24,Adjectives,Not good,Class_24
+25,Adjectives,Old,Class_25
+26,Adjectives,Past,Class_26
+27,Adjectives,Positive,Class_27
+28,Adjectives,Present,Class_28
+29,Adjectives,Quick,Class_29
+30,Adjectives,Rich,Class_30
+31,Adjectives,Same,Class_31
+32,Adjectives,Senior,Class_32
+33,Adjectives,Small,Class_33
+34,Adjectives,Soft,Class_34
+35,Adjectives,Strong,Class_35
+36,Adjectives,Thirsty,Class_36
+37,Adjectives,Tight,Class_37
+38,Adjectives,Ugly,Class_38
+39,Adjectives,Welcome,Class_39
+40,Adjectives,Wrong,Class_40
+41,Adverb,Again,Class_41
+42,Adverb,Also,Class_42
+43,Adverb,Can,Class_43
+44,Adverb,Cant,Class_44
+45,Adverb,Clearly,Class_45
+46,Adverb,Dont,Class_46
+47,Adverb,Dont know,Class_47
+48,Adverb,Here,Class_48
+49,Adverb,Instead,Class_49
+50,Adverb,Never,Class_50
+51,Adverb,Not like (dislike),Class_51
+52,Adverb,When,Class_52
+53,Adverb,Where,Class_53
+54,Adverb,Why,Class_54
+55,Colors,Black,Class_55
+56,Colors,Blue,Class_56
+57,Colors,Brown,Class_57
+58,Colors,Color,Class_58
+59,Colors,Gold,Class_59
+60,Colors,Gray,Class_60
+61,Colors,Green,Class_61
+62,Colors,Grey,Class_62
+63,Colors,Orange,Class_63
+64,Colors,Pink,Class_64
+65,Colors,Purple,Class_65
+66,Colors,Red,Class_66
+67,Colors,White,Class_67
+68,Colors,Yellow,Class_68
+69,Conjunctions,Or,Class_69
+70,Days,Day,Class_70
+71,Days,Day after tomorrow,Class_71
+72,Days,Evening,Class_72
+73,Days,Friday,Class_73
+74,Days,Good evening,Class_74
+75,Days,Good morning,Class_75
+76,Days,Good night,Class_76
+77,Days,Hour,Class_77
+78,Days,Monday,Class_78
+79,Days,Morning,Class_79
+80,Days,Night,Class_80
+81,Days,Saturday,Class_81
+82,Days,Seconds,Class_82
+83,Days,Sunday,Class_83
+84,Days,Thursday,Class_84
+85,Days,Time,Class_85
+86,Days,Today,Class_86
+87,Days,Tomorrow,Class_87
+88,Days,Tuesday,Class_88
+89,Days,Wednesday,Class_89
+90,Days,Week,Class_90
+91,Days,Yesterday,Class_91
+92,Determiner,No,Class_92
+93,Greetings,Alright,Class_93
+94,Greetings,Ayubowan,Class_94
+95,Greetings,Hello,Class_95
+96,Greetings,How are you,Class_96
+97,Greetings,Thank you,Class_97
+98,Interjection,Yes,Class_98
+99,Months,April,Class_99
+100,Months,August,Class_100
+101,Months,December,Class_101
+102,Months,February,Class_102
+103,Months,January,Class_103
+104,Months,July,Class_104
+105,Months,June,Class_105
+106,Months,March,Class_106
+107,Months,May,Class_107
+108,Months,Month,Class_108
+109,Months,November,Class_109
+110,Months,October,Class_110
+111,Months,September,Class_111
+112,Months,Year,Class_112
+113,Nouns,Article,Class_113
+114,Nouns,Bag,Class_114
+115,Nouns,Bed,Class_115
+116,Nouns,Book,Class_116
+117,Nouns,Camera,Class_117
+118,Nouns,Card,Class_118
+119,Nouns,Cat,Class_119
+120,Nouns,Ceiling fan,Class_120
+121,Nouns,Cell phone,Class_121
+122,Nouns,Chain,Class_122
+123,Nouns,Children,Class_123
+124,Nouns,Choice,Class_124
+125,Nouns,Clothing,Class_125
+126,Nouns,Computer,Class_126
+127,Nouns,Cow,Class_127
+128,Nouns,Crocodile,Class_128
+129,Nouns,Culture,Class_129
+130,Nouns,Door,Class_130
+131,Nouns,Elephant,Class_131
+132,Nouns,Eye,Class_132
+133,Nouns,Eyes,Class_133
+134,Nouns,Face,Class_134
+135,Nouns,Fever,Class_135
+136,Nouns,Flower,Class_136
+137,Nouns,Food,Class_137
+138,Nouns,Group,Class_138
+139,Nouns,Gun,Class_139
+140,Nouns,Hat,Class_140
+141,Nouns,He,Class_141
+142,Nouns,Health,Class_142
+143,Nouns,Hill,Class_143
+144,Nouns,How many,Class_144
+145,Nouns,How much,Class_145
+146,Nouns,I,Class_146
+147,Nouns,Impact,Class_147
+148,Nouns,Internet,Class_148
+149,Nouns,Key,Class_149
+150,Nouns,Laptop,Class_150
+151,Nouns,List,Class_151
+152,Nouns,Lock,Class_152
+153,Nouns,Middle,Class_153
+154,Nouns,Milk,Class_154
+155,Nouns,Mind,Class_155
+156,Nouns,Money,Class_156
+157,Nouns,Moon,Class_157
+158,Nouns,Movie,Class_158
+159,Nouns,My,Class_159
+160,Nouns,Network,Class_160
+161,Nouns,None,Class_161
+162,Nouns,Ok,Class_162
+163,Nouns,Our,Class_163
+164,Nouns,Paint,Class_164
+165,Nouns,Part,Class_165
+166,Nouns,Path,Class_166
+167,Nouns,Peace,Class_167
+168,Nouns,Pencil,Class_168
+169,Nouns,Phone,Class_169
+170,Nouns,Pocket,Class_170
+171,Nouns,Point,Class_171
+172,Nouns,Problem,Class_172
+173,Nouns,Radio,Class_173
+174,Nouns,Ring,Class_174
+175,Nouns,Sand,Class_175
+176,Nouns,Saree,Class_176
+177,Nouns,Shirt,Class_177
+178,Nouns,Sign,Class_178
+179,Nouns,Sign language,Class_179
+180,Nouns,Skirt,Class_180
+181,Nouns,Society,Class_181
+182,Nouns,Song,Class_182
+183,Nouns,Squirrel,Class_183
+184,Nouns,Street,Class_184
+185,Nouns,Structure,Class_185
+186,Nouns,Suit,Class_186
+187,Nouns,Table,Class_187
+188,Nouns,Tea,Class_188
+189,Nouns,Team,Class_189
+190,Nouns,Technology,Class_190
+191,Nouns,Telephone,Class_191
+192,Nouns,They,Class_192
+193,Nouns,Tree,Class_193
+194,Nouns,Weather,Class_194
+195,Nouns,Who,Class_195
+196,Nouns,Whom,Class_196
+197,Nouns,Whose,Class_197
+198,Nouns,Window,Class_198
+199,Nouns,You,Class_199
+200,Numbers,1. one,Class_200
+201,Numbers,10. ten,Class_201
+202,Numbers,11. eleven,Class_202
+203,Numbers,12. twelve,Class_203
+204,Numbers,13. thirteen,Class_204
+205,Numbers,14. fourteen,Class_205
+206,Numbers,15. fifteen,Class_206
+207,Numbers,16. sixteen,Class_207
+208,Numbers,17. seventeen,Class_208
+209,Numbers,18. eighteen,Class_209
+210,Numbers,19. nineteen,Class_210
+211,Numbers,2. two,Class_211
+212,Numbers,20. twenty,Class_212
+213,Numbers,3. three,Class_213
+214,Numbers,4. four,Class_214
+215,Numbers,5. five,Class_215
+216,Numbers,6. six,Class_216
+217,Numbers,7. seven,Class_217
+218,Numbers,8. eight,Class_218
+219,Numbers,9. nine,Class_219
+220,Numbers,Addition,Class_220
+221,Numbers,Count,Class_221
+222,Numbers,Divide,Class_222
+223,Numbers,Equal,Class_223
+224,Numbers,Multiplication,Class_224
+225,Numbers,Subtraction,Class_225
+226,People,Aunt,Class_226
+227,People,Baby,Class_227
+228,People,Bro,Class_228
+229,People,Brother in law,Class_229
+230,People,Child,Class_230
+231,People,Daughter,Class_231
+232,People,Doctor,Class_232
+233,People,Elder bro,Class_233
+234,People,Elder sister,Class_234
+235,People,Families,Class_235
+236,People,Family,Class_236
+237,People,Father,Class_237
+238,People,Grand father,Class_238
+239,People,Grand mother,Class_239
+240,People,Grand son,Class_240
+241,People,Husband,Class_241
+242,People,Lady,Class_242
+243,People,Man,Class_243
+244,People,Mother,Class_244
+245,People,Player,Class_245
+246,People,Police,Class_246
+247,People,Relations,Class_247
+248,People,She,Class_248
+249,People,Sister,Class_249
+250,People,Sister in law,Class_250
+251,People,Son,Class_251
+252,People,Thief,Class_252
+253,People,Uncle,Class_253
+254,People,Us,Class_254
+255,People,Wife,Class_255
+256,People,Younger bro,Class_256
+257,People,Younger sister,Class_257
+258,Places,Airport,Class_258
+259,Places,Bank,Class_259
+260,Places,Bus station,Class_260
+261,Places,Church,Class_261
+262,Places,Hospital,Class_262
+263,Places,House,Class_263
+264,Places,Location,Class_264
+265,Places,Next door,Class_265
+266,Places,Police station,Class_266
+267,Places,Road,Class_267
+268,Places,Shop,Class_268
+269,Places,Temple,Class_269
+270,Places,Train station,Class_270
+271,Preposition,After,Class_271
+272,Preposition,Around,Class_272
+273,Preposition,In,Class_273
+274,Preposition,Inside,Class_274
+275,Preposition,Near,Class_275
+276,Preposition,On,Class_276
+277,Preposition,Out,Class_277
+278,Preposition,Over,Class_278
+279,Preposition,Than,Class_279
+280,Preposition,To,Class_280
+281,Preposition,Until,Class_281
+282,Preposition,Up,Class_282
+283,Vehicles,Bicycle,Class_283
+284,Vehicles,Boat,Class_284
+285,Vehicles,Bus,Class_285
+286,Vehicles,Car,Class_286
+287,Vehicles,Motorcycle,Class_287
+288,Vehicles,Plane,Class_288
+289,Vehicles,Tire,Class_289
+290,Vehicles,Train,Class_290
+291,Vehicles,Van,Class_291
+292,Vehicles,Vehicle,Class_292
+293,Verbs,Allow,Class_293
+294,Verbs,Bathe,Class_294
+295,Verbs,Boil,Class_295
+296,Verbs,Break,Class_296
+297,Verbs,Bring,Class_297
+298,Verbs,Buy,Class_298
+299,Verbs,Carry,Class_299
+300,Verbs,Change,Class_300
+301,Verbs,Choose,Class_301
+302,Verbs,Click,Class_302
+303,Verbs,Come,Class_303
+304,Verbs,Connect,Class_304
+305,Verbs,Cook,Class_305
+306,Verbs,Copy,Class_306
+307,Verbs,Cough,Class_307
+308,Verbs,Cover,Class_308
+309,Verbs,Cry,Class_309
+310,Verbs,Cut,Class_310
+311,Verbs,Dance,Class_311
+312,Verbs,Done,Class_312
+313,Verbs,Draw,Class_313
+314,Verbs,Drink,Class_314
+315,Verbs,Eat,Class_315
+316,Verbs,Enter,Class_316
+317,Verbs,Erase,Class_317
+318,Verbs,Exchange,Class_318
+319,Verbs,Feel,Class_319
+320,Verbs,Fight,Class_320
+321,Verbs,Follow,Class_321
+322,Verbs,Get up,Class_322
+323,Verbs,Give,Class_323
+324,Verbs,Go,Class_324
+325,Verbs,Guide,Class_325
+326,Verbs,Hang,Class_326
+327,Verbs,Hear,Class_327
+328,Verbs,Help,Class_328
+329,Verbs,Hit,Class_329
+330,Verbs,How,Class_330
+331,Verbs,I know,Class_331
+332,Verbs,Jump,Class_332
+333,Verbs,Knock,Class_333
+334,Verbs,Laugh,Class_334
+335,Verbs,Lead,Class_335
+336,Verbs,Let,Class_336
+337,Verbs,Like,Class_337
+338,Verbs,Listen,Class_338
+339,Verbs,Look,Class_339
+340,Verbs,Love,Class_340
+341,Verbs,Make,Class_341
+342,Verbs,Meet,Class_342
+343,Verbs,Now,Class_343
+344,Verbs,Open,Class_344
+345,Verbs,Order,Class_345
+346,Verbs,Peeing,Class_346
+347,Verbs,Play,Class_347
+348,Verbs,Pull,Class_348
+349,Verbs,Put,Class_349
+350,Verbs,Quickly,Class_350
+351,Verbs,Run,Class_351
+352,Verbs,Scratch,Class_352
+353,Verbs,Search,Class_353
+354,Verbs,See,Class_354
+355,Verbs,Select,Class_355
+356,Verbs,Sell,Class_356
+357,Verbs,Show,Class_357
+358,Verbs,Sit,Class_358
+359,Verbs,Sleep,Class_359
+360,Verbs,Smile,Class_360
+361,Verbs,Stop,Class_361
+362,Verbs,Study,Class_362
+363,Verbs,Sweep,Class_363
+364,Verbs,Swim,Class_364
+365,Verbs,Take,Class_365
+366,Verbs,Talk,Class_366
+367,Verbs,Teach,Class_367
+368,Verbs,Tear,Class_368
+369,Verbs,Tell,Class_369
+370,Verbs,Text,Class_370
+371,Verbs,Think,Class_371
+372,Verbs,Throw,Class_372
+373,Verbs,Trust,Class_373
+374,Verbs,Understand,Class_374
+375,Verbs,Use,Class_375
+376,Verbs,Visit,Class_376
+377,Verbs,Walk,Class_377
+378,Verbs,Want,Class_378
+379,Verbs,Wash,Class_379
+380,Verbs,Watch,Class_380
+381,Verbs,Work,Class_381
+382,Verbs,Write,Class_382

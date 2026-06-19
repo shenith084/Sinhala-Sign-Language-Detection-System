@@ -1,0 +1,384 @@
+class_id,category,class_name_english,video_count,folder_path
+0,Adjectives,Bad,4,SSL400\Dataset - Original\Adjectives\Bad
+1,Adjectives,Beautiful,35,SSL400\Dataset - Original\Adjectives\Beautiful
+2,Adjectives,Careful,1,SSL400\Dataset - Original\Adjectives\Careful
+3,Adjectives,Cold,13,SSL400\Dataset - Original\Adjectives\Cold
+4,Adjectives,Deaf,19,SSL400\Dataset - Original\Adjectives\Deaf
+5,Adjectives,Deep,17,SSL400\Dataset - Original\Adjectives\Deep
+6,Adjectives,Different,10,SSL400\Dataset - Original\Adjectives\Different
+7,Adjectives,Difficult,2,SSL400\Dataset - Original\Adjectives\Difficult
+8,Adjectives,Double,6,SSL400\Dataset - Original\Adjectives\Double
+9,Adjectives,Fast,21,SSL400\Dataset - Original\Adjectives\Fast
+10,Adjectives,Fat,10,SSL400\Dataset - Original\Adjectives\Fat
+11,Adjectives,Free,4,SSL400\Dataset - Original\Adjectives\Free
+12,Adjectives,Full,12,SSL400\Dataset - Original\Adjectives\Full
+13,Adjectives,Good,67,SSL400\Dataset - Original\Adjectives\Good
+14,Adjectives,Happy,8,SSL400\Dataset - Original\Adjectives\Happy
+15,Adjectives,Hard,14,SSL400\Dataset - Original\Adjectives\Hard
+16,Adjectives,Healthy,21,SSL400\Dataset - Original\Adjectives\Healthy
+17,Adjectives,High,8,SSL400\Dataset - Original\Adjectives\High
+18,Adjectives,Independent,7,SSL400\Dataset - Original\Adjectives\Independent
+19,Adjectives,Less,5,SSL400\Dataset - Original\Adjectives\Less
+20,Adjectives,Loose,8,SSL400\Dataset - Original\Adjectives\Loose
+21,Adjectives,Low,8,SSL400\Dataset - Original\Adjectives\Low
+22,Adjectives,Next,5,SSL400\Dataset - Original\Adjectives\Next
+23,Adjectives,Nice,4,SSL400\Dataset - Original\Adjectives\Nice
+24,Adjectives,Not good,3,SSL400\Dataset - Original\Adjectives\Not good
+25,Adjectives,Old,7,SSL400\Dataset - Original\Adjectives\Old
+26,Adjectives,Past,9,SSL400\Dataset - Original\Adjectives\Past
+27,Adjectives,Positive,6,SSL400\Dataset - Original\Adjectives\Positive
+28,Adjectives,Present,8,SSL400\Dataset - Original\Adjectives\Present
+29,Adjectives,Quick,8,SSL400\Dataset - Original\Adjectives\Quick
+30,Adjectives,Rich,19,SSL400\Dataset - Original\Adjectives\Rich
+31,Adjectives,Same,9,SSL400\Dataset - Original\Adjectives\Same
+32,Adjectives,Senior,6,SSL400\Dataset - Original\Adjectives\Senior
+33,Adjectives,Small,8,SSL400\Dataset - Original\Adjectives\Small
+34,Adjectives,Soft,8,SSL400\Dataset - Original\Adjectives\Soft
+35,Adjectives,Strong,8,SSL400\Dataset - Original\Adjectives\Strong
+36,Adjectives,Thirsty,1,SSL400\Dataset - Original\Adjectives\Thirsty
+37,Adjectives,Tight,8,SSL400\Dataset - Original\Adjectives\Tight
+38,Adjectives,Ugly,1,SSL400\Dataset - Original\Adjectives\Ugly
+39,Adjectives,Welcome,5,SSL400\Dataset - Original\Adjectives\Welcome
+40,Adjectives,Wrong,20,SSL400\Dataset - Original\Adjectives\Wrong
+41,Adverb,Again,27,SSL400\Dataset - Original\Adverb\Again
+42,Adverb,Also,8,SSL400\Dataset - Original\Adverb\Also
+43,Adverb,Can,11,SSL400\Dataset - Original\Adverb\Can
+44,Adverb,Cant,3,SSL400\Dataset - Original\Adverb\Cant
+45,Adverb,Clearly,1,SSL400\Dataset - Original\Adverb\Clearly
+46,Adverb,Dont,1,SSL400\Dataset - Original\Adverb\Dont
+47,Adverb,Dont know,2,SSL400\Dataset - Original\Adverb\Dont know
+48,Adverb,Here,7,SSL400\Dataset - Original\Adverb\Here
+49,Adverb,Instead,6,SSL400\Dataset - Original\Adverb\Instead
+50,Adverb,Never,7,SSL400\Dataset - Original\Adverb\Never
+51,Adverb,Not like (dislike),2,SSL400\Dataset - Original\Adverb\Not like (dislike)
+52,Adverb,When,3,SSL400\Dataset - Original\Adverb\When
+53,Adverb,Where,2,SSL400\Dataset - Original\Adverb\Where
+54,Adverb,Why,5,SSL400\Dataset - Original\Adverb\Why
+55,Colors,Black,28,SSL400\Dataset - Original\Colors\Black
+56,Colors,Blue,5,SSL400\Dataset - Original\Colors\Blue
+57,Colors,Brown,5,SSL400\Dataset - Original\Colors\Brown
+58,Colors,Color,1,SSL400\Dataset - Original\Colors\Color
+59,Colors,Gold,4,SSL400\Dataset - Original\Colors\Gold
+60,Colors,Gray,1,SSL400\Dataset - Original\Colors\Gray
+61,Colors,Green,28,SSL400\Dataset - Original\Colors\Green
+62,Colors,Grey,3,SSL400\Dataset - Original\Colors\Grey
+63,Colors,Orange,5,SSL400\Dataset - Original\Colors\Orange
+64,Colors,Pink,6,SSL400\Dataset - Original\Colors\Pink
+65,Colors,Purple,30,SSL400\Dataset - Original\Colors\Purple
+66,Colors,Red,30,SSL400\Dataset - Original\Colors\Red
+67,Colors,White,48,SSL400\Dataset - Original\Colors\White
+68,Colors,Yellow,48,SSL400\Dataset - Original\Colors\Yellow
+69,Conjunctions,Or,4,SSL400\Dataset - Original\Conjunctions\Or
+70,Days,Day,22,SSL400\Dataset - Original\Days\Day
+71,Days,Day after tomorrow,1,SSL400\Dataset - Original\Days\Day after tomorrow
+72,Days,Evening,2,SSL400\Dataset - Original\Days\Evening
+73,Days,Friday,8,SSL400\Dataset - Original\Days\Friday
+74,Days,Good evening,4,SSL400\Dataset - Original\Days\Good evening
+75,Days,Good morning,4,SSL400\Dataset - Original\Days\Good morning
+76,Days,Good night,4,SSL400\Dataset - Original\Days\Good night
+77,Days,Hour,35,SSL400\Dataset - Original\Days\Hour
+78,Days,Monday,24,SSL400\Dataset - Original\Days\Monday
+79,Days,Morning,2,SSL400\Dataset - Original\Days\Morning
+80,Days,Night,3,SSL400\Dataset - Original\Days\Night
+81,Days,Saturday,3,SSL400\Dataset - Original\Days\Saturday
+82,Days,Seconds,2,SSL400\Dataset - Original\Days\Seconds
+83,Days,Sunday,4,SSL400\Dataset - Original\Days\Sunday
+84,Days,Thursday,3,SSL400\Dataset - Original\Days\Thursday
+85,Days,Time,25,SSL400\Dataset - Original\Days\Time
+86,Days,Today,36,SSL400\Dataset - Original\Days\Today
+87,Days,Tomorrow,19,SSL400\Dataset - Original\Days\Tomorrow
+88,Days,Tuesday,5,SSL400\Dataset - Original\Days\Tuesday
+89,Days,Wednesday,19,SSL400\Dataset - Original\Days\Wednesday
+90,Days,Week,6,SSL400\Dataset - Original\Days\Week
+91,Days,Yesterday,16,SSL400\Dataset - Original\Days\Yesterday
+92,Determiner,No,3,SSL400\Dataset - Original\Determiner\No
+93,Greetings,Alright,21,SSL400\Dataset - Original\Greetings\Alright
+94,Greetings,Ayubowan,4,SSL400\Dataset - Original\Greetings\Ayubowan
+95,Greetings,Hello,102,SSL400\Dataset - Original\Greetings\Hello
+96,Greetings,How are you,2,SSL400\Dataset - Original\Greetings\How are you
+97,Greetings,Thank you,116,SSL400\Dataset - Original\Greetings\Thank you
+98,Interjection,Yes,6,SSL400\Dataset - Original\Interjection\Yes
+99,Months,April,8,SSL400\Dataset - Original\Months\April
+100,Months,August,7,SSL400\Dataset - Original\Months\August
+101,Months,December,6,SSL400\Dataset - Original\Months\December
+102,Months,February,8,SSL400\Dataset - Original\Months\February
+103,Months,January,28,SSL400\Dataset - Original\Months\January
+104,Months,July,7,SSL400\Dataset - Original\Months\July
+105,Months,June,7,SSL400\Dataset - Original\Months\June
+106,Months,March,8,SSL400\Dataset - Original\Months\March
+107,Months,May,7,SSL400\Dataset - Original\Months\May
+108,Months,Month,6,SSL400\Dataset - Original\Months\Month
+109,Months,November,8,SSL400\Dataset - Original\Months\November
+110,Months,October,8,SSL400\Dataset - Original\Months\October
+111,Months,September,6,SSL400\Dataset - Original\Months\September
+112,Months,Year,1,SSL400\Dataset - Original\Months\Year
+113,Nouns,Article,4,SSL400\Dataset - Original\Nouns\Article
+114,Nouns,Bag,14,SSL400\Dataset - Original\Nouns\Bag
+115,Nouns,Bed,14,SSL400\Dataset - Original\Nouns\Bed
+116,Nouns,Book,16,SSL400\Dataset - Original\Nouns\Book
+117,Nouns,Camera,19,SSL400\Dataset - Original\Nouns\Camera
+118,Nouns,Card,8,SSL400\Dataset - Original\Nouns\Card
+119,Nouns,Cat,24,SSL400\Dataset - Original\Nouns\Cat
+120,Nouns,Ceiling fan,16,SSL400\Dataset - Original\Nouns\Ceiling fan
+121,Nouns,Cell phone,14,SSL400\Dataset - Original\Nouns\Cell phone
+122,Nouns,Chain,1,SSL400\Dataset - Original\Nouns\Chain
+123,Nouns,Children,7,SSL400\Dataset - Original\Nouns\Children
+124,Nouns,Choice,8,SSL400\Dataset - Original\Nouns\Choice
+125,Nouns,Clothing,20,SSL400\Dataset - Original\Nouns\Clothing
+126,Nouns,Computer,14,SSL400\Dataset - Original\Nouns\Computer
+127,Nouns,Cow,1,SSL400\Dataset - Original\Nouns\Cow
+128,Nouns,Crocodile,22,SSL400\Dataset - Original\Nouns\Crocodile
+129,Nouns,Culture,4,SSL400\Dataset - Original\Nouns\Culture
+130,Nouns,Door,7,SSL400\Dataset - Original\Nouns\Door
+131,Nouns,Elephant,24,SSL400\Dataset - Original\Nouns\Elephant
+132,Nouns,Eye,6,SSL400\Dataset - Original\Nouns\Eye
+133,Nouns,Eyes,5,SSL400\Dataset - Original\Nouns\Eyes
+134,Nouns,Face,8,SSL400\Dataset - Original\Nouns\Face
+135,Nouns,Fever,21,SSL400\Dataset - Original\Nouns\Fever
+136,Nouns,Flower,1,SSL400\Dataset - Original\Nouns\Flower
+137,Nouns,Food,7,SSL400\Dataset - Original\Nouns\Food
+138,Nouns,Group,8,SSL400\Dataset - Original\Nouns\Group
+139,Nouns,Gun,14,SSL400\Dataset - Original\Nouns\Gun
+140,Nouns,Hat,20,SSL400\Dataset - Original\Nouns\Hat
+141,Nouns,He,23,SSL400\Dataset - Original\Nouns\He
+142,Nouns,Health,6,SSL400\Dataset - Original\Nouns\Health
+143,Nouns,Hill,3,SSL400\Dataset - Original\Nouns\Hill
+144,Nouns,How many,1,SSL400\Dataset - Original\Nouns\How many
+145,Nouns,How much,2,SSL400\Dataset - Original\Nouns\How much
+146,Nouns,I,39,SSL400\Dataset - Original\Nouns\I
+147,Nouns,Impact,6,SSL400\Dataset - Original\Nouns\Impact
+148,Nouns,Internet,8,SSL400\Dataset - Original\Nouns\Internet
+149,Nouns,Key,14,SSL400\Dataset - Original\Nouns\Key
+150,Nouns,Laptop,14,SSL400\Dataset - Original\Nouns\Laptop
+151,Nouns,List,9,SSL400\Dataset - Original\Nouns\List
+152,Nouns,Lock,14,SSL400\Dataset - Original\Nouns\Lock
+153,Nouns,Middle,7,SSL400\Dataset - Original\Nouns\Middle
+154,Nouns,Milk,1,SSL400\Dataset - Original\Nouns\Milk
+155,Nouns,Mind,5,SSL400\Dataset - Original\Nouns\Mind
+156,Nouns,Money,38,SSL400\Dataset - Original\Nouns\Money
+157,Nouns,Moon,1,SSL400\Dataset - Original\Nouns\Moon
+158,Nouns,Movie,5,SSL400\Dataset - Original\Nouns\Movie
+159,Nouns,My,26,SSL400\Dataset - Original\Nouns\My
+160,Nouns,Network,6,SSL400\Dataset - Original\Nouns\Network
+161,Nouns,None,7,SSL400\Dataset - Original\Nouns\None
+162,Nouns,Ok,8,SSL400\Dataset - Original\Nouns\Ok
+163,Nouns,Our,4,SSL400\Dataset - Original\Nouns\Our
+164,Nouns,Paint,21,SSL400\Dataset - Original\Nouns\Paint
+165,Nouns,Part,4,SSL400\Dataset - Original\Nouns\Part
+166,Nouns,Path,6,SSL400\Dataset - Original\Nouns\Path
+167,Nouns,Peace,4,SSL400\Dataset - Original\Nouns\Peace
+168,Nouns,Pencil,14,SSL400\Dataset - Original\Nouns\Pencil
+169,Nouns,Phone,5,SSL400\Dataset - Original\Nouns\Phone
+170,Nouns,Pocket,22,SSL400\Dataset - Original\Nouns\Pocket
+171,Nouns,Point,11,SSL400\Dataset - Original\Nouns\Point
+172,Nouns,Problem,9,SSL400\Dataset - Original\Nouns\Problem
+173,Nouns,Radio,14,SSL400\Dataset - Original\Nouns\Radio
+174,Nouns,Ring,20,SSL400\Dataset - Original\Nouns\Ring
+175,Nouns,Sand,2,SSL400\Dataset - Original\Nouns\Sand
+176,Nouns,Saree,1,SSL400\Dataset - Original\Nouns\Saree
+177,Nouns,Shirt,20,SSL400\Dataset - Original\Nouns\Shirt
+178,Nouns,Sign,9,SSL400\Dataset - Original\Nouns\Sign
+179,Nouns,Sign language,1,SSL400\Dataset - Original\Nouns\Sign language
+180,Nouns,Skirt,21,SSL400\Dataset - Original\Nouns\Skirt
+181,Nouns,Society,5,SSL400\Dataset - Original\Nouns\Society
+182,Nouns,Song,1,SSL400\Dataset - Original\Nouns\Song
+183,Nouns,Squirrel,23,SSL400\Dataset - Original\Nouns\Squirrel
+184,Nouns,Street,6,SSL400\Dataset - Original\Nouns\Street
+185,Nouns,Structure,7,SSL400\Dataset - Original\Nouns\Structure
+186,Nouns,Suit,19,SSL400\Dataset - Original\Nouns\Suit
+187,Nouns,Table,15,SSL400\Dataset - Original\Nouns\Table
+188,Nouns,Tea,1,SSL400\Dataset - Original\Nouns\Tea
+189,Nouns,Team,6,SSL400\Dataset - Original\Nouns\Team
+190,Nouns,Technology,20,SSL400\Dataset - Original\Nouns\Technology
+191,Nouns,Telephone,20,SSL400\Dataset - Original\Nouns\Telephone
+192,Nouns,They,5,SSL400\Dataset - Original\Nouns\They
+193,Nouns,Tree,1,SSL400\Dataset - Original\Nouns\Tree
+194,Nouns,Weather,8,SSL400\Dataset - Original\Nouns\Weather
+195,Nouns,Who,3,SSL400\Dataset - Original\Nouns\Who
+196,Nouns,Whom,3,SSL400\Dataset - Original\Nouns\Whom
+197,Nouns,Whose,1,SSL400\Dataset - Original\Nouns\Whose
+198,Nouns,Window,14,SSL400\Dataset - Original\Nouns\Window
+199,Nouns,You,62,SSL400\Dataset - Original\Nouns\You
+200,Numbers,1. one,20,SSL400\Dataset - Original\Numbers\1. one
+201,Numbers,10. ten,3,SSL400\Dataset - Original\Numbers\10. ten
+202,Numbers,11. eleven,3,SSL400\Dataset - Original\Numbers\11. eleven
+203,Numbers,12. twelve,2,SSL400\Dataset - Original\Numbers\12. twelve
+204,Numbers,13. thirteen,3,SSL400\Dataset - Original\Numbers\13. thirteen
+205,Numbers,14. fourteen,3,SSL400\Dataset - Original\Numbers\14. fourteen
+206,Numbers,15. fifteen,4,SSL400\Dataset - Original\Numbers\15. fifteen
+207,Numbers,16. sixteen,3,SSL400\Dataset - Original\Numbers\16. sixteen
+208,Numbers,17. seventeen,2,SSL400\Dataset - Original\Numbers\17. seventeen
+209,Numbers,18. eighteen,3,SSL400\Dataset - Original\Numbers\18. eighteen
+210,Numbers,19. nineteen,3,SSL400\Dataset - Original\Numbers\19. nineteen
+211,Numbers,2. two,23,SSL400\Dataset - Original\Numbers\2. two
+212,Numbers,20. twenty,2,SSL400\Dataset - Original\Numbers\20. twenty
+213,Numbers,3. three,12,SSL400\Dataset - Original\Numbers\3. three
+214,Numbers,4. four,15,SSL400\Dataset - Original\Numbers\4. four
+215,Numbers,5. five,14,SSL400\Dataset - Original\Numbers\5. five
+216,Numbers,6. six,8,SSL400\Dataset - Original\Numbers\6. six
+217,Numbers,7. seven,4,SSL400\Dataset - Original\Numbers\7. seven
+218,Numbers,8. eight,10,SSL400\Dataset - Original\Numbers\8. eight
+219,Numbers,9. nine,5,SSL400\Dataset - Original\Numbers\9. nine
+220,Numbers,Addition,6,SSL400\Dataset - Original\Numbers\Addition
+221,Numbers,Count,3,SSL400\Dataset - Original\Numbers\Count
+222,Numbers,Divide,4,SSL400\Dataset - Original\Numbers\Divide
+223,Numbers,Equal,16,SSL400\Dataset - Original\Numbers\Equal
+224,Numbers,Multiplication,4,SSL400\Dataset - Original\Numbers\Multiplication
+225,Numbers,Subtraction,4,SSL400\Dataset - Original\Numbers\Subtraction
+226,People,Aunt,3,SSL400\Dataset - Original\People\Aunt
+227,People,Baby,4,SSL400\Dataset - Original\People\Baby
+228,People,Bro,10,SSL400\Dataset - Original\People\Bro
+229,People,Brother in law,1,SSL400\Dataset - Original\People\Brother in law
+230,People,Child,29,SSL400\Dataset - Original\People\Child
+231,People,Daughter,4,SSL400\Dataset - Original\People\Daughter
+232,People,Doctor,18,SSL400\Dataset - Original\People\Doctor
+233,People,Elder bro,25,SSL400\Dataset - Original\People\Elder bro
+234,People,Elder sister,26,SSL400\Dataset - Original\People\Elder sister
+235,People,Families,1,SSL400\Dataset - Original\People\Families
+236,People,Family,4,SSL400\Dataset - Original\People\Family
+237,People,Father,4,SSL400\Dataset - Original\People\Father
+238,People,Grand father,26,SSL400\Dataset - Original\People\Grand father
+239,People,Grand mother,4,SSL400\Dataset - Original\People\Grand mother
+240,People,Grand son,3,SSL400\Dataset - Original\People\Grand son
+241,People,Husband,3,SSL400\Dataset - Original\People\Husband
+242,People,Lady,3,SSL400\Dataset - Original\People\Lady
+243,People,Man,53,SSL400\Dataset - Original\People\Man
+244,People,Mother,28,SSL400\Dataset - Original\People\Mother
+245,People,Player,20,SSL400\Dataset - Original\People\Player
+246,People,Police,1,SSL400\Dataset - Original\People\Police
+247,People,Relations,1,SSL400\Dataset - Original\People\Relations
+248,People,She,2,SSL400\Dataset - Original\People\She
+249,People,Sister,3,SSL400\Dataset - Original\People\Sister
+250,People,Sister in law,2,SSL400\Dataset - Original\People\Sister in law
+251,People,Son,26,SSL400\Dataset - Original\People\Son
+252,People,Thief,1,SSL400\Dataset - Original\People\Thief
+253,People,Uncle,6,SSL400\Dataset - Original\People\Uncle
+254,People,Us,24,SSL400\Dataset - Original\People\Us
+255,People,Wife,3,SSL400\Dataset - Original\People\Wife
+256,People,Younger bro,23,SSL400\Dataset - Original\People\Younger bro
+257,People,Younger sister,8,SSL400\Dataset - Original\People\Younger sister
+258,Places,Airport,2,SSL400\Dataset - Original\Places\Airport
+259,Places,Bank,2,SSL400\Dataset - Original\Places\Bank
+260,Places,Bus station,2,SSL400\Dataset - Original\Places\Bus station
+261,Places,Church,2,SSL400\Dataset - Original\Places\Church
+262,Places,Hospital,2,SSL400\Dataset - Original\Places\Hospital
+263,Places,House,61,SSL400\Dataset - Original\Places\House
+264,Places,Location,22,SSL400\Dataset - Original\Places\Location
+265,Places,Next door,1,SSL400\Dataset - Original\Places\Next door
+266,Places,Police station,4,SSL400\Dataset - Original\Places\Police station
+267,Places,Road,20,SSL400\Dataset - Original\Places\Road
+268,Places,Shop,22,SSL400\Dataset - Original\Places\Shop
+269,Places,Temple,2,SSL400\Dataset - Original\Places\Temple
+270,Places,Train station,2,SSL400\Dataset - Original\Places\Train station
+271,Preposition,After,7,SSL400\Dataset - Original\Preposition\After
+272,Preposition,Around,5,SSL400\Dataset - Original\Preposition\Around
+273,Preposition,In,8,SSL400\Dataset - Original\Preposition\In
+274,Preposition,Inside,7,SSL400\Dataset - Original\Preposition\Inside
+275,Preposition,Near,9,SSL400\Dataset - Original\Preposition\Near
+276,Preposition,On,6,SSL400\Dataset - Original\Preposition\On
+277,Preposition,Out,5,SSL400\Dataset - Original\Preposition\Out
+278,Preposition,Over,6,SSL400\Dataset - Original\Preposition\Over
+279,Preposition,Than,4,SSL400\Dataset - Original\Preposition\Than
+280,Preposition,To,8,SSL400\Dataset - Original\Preposition\To
+281,Preposition,Until,8,SSL400\Dataset - Original\Preposition\Until
+282,Preposition,Up,8,SSL400\Dataset - Original\Preposition\Up
+283,Vehicles,Bicycle,3,SSL400\Dataset - Original\Vehicles\Bicycle
+284,Vehicles,Boat,21,SSL400\Dataset - Original\Vehicles\Boat
+285,Vehicles,Bus,3,SSL400\Dataset - Original\Vehicles\Bus
+286,Vehicles,Car,3,SSL400\Dataset - Original\Vehicles\Car
+287,Vehicles,Motorcycle,9,SSL400\Dataset - Original\Vehicles\Motorcycle
+288,Vehicles,Plane,30,SSL400\Dataset - Original\Vehicles\Plane
+289,Vehicles,Tire,1,SSL400\Dataset - Original\Vehicles\Tire
+290,Vehicles,Train,2,SSL400\Dataset - Original\Vehicles\Train
+291,Vehicles,Van,3,SSL400\Dataset - Original\Vehicles\Van
+292,Vehicles,Vehicle,8,SSL400\Dataset - Original\Vehicles\Vehicle
+293,Verbs,Allow,8,SSL400\Dataset - Original\Verbs\Allow
+294,Verbs,Bathe,2,SSL400\Dataset - Original\Verbs\Bathe
+295,Verbs,Boil,2,SSL400\Dataset - Original\Verbs\Boil
+296,Verbs,Break,2,SSL400\Dataset - Original\Verbs\Break
+297,Verbs,Bring,2,SSL400\Dataset - Original\Verbs\Bring
+298,Verbs,Buy,2,SSL400\Dataset - Original\Verbs\Buy
+299,Verbs,Carry,2,SSL400\Dataset - Original\Verbs\Carry
+300,Verbs,Change,12,SSL400\Dataset - Original\Verbs\Change
+301,Verbs,Choose,8,SSL400\Dataset - Original\Verbs\Choose
+302,Verbs,Click,4,SSL400\Dataset - Original\Verbs\Click
+303,Verbs,Come,34,SSL400\Dataset - Original\Verbs\Come
+304,Verbs,Connect,6,SSL400\Dataset - Original\Verbs\Connect
+305,Verbs,Cook,28,SSL400\Dataset - Original\Verbs\Cook
+306,Verbs,Copy,8,SSL400\Dataset - Original\Verbs\Copy
+307,Verbs,Cough,21,SSL400\Dataset - Original\Verbs\Cough
+308,Verbs,Cover,5,SSL400\Dataset - Original\Verbs\Cover
+309,Verbs,Cry,27,SSL400\Dataset - Original\Verbs\Cry
+310,Verbs,Cut,33,SSL400\Dataset - Original\Verbs\Cut
+311,Verbs,Dance,3,SSL400\Dataset - Original\Verbs\Dance
+312,Verbs,Done,5,SSL400\Dataset - Original\Verbs\Done
+313,Verbs,Draw,2,SSL400\Dataset - Original\Verbs\Draw
+314,Verbs,Drink,42,SSL400\Dataset - Original\Verbs\Drink
+315,Verbs,Eat,46,SSL400\Dataset - Original\Verbs\Eat
+316,Verbs,Enter,6,SSL400\Dataset - Original\Verbs\Enter
+317,Verbs,Erase,8,SSL400\Dataset - Original\Verbs\Erase
+318,Verbs,Exchange,9,SSL400\Dataset - Original\Verbs\Exchange
+319,Verbs,Feel,8,SSL400\Dataset - Original\Verbs\Feel
+320,Verbs,Fight,26,SSL400\Dataset - Original\Verbs\Fight
+321,Verbs,Follow,9,SSL400\Dataset - Original\Verbs\Follow
+322,Verbs,Get up,2,SSL400\Dataset - Original\Verbs\Get up
+323,Verbs,Give,15,SSL400\Dataset - Original\Verbs\Give
+324,Verbs,Go,34,SSL400\Dataset - Original\Verbs\Go
+325,Verbs,Guide,5,SSL400\Dataset - Original\Verbs\Guide
+326,Verbs,Hang,3,SSL400\Dataset - Original\Verbs\Hang
+327,Verbs,Hear,9,SSL400\Dataset - Original\Verbs\Hear
+328,Verbs,Help,30,SSL400\Dataset - Original\Verbs\Help
+329,Verbs,Hit,7,SSL400\Dataset - Original\Verbs\Hit
+330,Verbs,How,3,SSL400\Dataset - Original\Verbs\How
+331,Verbs,I know,2,SSL400\Dataset - Original\Verbs\I know
+332,Verbs,Jump,2,SSL400\Dataset - Original\Verbs\Jump
+333,Verbs,Knock,4,SSL400\Dataset - Original\Verbs\Knock
+334,Verbs,Laugh,5,SSL400\Dataset - Original\Verbs\Laugh
+335,Verbs,Lead,7,SSL400\Dataset - Original\Verbs\Lead
+336,Verbs,Let,4,SSL400\Dataset - Original\Verbs\Let
+337,Verbs,Like,7,SSL400\Dataset - Original\Verbs\Like
+338,Verbs,Listen,6,SSL400\Dataset - Original\Verbs\Listen
+339,Verbs,Look,27,SSL400\Dataset - Original\Verbs\Look
+340,Verbs,Love,8,SSL400\Dataset - Original\Verbs\Love
+341,Verbs,Make,2,SSL400\Dataset - Original\Verbs\Make
+342,Verbs,Meet,34,SSL400\Dataset - Original\Verbs\Meet
+343,Verbs,Now,2,SSL400\Dataset - Original\Verbs\Now
+344,Verbs,Open,7,SSL400\Dataset - Original\Verbs\Open
+345,Verbs,Order,10,SSL400\Dataset - Original\Verbs\Order
+346,Verbs,Peeing,6,SSL400\Dataset - Original\Verbs\Peeing
+347,Verbs,Play,26,SSL400\Dataset - Original\Verbs\Play
+348,Verbs,Pull,11,SSL400\Dataset - Original\Verbs\Pull
+349,Verbs,Put,4,SSL400\Dataset - Original\Verbs\Put
+350,Verbs,Quickly,1,SSL400\Dataset - Original\Verbs\Quickly
+351,Verbs,Run,26,SSL400\Dataset - Original\Verbs\Run
+352,Verbs,Scratch,3,SSL400\Dataset - Original\Verbs\Scratch
+353,Verbs,Search,2,SSL400\Dataset - Original\Verbs\Search
+354,Verbs,See,32,SSL400\Dataset - Original\Verbs\See
+355,Verbs,Select,3,SSL400\Dataset - Original\Verbs\Select
+356,Verbs,Sell,26,SSL400\Dataset - Original\Verbs\Sell
+357,Verbs,Show,9,SSL400\Dataset - Original\Verbs\Show
+358,Verbs,Sit,2,SSL400\Dataset - Original\Verbs\Sit
+359,Verbs,Sleep,27,SSL400\Dataset - Original\Verbs\Sleep
+360,Verbs,Smile,3,SSL400\Dataset - Original\Verbs\Smile
+361,Verbs,Stop,7,SSL400\Dataset - Original\Verbs\Stop
+362,Verbs,Study,5,SSL400\Dataset - Original\Verbs\Study
+363,Verbs,Sweep,2,SSL400\Dataset - Original\Verbs\Sweep
+364,Verbs,Swim,5,SSL400\Dataset - Original\Verbs\Swim
+365,Verbs,Take,3,SSL400\Dataset - Original\Verbs\Take
+366,Verbs,Talk,2,SSL400\Dataset - Original\Verbs\Talk
+367,Verbs,Teach,24,SSL400\Dataset - Original\Verbs\Teach
+368,Verbs,Tear,3,SSL400\Dataset - Original\Verbs\Tear
+369,Verbs,Tell,35,SSL400\Dataset - Original\Verbs\Tell
+370,Verbs,Text,6,SSL400\Dataset - Original\Verbs\Text
+371,Verbs,Think,7,SSL400\Dataset - Original\Verbs\Think
+372,Verbs,Throw,2,SSL400\Dataset - Original\Verbs\Throw
+373,Verbs,Trust,1,SSL400\Dataset - Original\Verbs\Trust
+374,Verbs,Understand,6,SSL400\Dataset - Original\Verbs\Understand
+375,Verbs,Use,5,SSL400\Dataset - Original\Verbs\Use
+376,Verbs,Visit,9,SSL400\Dataset - Original\Verbs\Visit
+377,Verbs,Walk,27,SSL400\Dataset - Original\Verbs\Walk
+378,Verbs,Want,22,SSL400\Dataset - Original\Verbs\Want
+379,Verbs,Wash,10,SSL400\Dataset - Original\Verbs\Wash
+380,Verbs,Watch,8,SSL400\Dataset - Original\Verbs\Watch
+381,Verbs,Work,2,SSL400\Dataset - Original\Verbs\Work
+382,Verbs,Write,35,SSL400\Dataset - Original\Verbs\Write

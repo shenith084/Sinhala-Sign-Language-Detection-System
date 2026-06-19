@@ -1,0 +1,47 @@
+# Python & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.env
+.venv
+venv/
+ENV/
+
+# Data and Models
+data/raw/
+data/processed/
+SSL400/
+models/
+logs/
+results/
+*.keras
+*.h5
+*.pb
+
+# Node.js
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+npm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db

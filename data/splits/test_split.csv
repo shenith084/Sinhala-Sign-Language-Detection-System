@@ -1,0 +1,843 @@
+class_id,category,class_name_english,video_path
+302,Verbs,Click,SSL400\Dataset - Original\Verbs\Click\Click_002.mp4
+380,Verbs,Watch,SSL400\Dataset - Original\Verbs\Watch\Watch_006.mp4
+146,Nouns,I,SSL400\Dataset - Original\Nouns\I\I_028.mp4
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_037.mp4
+143,Nouns,Hill,SSL400\Dataset - Original\Nouns\Hill\Hill_002.mp4
+4,Adjectives,Deaf,SSL400\Dataset - Original\Adjectives\Deaf\Deaf_001.mp4
+356,Verbs,Sell,SSL400\Dataset - Original\Verbs\Sell\Sell_002.mp4
+121,Nouns,Cell phone,SSL400\Dataset - Original\Nouns\Cell phone\Cell phone_009.MOV
+243,People,Man,SSL400\Dataset - Original\People\Man\Man_008.mp4
+263,Places,House,SSL400\Dataset - Original\Places\House\House_055.mp4
+9,Adjectives,Fast,SSL400\Dataset - Original\Adjectives\Fast\Fast_014.MOV
+56,Colors,Blue,SSL400\Dataset - Original\Colors\Blue\Blue_001.mp4
+22,Adjectives,Next,SSL400\Dataset - Original\Adjectives\Next\Next_005.mp4
+359,Verbs,Sleep,SSL400\Dataset - Original\Verbs\Sleep\Sleep_015.mp4
+382,Verbs,Write,SSL400\Dataset - Original\Verbs\Write\Write_025.mp4
+214,Numbers,4. four,SSL400\Dataset - Original\Numbers\4. four\4. four_014.mov
+204,Numbers,13. thirteen,SSL400\Dataset - Original\Numbers\13. thirteen\13. thirteen_001.mov
+271,Preposition,After,SSL400\Dataset - Original\Preposition\After\After_001.mp4
+140,Nouns,Hat,SSL400\Dataset - Original\Nouns\Hat\Hat_005.MOV
+67,Colors,White,SSL400\Dataset - Original\Colors\White\White_015.mp4
+70,Days,Day,SSL400\Dataset - Original\Days\Day\Day_015.mp4
+263,Places,House,SSL400\Dataset - Original\Places\House\House_003.mp4
+134,Nouns,Face,SSL400\Dataset - Original\Nouns\Face\Face_001.mp4
+218,Numbers,8. eight,SSL400\Dataset - Original\Numbers\8. eight\8. eight_005.mov
+327,Verbs,Hear,SSL400\Dataset - Original\Verbs\Hear\Hear_006.mp4
+314,Verbs,Drink,SSL400\Dataset - Original\Verbs\Drink\Drink_011.mp4
+323,Verbs,Give,SSL400\Dataset - Original\Verbs\Give\Give_005.mp4
+315,Verbs,Eat,SSL400\Dataset - Original\Verbs\Eat\Eat_044.mp4
+180,Nouns,Skirt,SSL400\Dataset - Original\Nouns\Skirt\Skirt_004.MOV
+228,People,Bro,SSL400\Dataset - Original\People\Bro\Bro_005.mov
+327,Verbs,Hear,SSL400\Dataset - Original\Verbs\Hear\Hear_009.mp4
+194,Nouns,Weather,SSL400\Dataset - Original\Nouns\Weather\Weather_004.mp4
+315,Verbs,Eat,SSL400\Dataset - Original\Verbs\Eat\Eat_004.mp4
+103,Months,January,SSL400\Dataset - Original\Months\January\January_002.mp4
+369,Verbs,Tell,SSL400\Dataset - Original\Verbs\Tell\Tell_029.mp4
+280,Preposition,To,SSL400\Dataset - Original\Preposition\To\To_001.mp4
+305,Verbs,Cook,SSL400\Dataset - Original\Verbs\Cook\Cook_003.mp4
+243,People,Man,SSL400\Dataset - Original\People\Man\Man_013.mp4
+116,Nouns,Book,SSL400\Dataset - Original\Nouns\Book\Book_009.mp4
+200,Numbers,1. one,SSL400\Dataset - Original\Numbers\1. one\1. one_004.mp4
+5,Adjectives,Deep,SSL400\Dataset - Original\Adjectives\Deep\Deep_016.MOV
+207,Numbers,16. sixteen,SSL400\Dataset - Original\Numbers\16. sixteen\16. sixteen_001.mov
+67,Colors,White,SSL400\Dataset - Original\Colors\White\White_005.mp4
+234,People,Elder sister,SSL400\Dataset - Original\People\Elder sister\Elder sister_026.mov
+190,Nouns,Technology,SSL400\Dataset - Original\Nouns\Technology\Technology_019.MP4
+70,Days,Day,SSL400\Dataset - Original\Days\Day\Day_017.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_092.mp4
+234,People,Elder sister,SSL400\Dataset - Original\People\Elder sister\Elder sister_021.mov
+340,Verbs,Love,SSL400\Dataset - Original\Verbs\Love\Love_005.mp4
+172,Nouns,Problem,SSL400\Dataset - Original\Nouns\Problem\Problem_004.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_018.mp4
+121,Nouns,Cell phone,SSL400\Dataset - Original\Nouns\Cell phone\Cell phone_001.MOV
+367,Verbs,Teach,SSL400\Dataset - Original\Verbs\Teach\Teach_012.mp4
+198,Nouns,Window,SSL400\Dataset - Original\Nouns\Window\Window_013.MP4
+279,Preposition,Than,SSL400\Dataset - Original\Preposition\Than\Than_002.mp4
+61,Colors,Green,SSL400\Dataset - Original\Colors\Green\Green_011.mp4
+310,Verbs,Cut,SSL400\Dataset - Original\Verbs\Cut\Cut_027.mp4
+128,Nouns,Crocodile,SSL400\Dataset - Original\Nouns\Crocodile\Crocodile_006.mp4
+54,Adverb,Why,SSL400\Dataset - Original\Adverb\Why\Why_003.mov
+307,Verbs,Cough,SSL400\Dataset - Original\Verbs\Cough\Cough_015.mp4
+55,Colors,Black,SSL400\Dataset - Original\Colors\Black\Black_020.MOV
+291,Vehicles,Van,SSL400\Dataset - Original\Vehicles\Van\Van_002.mov
+303,Verbs,Come,SSL400\Dataset - Original\Verbs\Come\Come_006.mp4
+21,Adjectives,Low,SSL400\Dataset - Original\Adjectives\Low\Low_002.MOV
+354,Verbs,See,SSL400\Dataset - Original\Verbs\See\See_011.mp4
+171,Nouns,Point,SSL400\Dataset - Original\Nouns\Point\Point_004.mp4
+170,Nouns,Pocket,SSL400\Dataset - Original\Nouns\Pocket\Pocket_005.MOV
+85,Days,Time,SSL400\Dataset - Original\Days\Time\Time_013.MOV
+213,Numbers,3. three,SSL400\Dataset - Original\Numbers\3. three\3. three_003.mov
+303,Verbs,Come,SSL400\Dataset - Original\Verbs\Come\Come_027.mov
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_064.mp4
+35,Adjectives,Strong,SSL400\Dataset - Original\Adjectives\Strong\Strong_004.MOV
+67,Colors,White,SSL400\Dataset - Original\Colors\White\White_037.MOV
+264,Places,Location,SSL400\Dataset - Original\Places\Location\Location_013.MOV
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_024.mp4
+282,Preposition,Up,SSL400\Dataset - Original\Preposition\Up\Up_002.mp4
+99,Months,April,SSL400\Dataset - Original\Months\April\April_007.mov
+356,Verbs,Sell,SSL400\Dataset - Original\Verbs\Sell\Sell_001.mp4
+103,Months,January,SSL400\Dataset - Original\Months\January\January_001.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_083.mp4
+256,People,Younger bro,SSL400\Dataset - Original\People\Younger bro\Younger bro_011.mp4
+94,Greetings,Ayubowan,SSL400\Dataset - Original\Greetings\Ayubowan\Ayubowan_003.mov
+118,Nouns,Card,SSL400\Dataset - Original\Nouns\Card\Card_001.mp4
+16,Adjectives,Healthy,SSL400\Dataset - Original\Adjectives\Healthy\Healthy_013.MOV
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_030.mov
+103,Months,January,SSL400\Dataset - Original\Months\January\January_019.mp4
+181,Nouns,Society,SSL400\Dataset - Original\Nouns\Society\Society_005.mp4
+377,Verbs,Walk,SSL400\Dataset - Original\Verbs\Walk\Walk_009.mp4
+146,Nouns,I,SSL400\Dataset - Original\Nouns\I\I_020.mov
+301,Verbs,Choose,SSL400\Dataset - Original\Verbs\Choose\Choose_006.mp4
+106,Months,March,SSL400\Dataset - Original\Months\March\March_002.mp4
+244,People,Mother,SSL400\Dataset - Original\People\Mother\Mother_022.mov
+77,Days,Hour,SSL400\Dataset - Original\Days\Hour\Hour_025.MOV
+267,Places,Road,SSL400\Dataset - Original\Places\Road\Road_004.MOV
+342,Verbs,Meet,SSL400\Dataset - Original\Verbs\Meet\Meet_027.mp4
+263,Places,House,SSL400\Dataset - Original\Places\House\House_024.mp4
+268,Places,Shop,SSL400\Dataset - Original\Places\Shop\Shop_010.MOV
+191,Nouns,Telephone,SSL400\Dataset - Original\Nouns\Telephone\Telephone_003.mp4
+323,Verbs,Give,SSL400\Dataset - Original\Verbs\Give\Give_003.mp4
+17,Adjectives,High,SSL400\Dataset - Original\Adjectives\High\High_005.MOV
+377,Verbs,Walk,SSL400\Dataset - Original\Verbs\Walk\Walk_014.mp4
+342,Verbs,Meet,SSL400\Dataset - Original\Verbs\Meet\Meet_019.mp4
+310,Verbs,Cut,SSL400\Dataset - Original\Verbs\Cut\Cut_009.mp4
+50,Adverb,Never,SSL400\Dataset - Original\Adverb\Never\Never_007.mp4
+78,Days,Monday,SSL400\Dataset - Original\Days\Monday\Monday_006.mp4
+43,Adverb,Can,SSL400\Dataset - Original\Adverb\Can\Can_008.mov
+351,Verbs,Run,SSL400\Dataset - Original\Verbs\Run\Run_015.mp4
+65,Colors,Purple,SSL400\Dataset - Original\Colors\Purple\Purple_001.mp4
+256,People,Younger bro,SSL400\Dataset - Original\People\Younger bro\Younger bro_002.mp4
+165,Nouns,Part,SSL400\Dataset - Original\Nouns\Part\Part_002.mp4
+159,Nouns,My,SSL400\Dataset - Original\Nouns\My\My_021.mp4
+351,Verbs,Run,SSL400\Dataset - Original\Verbs\Run\Run_003.mp4
+245,People,Player,SSL400\Dataset - Original\People\Player\Player_003.MOV
+98,Interjection,Yes,SSL400\Dataset - Original\Interjection\Yes\Yes_001.mov
+147,Nouns,Impact,SSL400\Dataset - Original\Nouns\Impact\Impact_003.mp4
+183,Nouns,Squirrel,SSL400\Dataset - Original\Nouns\Squirrel\Squirrel_002.mp4
+222,Numbers,Divide,SSL400\Dataset - Original\Numbers\Divide\Divide_003.mov
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_027.mp4
+194,Nouns,Weather,SSL400\Dataset - Original\Nouns\Weather\Weather_008.mp4
+288,Vehicles,Plane,SSL400\Dataset - Original\Vehicles\Plane\Plane_003.mp4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_006.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_051.mov
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_043.mp4
+140,Nouns,Hat,SSL400\Dataset - Original\Nouns\Hat\Hat_019.MOV
+234,People,Elder sister,SSL400\Dataset - Original\People\Elder sister\Elder sister_018.mp4
+86,Days,Today,SSL400\Dataset - Original\Days\Today\Today_020.MOV
+85,Days,Time,SSL400\Dataset - Original\Days\Time\Time_005.mp4
+369,Verbs,Tell,SSL400\Dataset - Original\Verbs\Tell\Tell_001.mp4
+215,Numbers,5. five,SSL400\Dataset - Original\Numbers\5. five\5. five_007.mov
+233,People,Elder bro,SSL400\Dataset - Original\People\Elder bro\Elder bro_014.mp4
+26,Adjectives,Past,SSL400\Dataset - Original\Adjectives\Past\Past_007.mp4
+55,Colors,Black,SSL400\Dataset - Original\Colors\Black\Black_028.MP4
+189,Nouns,Team,SSL400\Dataset - Original\Nouns\Team\Team_005.mp4
+178,Nouns,Sign,SSL400\Dataset - Original\Nouns\Sign\Sign_002.mp4
+126,Nouns,Computer,SSL400\Dataset - Original\Nouns\Computer\Computer_001.MOV
+230,People,Child,SSL400\Dataset - Original\People\Child\Child_020.MOV
+303,Verbs,Come,SSL400\Dataset - Original\Verbs\Come\Come_023.mp4
+132,Nouns,Eye,SSL400\Dataset - Original\Nouns\Eye\Eye_002.mp4
+67,Colors,White,SSL400\Dataset - Original\Colors\White\White_044.mov
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_063.mp4
+120,Nouns,Ceiling fan,SSL400\Dataset - Original\Nouns\Ceiling fan\Ceiling fan_007.MOV
+141,Nouns,He,SSL400\Dataset - Original\Nouns\He\He_015.MOV
+237,People,Father,SSL400\Dataset - Original\People\Father\Father_002.mov
+119,Nouns,Cat,SSL400\Dataset - Original\Nouns\Cat\Cat_002.mp4
+1,Adjectives,Beautiful,SSL400\Dataset - Original\Adjectives\Beautiful\Beautiful_003.mp4
+153,Nouns,Middle,SSL400\Dataset - Original\Nouns\Middle\Middle_001.mp4
+354,Verbs,See,SSL400\Dataset - Original\Verbs\See\See_010.mp4
+339,Verbs,Look,SSL400\Dataset - Original\Verbs\Look\Look_011.mp4
+151,Nouns,List,SSL400\Dataset - Original\Nouns\List\List_001.mp4
+65,Colors,Purple,SSL400\Dataset - Original\Colors\Purple\Purple_027.mov
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_047.MOV
+186,Nouns,Suit,SSL400\Dataset - Original\Nouns\Suit\Suit_006.MOV
+288,Vehicles,Plane,SSL400\Dataset - Original\Vehicles\Plane\Plane_012.MOV
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_023.mp4
+87,Days,Tomorrow,SSL400\Dataset - Original\Days\Tomorrow\Tomorrow_003.MOV
+216,Numbers,6. six,SSL400\Dataset - Original\Numbers\6. six\6. six_003.mov
+243,People,Man,SSL400\Dataset - Original\People\Man\Man_001.mp4
+354,Verbs,See,SSL400\Dataset - Original\Verbs\See\See_029.mov
+73,Days,Friday,SSL400\Dataset - Original\Days\Friday\Friday_003.mov
+287,Vehicles,Motorcycle,SSL400\Dataset - Original\Vehicles\Motorcycle\Motorcycle_009.mov
+264,Places,Location,SSL400\Dataset - Original\Places\Location\Location_011.MOV
+339,Verbs,Look,SSL400\Dataset - Original\Verbs\Look\Look_019.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_113.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_019.mp4
+303,Verbs,Come,SSL400\Dataset - Original\Verbs\Come\Come_028.mov
+170,Nouns,Pocket,SSL400\Dataset - Original\Nouns\Pocket\Pocket_012.MOV
+382,Verbs,Write,SSL400\Dataset - Original\Verbs\Write\Write_017.mp4
+30,Adjectives,Rich,SSL400\Dataset - Original\Adjectives\Rich\Rich_011.mp4
+320,Verbs,Fight,SSL400\Dataset - Original\Verbs\Fight\Fight_008.mp4
+254,People,Us,SSL400\Dataset - Original\People\Us\Us_004.mp4
+139,Nouns,Gun,SSL400\Dataset - Original\Nouns\Gun\Gun_003.MOV
+230,People,Child,SSL400\Dataset - Original\People\Child\Child_012.MOV
+244,People,Mother,SSL400\Dataset - Original\People\Mother\Mother_027.mov
+160,Nouns,Network,SSL400\Dataset - Original\Nouns\Network\Network_005.mp4
+340,Verbs,Love,SSL400\Dataset - Original\Verbs\Love\Love_001.mp4
+109,Months,November,SSL400\Dataset - Original\Months\November\November_004.mp4
+128,Nouns,Crocodile,SSL400\Dataset - Original\Nouns\Crocodile\Crocodile_003.mp4
+320,Verbs,Fight,SSL400\Dataset - Original\Verbs\Fight\Fight_012.mp4
+293,Verbs,Allow,SSL400\Dataset - Original\Verbs\Allow\Allow_003.mp4
+37,Adjectives,Tight,SSL400\Dataset - Original\Adjectives\Tight\Tight_008.MOV
+317,Verbs,Erase,SSL400\Dataset - Original\Verbs\Erase\Erase_003.mp4
+284,Vehicles,Boat,SSL400\Dataset - Original\Vehicles\Boat\Boat_007.MOV
+367,Verbs,Teach,SSL400\Dataset - Original\Verbs\Teach\Teach_008.mp4
+379,Verbs,Wash,SSL400\Dataset - Original\Verbs\Wash\Wash_009.mov
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_035.mp4
+288,Vehicles,Plane,SSL400\Dataset - Original\Vehicles\Plane\Plane_025.MOV
+117,Nouns,Camera,SSL400\Dataset - Original\Nouns\Camera\Camera_015.MOV
+180,Nouns,Skirt,SSL400\Dataset - Original\Nouns\Skirt\Skirt_014.MOV
+214,Numbers,4. four,SSL400\Dataset - Original\Numbers\4. four\4. four_006.mov
+41,Adverb,Again,SSL400\Dataset - Original\Adverb\Again\Again_005.mp4
+319,Verbs,Feel,SSL400\Dataset - Original\Verbs\Feel\Feel_005.mp4
+3,Adjectives,Cold,SSL400\Dataset - Original\Adjectives\Cold\Cold_009.mp4
+292,Vehicles,Vehicle,SSL400\Dataset - Original\Vehicles\Vehicle\Vehicle_004.mp4
+263,Places,House,SSL400\Dataset - Original\Places\House\House_004.mp4
+114,Nouns,Bag,SSL400\Dataset - Original\Nouns\Bag\Bag_001.MOV
+306,Verbs,Copy,SSL400\Dataset - Original\Verbs\Copy\Copy_008.mp4
+251,People,Son,SSL400\Dataset - Original\People\Son\Son_015.MOV
+149,Nouns,Key,SSL400\Dataset - Original\Nouns\Key\Key_014.MP4
+86,Days,Today,SSL400\Dataset - Original\Days\Today\Today_013.mp4
+238,People,Grand father,SSL400\Dataset - Original\People\Grand father\Grand father_025.mov
+105,Months,June,SSL400\Dataset - Original\Months\June\June_006.mov
+59,Colors,Gold,SSL400\Dataset - Original\Colors\Gold\Gold_003.mov
+236,People,Family,SSL400\Dataset - Original\People\Family\Family_001.mov
+115,Nouns,Bed,SSL400\Dataset - Original\Nouns\Bed\Bed_010.MP4
+183,Nouns,Squirrel,SSL400\Dataset - Original\Nouns\Squirrel\Squirrel_011.mp4
+149,Nouns,Key,SSL400\Dataset - Original\Nouns\Key\Key_001.MOV
+356,Verbs,Sell,SSL400\Dataset - Original\Verbs\Sell\Sell_003.mp4
+377,Verbs,Walk,SSL400\Dataset - Original\Verbs\Walk\Walk_018.mp4
+1,Adjectives,Beautiful,SSL400\Dataset - Original\Adjectives\Beautiful\Beautiful_012.mp4
+367,Verbs,Teach,SSL400\Dataset - Original\Verbs\Teach\Teach_004.mp4
+67,Colors,White,SSL400\Dataset - Original\Colors\White\White_017.mp4
+78,Days,Monday,SSL400\Dataset - Original\Days\Monday\Monday_024.mov
+268,Places,Shop,SSL400\Dataset - Original\Places\Shop\Shop_012.MOV
+315,Verbs,Eat,SSL400\Dataset - Original\Verbs\Eat\Eat_046.mp4
+85,Days,Time,SSL400\Dataset - Original\Days\Time\Time_019.MOV
+257,People,Younger sister,SSL400\Dataset - Original\People\Younger sister\Younger sister_002.mov
+138,Nouns,Group,SSL400\Dataset - Original\Nouns\Group\Group_003.mp4
+369,Verbs,Tell,SSL400\Dataset - Original\Verbs\Tell\Tell_011.mp4
+233,People,Elder bro,SSL400\Dataset - Original\People\Elder bro\Elder bro_005.mp4
+359,Verbs,Sleep,SSL400\Dataset - Original\Verbs\Sleep\Sleep_002.mp4
+68,Colors,Yellow,SSL400\Dataset - Original\Colors\Yellow\Yellow_045.mov
+277,Preposition,Out,SSL400\Dataset - Original\Preposition\Out\Out_001.mp4
+93,Greetings,Alright,SSL400\Dataset - Original\Greetings\Alright\Alright_001.MOV
+170,Nouns,Pocket,SSL400\Dataset - Original\Nouns\Pocket\Pocket_008.MOV
+164,Nouns,Paint,SSL400\Dataset - Original\Nouns\Paint\Paint_006.mp4
+300,Verbs,Change,SSL400\Dataset - Original\Verbs\Change\Change_008.mp4
+200,Numbers,1. one,SSL400\Dataset - Original\Numbers\1. one\1. one_014.mov
+303,Verbs,Come,SSL400\Dataset - Original\Verbs\Come\Come_004.mp4
+117,Nouns,Camera,SSL400\Dataset - Original\Nouns\Camera\Camera_017.MP4
+141,Nouns,He,SSL400\Dataset - Original\Nouns\He\He_003.MOV
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_034.MOV
+230,People,Child,SSL400\Dataset - Original\People\Child\Child_029.MP4
+67,Colors,White,SSL400\Dataset - Original\Colors\White\White_001.mp4
+190,Nouns,Technology,SSL400\Dataset - Original\Nouns\Technology\Technology_004.mp4
+4,Adjectives,Deaf,SSL400\Dataset - Original\Adjectives\Deaf\Deaf_019.MOV
+158,Nouns,Movie,SSL400\Dataset - Original\Nouns\Movie\Movie_002.mp4
+321,Verbs,Follow,SSL400\Dataset - Original\Verbs\Follow\Follow_002.mp4
+10,Adjectives,Fat,SSL400\Dataset - Original\Adjectives\Fat\Fat_006.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_010.mp4
+243,People,Man,SSL400\Dataset - Original\People\Man\Man_035.MOV
+345,Verbs,Order,SSL400\Dataset - Original\Verbs\Order\Order_005.mp4
+378,Verbs,Want,SSL400\Dataset - Original\Verbs\Want\Want_002.mp4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_060.MOV
+102,Months,February,SSL400\Dataset - Original\Months\February\February_001.mov
+287,Vehicles,Motorcycle,SSL400\Dataset - Original\Vehicles\Motorcycle\Motorcycle_008.mov
+239,People,Grand mother,SSL400\Dataset - Original\People\Grand mother\Grand mother_003.mov
+163,Nouns,Our,SSL400\Dataset - Original\Nouns\Our\Our_004.mp4
+89,Days,Wednesday,SSL400\Dataset - Original\Days\Wednesday\Wednesday_015.mov
+66,Colors,Red,SSL400\Dataset - Original\Colors\Red\Red_010.mp4
+78,Days,Monday,SSL400\Dataset - Original\Days\Monday\Monday_022.mov
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_029.mp4
+186,Nouns,Suit,SSL400\Dataset - Original\Nouns\Suit\Suit_012.MOV
+139,Nouns,Gun,SSL400\Dataset - Original\Nouns\Gun\Gun_012.MP4
+141,Nouns,He,SSL400\Dataset - Original\Nouns\He\He_022.MOV
+307,Verbs,Cough,SSL400\Dataset - Original\Verbs\Cough\Cough_006.mp4
+320,Verbs,Fight,SSL400\Dataset - Original\Verbs\Fight\Fight_013.mp4
+232,People,Doctor,SSL400\Dataset - Original\People\Doctor\Doctor_001.mp4
+244,People,Mother,SSL400\Dataset - Original\People\Mother\Mother_012.mp4
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_057.mp4
+3,Adjectives,Cold,SSL400\Dataset - Original\Adjectives\Cold\Cold_001.mp4
+232,People,Doctor,SSL400\Dataset - Original\People\Doctor\Doctor_018.mp4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_026.mp4
+86,Days,Today,SSL400\Dataset - Original\Days\Today\Today_031.MP4
+174,Nouns,Ring,SSL400\Dataset - Original\Nouns\Ring\Ring_001.mp4
+374,Verbs,Understand,SSL400\Dataset - Original\Verbs\Understand\Understand_001.mov
+169,Nouns,Phone,SSL400\Dataset - Original\Nouns\Phone\Phone_004.mp4
+65,Colors,Purple,SSL400\Dataset - Original\Colors\Purple\Purple_023.mp4
+254,People,Us,SSL400\Dataset - Original\People\Us\Us_010.mp4
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_008.mp4
+86,Days,Today,SSL400\Dataset - Original\Days\Today\Today_036.mov
+309,Verbs,Cry,SSL400\Dataset - Original\Verbs\Cry\Cry_004.mp4
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_017.mp4
+382,Verbs,Write,SSL400\Dataset - Original\Verbs\Write\Write_010.mp4
+232,People,Doctor,SSL400\Dataset - Original\People\Doctor\Doctor_016.mp4
+380,Verbs,Watch,SSL400\Dataset - Original\Verbs\Watch\Watch_002.mp4
+284,Vehicles,Boat,SSL400\Dataset - Original\Vehicles\Boat\Boat_008.MOV
+134,Nouns,Face,SSL400\Dataset - Original\Nouns\Face\Face_003.mp4
+55,Colors,Black,SSL400\Dataset - Original\Colors\Black\Black_026.MOV
+75,Days,Good morning,SSL400\Dataset - Original\Days\Good morning\Good morning_001.mov
+314,Verbs,Drink,SSL400\Dataset - Original\Verbs\Drink\Drink_021.mp4
+333,Verbs,Knock,SSL400\Dataset - Original\Verbs\Knock\Knock_003.mov
+15,Adjectives,Hard,SSL400\Dataset - Original\Adjectives\Hard\Hard_006.mp4
+48,Adverb,Here,SSL400\Dataset - Original\Adverb\Here\Here_005.mp4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_038.mp4
+342,Verbs,Meet,SSL400\Dataset - Original\Verbs\Meet\Meet_022.mp4
+8,Adjectives,Double,SSL400\Dataset - Original\Adjectives\Double\Double_006.mp4
+90,Days,Week,SSL400\Dataset - Original\Days\Week\Week_002.mov
+42,Adverb,Also,SSL400\Dataset - Original\Adverb\Also\Also_004.mp4
+156,Nouns,Money,SSL400\Dataset - Original\Nouns\Money\Money_034.MP4
+12,Adjectives,Full,SSL400\Dataset - Original\Adjectives\Full\Full_001.mp4
+226,People,Aunt,SSL400\Dataset - Original\People\Aunt\Aunt_003.mov
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_024.MOV
+101,Months,December,SSL400\Dataset - Original\Months\December\December_005.mov
+148,Nouns,Internet,SSL400\Dataset - Original\Nouns\Internet\Internet_004.mp4
+211,Numbers,2. two,SSL400\Dataset - Original\Numbers\2. two\2. two_012.mov
+65,Colors,Purple,SSL400\Dataset - Original\Colors\Purple\Purple_024.mp4
+365,Verbs,Take,SSL400\Dataset - Original\Verbs\Take\Take_003.mov
+25,Adjectives,Old,SSL400\Dataset - Original\Adjectives\Old\Old_002.mp4
+304,Verbs,Connect,SSL400\Dataset - Original\Verbs\Connect\Connect_005.mp4
+15,Adjectives,Hard,SSL400\Dataset - Original\Adjectives\Hard\Hard_004.mp4
+68,Colors,Yellow,SSL400\Dataset - Original\Colors\Yellow\Yellow_011.mp4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_074.mp4
+314,Verbs,Drink,SSL400\Dataset - Original\Verbs\Drink\Drink_035.mp4
+245,People,Player,SSL400\Dataset - Original\People\Player\Player_020.MP4
+376,Verbs,Visit,SSL400\Dataset - Original\Verbs\Visit\Visit_006.mp4
+86,Days,Today,SSL400\Dataset - Original\Days\Today\Today_005.mp4
+17,Adjectives,High,SSL400\Dataset - Original\Adjectives\High\High_002.MOV
+244,People,Mother,SSL400\Dataset - Original\People\Mother\Mother_013.mp4
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_037.mov
+159,Nouns,My,SSL400\Dataset - Original\Nouns\My\My_004.mp4
+86,Days,Today,SSL400\Dataset - Original\Days\Today\Today_001.mp4
+113,Nouns,Article,SSL400\Dataset - Original\Nouns\Article\Article_004.mp4
+68,Colors,Yellow,SSL400\Dataset - Original\Colors\Yellow\Yellow_008.mp4
+120,Nouns,Ceiling fan,SSL400\Dataset - Original\Nouns\Ceiling fan\Ceiling fan_005.MOV
+195,Nouns,Who,SSL400\Dataset - Original\Nouns\Who\Who_001.mov
+367,Verbs,Teach,SSL400\Dataset - Original\Verbs\Teach\Teach_013.mp4
+292,Vehicles,Vehicle,SSL400\Dataset - Original\Vehicles\Vehicle\Vehicle_008.mov
+264,Places,Location,SSL400\Dataset - Original\Places\Location\Location_017.MOV
+77,Days,Hour,SSL400\Dataset - Original\Days\Hour\Hour_020.mov
+1,Adjectives,Beautiful,SSL400\Dataset - Original\Adjectives\Beautiful\Beautiful_024.mov
+288,Vehicles,Plane,SSL400\Dataset - Original\Vehicles\Plane\Plane_001.mp4
+42,Adverb,Also,SSL400\Dataset - Original\Adverb\Also\Also_002.mp4
+74,Days,Good evening,SSL400\Dataset - Original\Days\Good evening\Good evening_002.mov
+184,Nouns,Street,SSL400\Dataset - Original\Nouns\Street\Street_004.mp4
+5,Adjectives,Deep,SSL400\Dataset - Original\Adjectives\Deep\Deep_009.mp4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_011.mp4
+39,Adjectives,Welcome,SSL400\Dataset - Original\Adjectives\Welcome\Welcome_001.mp4
+263,Places,House,SSL400\Dataset - Original\Places\House\House_034.mp4
+328,Verbs,Help,SSL400\Dataset - Original\Verbs\Help\Help_021.mp4
+185,Nouns,Structure,SSL400\Dataset - Original\Nouns\Structure\Structure_003.mp4
+64,Colors,Pink,SSL400\Dataset - Original\Colors\Pink\Pink_001.mov
+346,Verbs,Peeing,SSL400\Dataset - Original\Verbs\Peeing\Peeing_002.mp4
+33,Adjectives,Small,SSL400\Dataset - Original\Adjectives\Small\Small_003.mp4
+196,Nouns,Whom,SSL400\Dataset - Original\Nouns\Whom\Whom_001.mov
+128,Nouns,Crocodile,SSL400\Dataset - Original\Nouns\Crocodile\Crocodile_017.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_004.mp4
+117,Nouns,Camera,SSL400\Dataset - Original\Nouns\Camera\Camera_007.MOV
+146,Nouns,I,SSL400\Dataset - Original\Nouns\I\I_003.mp4
+108,Months,Month,SSL400\Dataset - Original\Months\Month\Month_003.mov
+228,People,Bro,SSL400\Dataset - Original\People\Bro\Bro_002.mov
+339,Verbs,Look,SSL400\Dataset - Original\Verbs\Look\Look_006.mp4
+324,Verbs,Go,SSL400\Dataset - Original\Verbs\Go\Go_010.mp4
+110,Months,October,SSL400\Dataset - Original\Months\October\October_004.mov
+116,Nouns,Book,SSL400\Dataset - Original\Nouns\Book\Book_005.mp4
+192,Nouns,They,SSL400\Dataset - Original\Nouns\They\They_001.mp4
+307,Verbs,Cough,SSL400\Dataset - Original\Verbs\Cough\Cough_003.mp4
+318,Verbs,Exchange,SSL400\Dataset - Original\Verbs\Exchange\Exchange_009.mp4
+30,Adjectives,Rich,SSL400\Dataset - Original\Adjectives\Rich\Rich_005.mp4
+141,Nouns,He,SSL400\Dataset - Original\Nouns\He\He_012.MOV
+238,People,Grand father,SSL400\Dataset - Original\People\Grand father\Grand father_017.mp4
+251,People,Son,SSL400\Dataset - Original\People\Son\Son_020.MOV
+40,Adjectives,Wrong,SSL400\Dataset - Original\Adjectives\Wrong\Wrong_016.mp4
+139,Nouns,Gun,SSL400\Dataset - Original\Nouns\Gun\Gun_008.MP4
+328,Verbs,Help,SSL400\Dataset - Original\Verbs\Help\Help_023.mp4
+66,Colors,Red,SSL400\Dataset - Original\Colors\Red\Red_026.mp4
+77,Days,Hour,SSL400\Dataset - Original\Days\Hour\Hour_010.mp4
+274,Preposition,Inside,SSL400\Dataset - Original\Preposition\Inside\Inside_005.mp4
+288,Vehicles,Plane,SSL400\Dataset - Original\Vehicles\Plane\Plane_024.MOV
+40,Adjectives,Wrong,SSL400\Dataset - Original\Adjectives\Wrong\Wrong_017.mp4
+202,Numbers,11. eleven,SSL400\Dataset - Original\Numbers\11. eleven\11. eleven_001.mov
+211,Numbers,2. two,SSL400\Dataset - Original\Numbers\2. two\2. two_002.mp4
+263,Places,House,SSL400\Dataset - Original\Places\House\House_052.mp4
+347,Verbs,Play,SSL400\Dataset - Original\Verbs\Play\Play_022.mp4
+382,Verbs,Write,SSL400\Dataset - Original\Verbs\Write\Write_003.mp4
+355,Verbs,Select,SSL400\Dataset - Original\Verbs\Select\Select_001.mov
+6,Adjectives,Different,SSL400\Dataset - Original\Adjectives\Different\Different_003.mp4
+166,Nouns,Path,SSL400\Dataset - Original\Nouns\Path\Path_002.mp4
+29,Adjectives,Quick,SSL400\Dataset - Original\Adjectives\Quick\Quick_004.mp4
+173,Nouns,Radio,SSL400\Dataset - Original\Nouns\Radio\Radio_002.MOV
+156,Nouns,Money,SSL400\Dataset - Original\Nouns\Money\Money_003.mp4
+278,Preposition,Over,SSL400\Dataset - Original\Preposition\Over\Over_001.mp4
+377,Verbs,Walk,SSL400\Dataset - Original\Verbs\Walk\Walk_003.mp4
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_049.mp4
+238,People,Grand father,SSL400\Dataset - Original\People\Grand father\Grand father_009.mp4
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_062.mp4
+213,Numbers,3. three,SSL400\Dataset - Original\Numbers\3. three\3. three_007.mov
+61,Colors,Green,SSL400\Dataset - Original\Colors\Green\Green_006.mp4
+148,Nouns,Internet,SSL400\Dataset - Original\Nouns\Internet\Internet_002.mp4
+378,Verbs,Want,SSL400\Dataset - Original\Verbs\Want\Want_009.mp4
+382,Verbs,Write,SSL400\Dataset - Original\Verbs\Write\Write_015.mp4
+216,Numbers,6. six,SSL400\Dataset - Original\Numbers\6. six\6. six_004.mov
+211,Numbers,2. two,SSL400\Dataset - Original\Numbers\2. two\2. two_003.mp4
+3,Adjectives,Cold,SSL400\Dataset - Original\Adjectives\Cold\Cold_011.mp4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_046.MOV
+1,Adjectives,Beautiful,SSL400\Dataset - Original\Adjectives\Beautiful\Beautiful_017.mp4
+267,Places,Road,SSL400\Dataset - Original\Places\Road\Road_019.MOV
+310,Verbs,Cut,SSL400\Dataset - Original\Verbs\Cut\Cut_025.mp4
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_041.mp4
+78,Days,Monday,SSL400\Dataset - Original\Days\Monday\Monday_016.mp4
+309,Verbs,Cry,SSL400\Dataset - Original\Verbs\Cry\Cry_014.mp4
+351,Verbs,Run,SSL400\Dataset - Original\Verbs\Run\Run_007.mp4
+152,Nouns,Lock,SSL400\Dataset - Original\Nouns\Lock\Lock_012.MP4
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_029.mov
+254,People,Us,SSL400\Dataset - Original\People\Us\Us_003.mp4
+146,Nouns,I,SSL400\Dataset - Original\Nouns\I\I_029.mp4
+61,Colors,Green,SSL400\Dataset - Original\Colors\Green\Green_012.mp4
+243,People,Man,SSL400\Dataset - Original\People\Man\Man_005.mp4
+103,Months,January,SSL400\Dataset - Original\Months\January\January_014.mp4
+376,Verbs,Visit,SSL400\Dataset - Original\Verbs\Visit\Visit_005.mp4
+125,Nouns,Clothing,SSL400\Dataset - Original\Nouns\Clothing\Clothing_019.MOV
+215,Numbers,5. five,SSL400\Dataset - Original\Numbers\5. five\5. five_001.mp4
+4,Adjectives,Deaf,SSL400\Dataset - Original\Adjectives\Deaf\Deaf_009.mp4
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_046.mp4
+369,Verbs,Tell,SSL400\Dataset - Original\Verbs\Tell\Tell_032.mp4
+320,Verbs,Fight,SSL400\Dataset - Original\Verbs\Fight\Fight_001.mp4
+306,Verbs,Copy,SSL400\Dataset - Original\Verbs\Copy\Copy_007.mp4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_013.mp4
+339,Verbs,Look,SSL400\Dataset - Original\Verbs\Look\Look_010.mp4
+281,Preposition,Until,SSL400\Dataset - Original\Preposition\Until\Until_008.mp4
+280,Preposition,To,SSL400\Dataset - Original\Preposition\To\To_007.mp4
+55,Colors,Black,SSL400\Dataset - Original\Colors\Black\Black_007.mov
+328,Verbs,Help,SSL400\Dataset - Original\Verbs\Help\Help_006.mp4
+9,Adjectives,Fast,SSL400\Dataset - Original\Adjectives\Fast\Fast_020.MOV
+305,Verbs,Cook,SSL400\Dataset - Original\Verbs\Cook\Cook_002.mp4
+141,Nouns,He,SSL400\Dataset - Original\Nouns\He\He_004.MOV
+124,Nouns,Choice,SSL400\Dataset - Original\Nouns\Choice\Choice_007.mp4
+26,Adjectives,Past,SSL400\Dataset - Original\Adjectives\Past\Past_005.mp4
+83,Days,Sunday,SSL400\Dataset - Original\Days\Sunday\Sunday_001.mov
+31,Adjectives,Same,SSL400\Dataset - Original\Adjectives\Same\Same_008.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_066.mp4
+263,Places,House,SSL400\Dataset - Original\Places\House\House_014.mp4
+138,Nouns,Group,SSL400\Dataset - Original\Nouns\Group\Group_001.mp4
+146,Nouns,I,SSL400\Dataset - Original\Nouns\I\I_017.mov
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_008.mp4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_036.mp4
+315,Verbs,Eat,SSL400\Dataset - Original\Verbs\Eat\Eat_022.mp4
+107,Months,May,SSL400\Dataset - Original\Months\May\May_001.mov
+300,Verbs,Change,SSL400\Dataset - Original\Verbs\Change\Change_005.mp4
+68,Colors,Yellow,SSL400\Dataset - Original\Colors\Yellow\Yellow_043.mov
+67,Colors,White,SSL400\Dataset - Original\Colors\White\White_030.MOV
+135,Nouns,Fever,SSL400\Dataset - Original\Nouns\Fever\Fever_004.mp4
+120,Nouns,Ceiling fan,SSL400\Dataset - Original\Nouns\Ceiling fan\Ceiling fan_004.MOV
+186,Nouns,Suit,SSL400\Dataset - Original\Nouns\Suit\Suit_003.MOV
+305,Verbs,Cook,SSL400\Dataset - Original\Verbs\Cook\Cook_020.mp4
+218,Numbers,8. eight,SSL400\Dataset - Original\Numbers\8. eight\8. eight_006.mov
+19,Adjectives,Less,SSL400\Dataset - Original\Adjectives\Less\Less_001.mp4
+117,Nouns,Camera,SSL400\Dataset - Original\Nouns\Camera\Camera_014.MOV
+125,Nouns,Clothing,SSL400\Dataset - Original\Nouns\Clothing\Clothing_010.MOV
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_026.MOV
+337,Verbs,Like,SSL400\Dataset - Original\Verbs\Like\Like_002.mov
+324,Verbs,Go,SSL400\Dataset - Original\Verbs\Go\Go_034.mov
+131,Nouns,Elephant,SSL400\Dataset - Original\Nouns\Elephant\Elephant_008.mp4
+100,Months,August,SSL400\Dataset - Original\Months\August\August_001.mov
+186,Nouns,Suit,SSL400\Dataset - Original\Nouns\Suit\Suit_017.MOV
+68,Colors,Yellow,SSL400\Dataset - Original\Colors\Yellow\Yellow_016.mp4
+328,Verbs,Help,SSL400\Dataset - Original\Verbs\Help\Help_026.mov
+9,Adjectives,Fast,SSL400\Dataset - Original\Adjectives\Fast\Fast_018.MOV
+281,Preposition,Until,SSL400\Dataset - Original\Preposition\Until\Until_006.mp4
+191,Nouns,Telephone,SSL400\Dataset - Original\Nouns\Telephone\Telephone_008.MOV
+91,Days,Yesterday,SSL400\Dataset - Original\Days\Yesterday\Yesterday_004.MOV
+293,Verbs,Allow,SSL400\Dataset - Original\Verbs\Allow\Allow_005.mp4
+238,People,Grand father,SSL400\Dataset - Original\People\Grand father\Grand father_013.mp4
+314,Verbs,Drink,SSL400\Dataset - Original\Verbs\Drink\Drink_036.mp4
+245,People,Player,SSL400\Dataset - Original\People\Player\Player_007.MOV
+66,Colors,Red,SSL400\Dataset - Original\Colors\Red\Red_005.mp4
+16,Adjectives,Healthy,SSL400\Dataset - Original\Adjectives\Healthy\Healthy_004.MOV
+217,Numbers,7. seven,SSL400\Dataset - Original\Numbers\7. seven\7. seven_002.mov
+230,People,Child,SSL400\Dataset - Original\People\Child\Child_028.MOV
+347,Verbs,Play,SSL400\Dataset - Original\Verbs\Play\Play_011.mp4
+67,Colors,White,SSL400\Dataset - Original\Colors\White\White_023.mp4
+234,People,Elder sister,SSL400\Dataset - Original\People\Elder sister\Elder sister_013.mp4
+356,Verbs,Sell,SSL400\Dataset - Original\Verbs\Sell\Sell_004.mp4
+155,Nouns,Mind,SSL400\Dataset - Original\Nouns\Mind\Mind_002.mp4
+104,Months,July,SSL400\Dataset - Original\Months\July\July_004.mp4
+314,Verbs,Drink,SSL400\Dataset - Original\Verbs\Drink\Drink_029.mp4
+307,Verbs,Cough,SSL400\Dataset - Original\Verbs\Cough\Cough_014.mp4
+78,Days,Monday,SSL400\Dataset - Original\Days\Monday\Monday_021.mov
+41,Adverb,Again,SSL400\Dataset - Original\Adverb\Again\Again_003.mp4
+135,Nouns,Fever,SSL400\Dataset - Original\Nouns\Fever\Fever_007.mp4
+27,Adjectives,Positive,SSL400\Dataset - Original\Adjectives\Positive\Positive_002.mp4
+335,Verbs,Lead,SSL400\Dataset - Original\Verbs\Lead\Lead_005.mp4
+221,Numbers,Count,SSL400\Dataset - Original\Numbers\Count\Count_002.mov
+140,Nouns,Hat,SSL400\Dataset - Original\Nouns\Hat\Hat_018.MOV
+324,Verbs,Go,SSL400\Dataset - Original\Verbs\Go\Go_029.mov
+1,Adjectives,Beautiful,SSL400\Dataset - Original\Adjectives\Beautiful\Beautiful_032.MOV
+190,Nouns,Technology,SSL400\Dataset - Original\Nouns\Technology\Technology_016.MP4
+173,Nouns,Radio,SSL400\Dataset - Original\Nouns\Radio\Radio_014.MP4
+146,Nouns,I,SSL400\Dataset - Original\Nouns\I\I_027.mp4
+354,Verbs,See,SSL400\Dataset - Original\Verbs\See\See_022.mp4
+131,Nouns,Elephant,SSL400\Dataset - Original\Nouns\Elephant\Elephant_015.mp4
+308,Verbs,Cover,SSL400\Dataset - Original\Verbs\Cover\Cover_002.mp4
+245,People,Player,SSL400\Dataset - Original\People\Player\Player_017.MOV
+321,Verbs,Follow,SSL400\Dataset - Original\Verbs\Follow\Follow_004.mp4
+174,Nouns,Ring,SSL400\Dataset - Original\Nouns\Ring\Ring_012.MOV
+339,Verbs,Look,SSL400\Dataset - Original\Verbs\Look\Look_018.mp4
+328,Verbs,Help,SSL400\Dataset - Original\Verbs\Help\Help_012.mp4
+126,Nouns,Computer,SSL400\Dataset - Original\Nouns\Computer\Computer_003.MOV
+315,Verbs,Eat,SSL400\Dataset - Original\Verbs\Eat\Eat_007.mp4
+288,Vehicles,Plane,SSL400\Dataset - Original\Vehicles\Plane\Plane_008.MOV
+273,Preposition,In,SSL400\Dataset - Original\Preposition\In\In_008.mp4
+324,Verbs,Go,SSL400\Dataset - Original\Verbs\Go\Go_011.mp4
+61,Colors,Green,SSL400\Dataset - Original\Colors\Green\Green_010.mp4
+211,Numbers,2. two,SSL400\Dataset - Original\Numbers\2. two\2. two_006.mp4
+251,People,Son,SSL400\Dataset - Original\People\Son\Son_025.mov
+243,People,Man,SSL400\Dataset - Original\People\Man\Man_047.MOV
+310,Verbs,Cut,SSL400\Dataset - Original\Verbs\Cut\Cut_014.mp4
+128,Nouns,Crocodile,SSL400\Dataset - Original\Nouns\Crocodile\Crocodile_021.mp4
+131,Nouns,Elephant,SSL400\Dataset - Original\Nouns\Elephant\Elephant_024.mp4
+256,People,Younger bro,SSL400\Dataset - Original\People\Younger bro\Younger bro_016.mp4
+264,Places,Location,SSL400\Dataset - Original\Places\Location\Location_006.MOV
+63,Colors,Orange,SSL400\Dataset - Original\Colors\Orange\Orange_002.mp4
+55,Colors,Black,SSL400\Dataset - Original\Colors\Black\Black_009.MOV
+326,Verbs,Hang,SSL400\Dataset - Original\Verbs\Hang\Hang_003.mov
+357,Verbs,Show,SSL400\Dataset - Original\Verbs\Show\Show_001.mp4
+30,Adjectives,Rich,SSL400\Dataset - Original\Adjectives\Rich\Rich_019.mp4
+190,Nouns,Technology,SSL400\Dataset - Original\Nouns\Technology\Technology_015.MP4
+309,Verbs,Cry,SSL400\Dataset - Original\Verbs\Cry\Cry_003.mp4
+146,Nouns,I,SSL400\Dataset - Original\Nouns\I\I_022.mov
+361,Verbs,Stop,SSL400\Dataset - Original\Verbs\Stop\Stop_006.mov
+329,Verbs,Hit,SSL400\Dataset - Original\Verbs\Hit\Hit_001.mp4
+351,Verbs,Run,SSL400\Dataset - Original\Verbs\Run\Run_004.mp4
+119,Nouns,Cat,SSL400\Dataset - Original\Nouns\Cat\Cat_003.mp4
+80,Days,Night,SSL400\Dataset - Original\Days\Night\Night_001.mov
+66,Colors,Red,SSL400\Dataset - Original\Colors\Red\Red_021.mp4
+67,Colors,White,SSL400\Dataset - Original\Colors\White\White_046.mp4
+142,Nouns,Health,SSL400\Dataset - Original\Nouns\Health\Health_001.mp4
+66,Colors,Red,SSL400\Dataset - Original\Colors\Red\Red_023.mp4
+0,Adjectives,Bad,SSL400\Dataset - Original\Adjectives\Bad\Bad_001.mov
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_012.mp4
+40,Adjectives,Wrong,SSL400\Dataset - Original\Adjectives\Wrong\Wrong_013.mp4
+198,Nouns,Window,SSL400\Dataset - Original\Nouns\Window\Window_011.MP4
+28,Adjectives,Present,SSL400\Dataset - Original\Adjectives\Present\Present_005.mp4
+323,Verbs,Give,SSL400\Dataset - Original\Verbs\Give\Give_002.mp4
+168,Nouns,Pencil,SSL400\Dataset - Original\Nouns\Pencil\Pencil_013.MP4
+357,Verbs,Show,SSL400\Dataset - Original\Verbs\Show\Show_007.mp4
+70,Days,Day,SSL400\Dataset - Original\Days\Day\Day_003.mp4
+342,Verbs,Meet,SSL400\Dataset - Original\Verbs\Meet\Meet_021.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_074.mp4
+87,Days,Tomorrow,SSL400\Dataset - Original\Days\Tomorrow\Tomorrow_019.mov
+256,People,Younger bro,SSL400\Dataset - Original\People\Younger bro\Younger bro_021.mov
+171,Nouns,Point,SSL400\Dataset - Original\Nouns\Point\Point_006.mp4
+170,Nouns,Pocket,SSL400\Dataset - Original\Nouns\Pocket\Pocket_001.mp4
+315,Verbs,Eat,SSL400\Dataset - Original\Verbs\Eat\Eat_012.mp4
+347,Verbs,Play,SSL400\Dataset - Original\Verbs\Play\Play_012.mp4
+360,Verbs,Smile,SSL400\Dataset - Original\Verbs\Smile\Smile_003.mov
+70,Days,Day,SSL400\Dataset - Original\Days\Day\Day_020.mov
+164,Nouns,Paint,SSL400\Dataset - Original\Nouns\Paint\Paint_004.mp4
+159,Nouns,My,SSL400\Dataset - Original\Nouns\My\My_013.mp4
+81,Days,Saturday,SSL400\Dataset - Original\Days\Saturday\Saturday_002.mov
+354,Verbs,See,SSL400\Dataset - Original\Verbs\See\See_003.mp4
+370,Verbs,Text,SSL400\Dataset - Original\Verbs\Text\Text_002.mp4
+214,Numbers,4. four,SSL400\Dataset - Original\Numbers\4. four\4. four_004.mp4
+162,Nouns,Ok,SSL400\Dataset - Original\Nouns\Ok\Ok_001.mp4
+225,Numbers,Subtraction,SSL400\Dataset - Original\Numbers\Subtraction\Subtraction_002.mov
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_053.mp4
+223,Numbers,Equal,SSL400\Dataset - Original\Numbers\Equal\Equal_011.mov
+315,Verbs,Eat,SSL400\Dataset - Original\Verbs\Eat\Eat_028.mp4
+73,Days,Friday,SSL400\Dataset - Original\Days\Friday\Friday_006.mov
+305,Verbs,Cook,SSL400\Dataset - Original\Verbs\Cook\Cook_021.mp4
+314,Verbs,Drink,SSL400\Dataset - Original\Verbs\Drink\Drink_030.mp4
+34,Adjectives,Soft,SSL400\Dataset - Original\Adjectives\Soft\Soft_001.MOV
+324,Verbs,Go,SSL400\Dataset - Original\Verbs\Go\Go_019.mp4
+10,Adjectives,Fat,SSL400\Dataset - Original\Adjectives\Fat\Fat_003.mp4
+254,People,Us,SSL400\Dataset - Original\People\Us\Us_008.mp4
+49,Adverb,Instead,SSL400\Dataset - Original\Adverb\Instead\Instead_001.mp4
+41,Adverb,Again,SSL400\Dataset - Original\Adverb\Again\Again_016.mp4
+156,Nouns,Money,SSL400\Dataset - Original\Nouns\Money\Money_009.mp4
+15,Adjectives,Hard,SSL400\Dataset - Original\Adjectives\Hard\Hard_010.MOV
+369,Verbs,Tell,SSL400\Dataset - Original\Verbs\Tell\Tell_025.mp4
+275,Preposition,Near,SSL400\Dataset - Original\Preposition\Near\Near_003.mp4
+345,Verbs,Order,SSL400\Dataset - Original\Verbs\Order\Order_008.mp4
+129,Nouns,Culture,SSL400\Dataset - Original\Nouns\Culture\Culture_002.mp4
+31,Adjectives,Same,SSL400\Dataset - Original\Adjectives\Same\Same_005.mp4
+320,Verbs,Fight,SSL400\Dataset - Original\Verbs\Fight\Fight_014.mp4
+267,Places,Road,SSL400\Dataset - Original\Places\Road\Road_007.MOV
+174,Nouns,Ring,SSL400\Dataset - Original\Nouns\Ring\Ring_014.MP4
+106,Months,March,SSL400\Dataset - Original\Months\March\March_008.mov
+103,Months,January,SSL400\Dataset - Original\Months\January\January_011.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_001.mp4
+116,Nouns,Book,SSL400\Dataset - Original\Nouns\Book\Book_007.mp4
+135,Nouns,Fever,SSL400\Dataset - Original\Nouns\Fever\Fever_010.mp4
+93,Greetings,Alright,SSL400\Dataset - Original\Greetings\Alright\Alright_021.MOV
+111,Months,September,SSL400\Dataset - Original\Months\September\September_001.mov
+140,Nouns,Hat,SSL400\Dataset - Original\Nouns\Hat\Hat_004.MOV
+263,Places,House,SSL400\Dataset - Original\Places\House\House_016.mp4
+93,Greetings,Alright,SSL400\Dataset - Original\Greetings\Alright\Alright_005.MOV
+285,Vehicles,Bus,SSL400\Dataset - Original\Vehicles\Bus\Bus_001.mov
+68,Colors,Yellow,SSL400\Dataset - Original\Colors\Yellow\Yellow_040.MOV
+4,Adjectives,Deaf,SSL400\Dataset - Original\Adjectives\Deaf\Deaf_007.mp4
+364,Verbs,Swim,SSL400\Dataset - Original\Verbs\Swim\Swim_004.mp4
+256,People,Younger bro,SSL400\Dataset - Original\People\Younger bro\Younger bro_020.mp4
+115,Nouns,Bed,SSL400\Dataset - Original\Nouns\Bed\Bed_009.MP4
+87,Days,Tomorrow,SSL400\Dataset - Original\Days\Tomorrow\Tomorrow_014.MP4
+91,Days,Yesterday,SSL400\Dataset - Original\Days\Yesterday\Yesterday_014.MP4
+159,Nouns,My,SSL400\Dataset - Original\Nouns\My\My_008.mov
+354,Verbs,See,SSL400\Dataset - Original\Verbs\See\See_031.mov
+177,Nouns,Shirt,SSL400\Dataset - Original\Nouns\Shirt\Shirt_013.MOV
+243,People,Man,SSL400\Dataset - Original\People\Man\Man_017.mp4
+243,People,Man,SSL400\Dataset - Original\People\Man\Man_024.mov
+34,Adjectives,Soft,SSL400\Dataset - Original\Adjectives\Soft\Soft_004.MOV
+272,Preposition,Around,SSL400\Dataset - Original\Preposition\Around\Around_005.mp4
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_027.MOV
+177,Nouns,Shirt,SSL400\Dataset - Original\Nouns\Shirt\Shirt_016.MOV
+233,People,Elder bro,SSL400\Dataset - Original\People\Elder bro\Elder bro_003.mp4
+356,Verbs,Sell,SSL400\Dataset - Original\Verbs\Sell\Sell_008.mp4
+319,Verbs,Feel,SSL400\Dataset - Original\Verbs\Feel\Feel_007.mp4
+305,Verbs,Cook,SSL400\Dataset - Original\Verbs\Cook\Cook_009.mp4
+99,Months,April,SSL400\Dataset - Original\Months\April\April_004.mov
+114,Nouns,Bag,SSL400\Dataset - Original\Nouns\Bag\Bag_005.MOV
+5,Adjectives,Deep,SSL400\Dataset - Original\Adjectives\Deep\Deep_010.MOV
+133,Nouns,Eyes,SSL400\Dataset - Original\Nouns\Eyes\Eyes_003.mp4
+126,Nouns,Computer,SSL400\Dataset - Original\Nouns\Computer\Computer_009.MOV
+311,Verbs,Dance,SSL400\Dataset - Original\Verbs\Dance\Dance_002.mov
+243,People,Man,SSL400\Dataset - Original\People\Man\Man_043.MOV
+61,Colors,Green,SSL400\Dataset - Original\Colors\Green\Green_016.mp4
+220,Numbers,Addition,SSL400\Dataset - Original\Numbers\Addition\Addition_002.mov
+93,Greetings,Alright,SSL400\Dataset - Original\Greetings\Alright\Alright_010.MOV
+109,Months,November,SSL400\Dataset - Original\Months\November\November_003.mov
+130,Nouns,Door,SSL400\Dataset - Original\Nouns\Door\Door_007.mp4
+223,Numbers,Equal,SSL400\Dataset - Original\Numbers\Equal\Equal_002.mp4
+89,Days,Wednesday,SSL400\Dataset - Original\Days\Wednesday\Wednesday_001.MOV
+263,Places,House,SSL400\Dataset - Original\Places\House\House_029.mp4
+215,Numbers,5. five,SSL400\Dataset - Original\Numbers\5. five\5. five_004.mp4
+152,Nouns,Lock,SSL400\Dataset - Original\Nouns\Lock\Lock_009.MP4
+151,Nouns,List,SSL400\Dataset - Original\Nouns\List\List_006.mp4
+88,Days,Tuesday,SSL400\Dataset - Original\Days\Tuesday\Tuesday_003.mov
+347,Verbs,Play,SSL400\Dataset - Original\Verbs\Play\Play_021.mp4
+85,Days,Time,SSL400\Dataset - Original\Days\Time\Time_012.MOV
+55,Colors,Black,SSL400\Dataset - Original\Colors\Black\Black_008.mp4
+183,Nouns,Squirrel,SSL400\Dataset - Original\Nouns\Squirrel\Squirrel_004.mp4
+330,Verbs,How,SSL400\Dataset - Original\Verbs\How\How_002.mov
+283,Vehicles,Bicycle,SSL400\Dataset - Original\Vehicles\Bicycle\Bicycle_003.mov
+68,Colors,Yellow,SSL400\Dataset - Original\Colors\Yellow\Yellow_023.MOV
+131,Nouns,Elephant,SSL400\Dataset - Original\Nouns\Elephant\Elephant_005.mp4
+243,People,Man,SSL400\Dataset - Original\People\Man\Man_045.MP4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_069.mp4
+110,Months,October,SSL400\Dataset - Original\Months\October\October_003.mp4
+178,Nouns,Sign,SSL400\Dataset - Original\Nouns\Sign\Sign_009.mp4
+159,Nouns,My,SSL400\Dataset - Original\Nouns\My\My_023.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_032.MOV
+309,Verbs,Cry,SSL400\Dataset - Original\Verbs\Cry\Cry_008.mp4
+156,Nouns,Money,SSL400\Dataset - Original\Nouns\Money\Money_015.mp4
+315,Verbs,Eat,SSL400\Dataset - Original\Verbs\Eat\Eat_003.mp4
+267,Places,Road,SSL400\Dataset - Original\Places\Road\Road_003.MOV
+20,Adjectives,Loose,SSL400\Dataset - Original\Adjectives\Loose\Loose_005.MOV
+233,People,Elder bro,SSL400\Dataset - Original\People\Elder bro\Elder bro_020.mp4
+284,Vehicles,Boat,SSL400\Dataset - Original\Vehicles\Boat\Boat_015.MOV
+230,People,Child,SSL400\Dataset - Original\People\Child\Child_014.MOV
+69,Conjunctions,Or,SSL400\Dataset - Original\Conjunctions\Or\Or_002.mp4
+9,Adjectives,Fast,SSL400\Dataset - Original\Adjectives\Fast\Fast_003.MOV
+211,Numbers,2. two,SSL400\Dataset - Original\Numbers\2. two\2. two_017.mov
+152,Nouns,Lock,SSL400\Dataset - Original\Nouns\Lock\Lock_006.MOV
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_003.mp4
+328,Verbs,Help,SSL400\Dataset - Original\Verbs\Help\Help_009.mp4
+65,Colors,Purple,SSL400\Dataset - Original\Colors\Purple\Purple_005.mp4
+41,Adverb,Again,SSL400\Dataset - Original\Adverb\Again\Again_012.mp4
+234,People,Elder sister,SSL400\Dataset - Original\People\Elder sister\Elder sister_024.mov
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_047.MOV
+375,Verbs,Use,SSL400\Dataset - Original\Verbs\Use\Use_004.mp4
+102,Months,February,SSL400\Dataset - Original\Months\February\February_005.mov
+41,Adverb,Again,SSL400\Dataset - Original\Adverb\Again\Again_021.mp4
+103,Months,January,SSL400\Dataset - Original\Months\January\January_022.mov
+276,Preposition,On,SSL400\Dataset - Original\Preposition\On\On_002.mp4
+156,Nouns,Money,SSL400\Dataset - Original\Nouns\Money\Money_037.MP4
+243,People,Man,SSL400\Dataset - Original\People\Man\Man_023.mov
+367,Verbs,Teach,SSL400\Dataset - Original\Verbs\Teach\Teach_018.mp4
+342,Verbs,Meet,SSL400\Dataset - Original\Verbs\Meet\Meet_013.mov
+268,Places,Shop,SSL400\Dataset - Original\Places\Shop\Shop_003.MOV
+301,Verbs,Choose,SSL400\Dataset - Original\Verbs\Choose\Choose_003.mp4
+121,Nouns,Cell phone,SSL400\Dataset - Original\Nouns\Cell phone\Cell phone_014.MP4
+209,Numbers,18. eighteen,SSL400\Dataset - Original\Numbers\18. eighteen\18. eighteen_002.mov
+68,Colors,Yellow,SSL400\Dataset - Original\Colors\Yellow\Yellow_004.mp4
+254,People,Us,SSL400\Dataset - Original\People\Us\Us_002.mp4
+77,Days,Hour,SSL400\Dataset - Original\Days\Hour\Hour_017.mp4
+119,Nouns,Cat,SSL400\Dataset - Original\Nouns\Cat\Cat_023.mp4
+187,Nouns,Table,SSL400\Dataset - Original\Nouns\Table\Table_009.MP4
+200,Numbers,1. one,SSL400\Dataset - Original\Numbers\1. one\1. one_007.mp4
+253,People,Uncle,SSL400\Dataset - Original\People\Uncle\Uncle_001.mov
+20,Adjectives,Loose,SSL400\Dataset - Original\Adjectives\Loose\Loose_001.MOV
+349,Verbs,Put,SSL400\Dataset - Original\Verbs\Put\Put_002.mov
+318,Verbs,Exchange,SSL400\Dataset - Original\Verbs\Exchange\Exchange_001.mp4
+16,Adjectives,Healthy,SSL400\Dataset - Original\Adjectives\Healthy\Healthy_015.MOV
+12,Adjectives,Full,SSL400\Dataset - Original\Adjectives\Full\Full_005.mp4
+37,Adjectives,Tight,SSL400\Dataset - Original\Adjectives\Tight\Tight_005.MOV
+32,Adjectives,Senior,SSL400\Dataset - Original\Adjectives\Senior\Senior_001.mp4
+266,Places,Police station,SSL400\Dataset - Original\Places\Police station\Police station_001.mov
+86,Days,Today,SSL400\Dataset - Original\Days\Today\Today_002.mp4
+161,Nouns,,SSL400\Dataset - Original\Nouns\None\None_004.mp4
+168,Nouns,Pencil,SSL400\Dataset - Original\Nouns\Pencil\Pencil_012.MP4
+65,Colors,Purple,SSL400\Dataset - Original\Colors\Purple\Purple_013.mp4
+187,Nouns,Table,SSL400\Dataset - Original\Nouns\Table\Table_012.MP4
+146,Nouns,I,SSL400\Dataset - Original\Nouns\I\I_011.mov
+362,Verbs,Study,SSL400\Dataset - Original\Verbs\Study\Study_004.mov
+162,Nouns,Ok,SSL400\Dataset - Original\Nouns\Ok\Ok_003.mp4
+191,Nouns,Telephone,SSL400\Dataset - Original\Nouns\Telephone\Telephone_016.MP4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_102.mp4
+119,Nouns,Cat,SSL400\Dataset - Original\Nouns\Cat\Cat_010.mp4
+377,Verbs,Walk,SSL400\Dataset - Original\Verbs\Walk\Walk_012.mp4
+18,Adjectives,Independent,SSL400\Dataset - Original\Adjectives\Independent\Independent_002.mp4
+131,Nouns,Elephant,SSL400\Dataset - Original\Nouns\Elephant\Elephant_006.mp4
+242,People,Lady,SSL400\Dataset - Original\People\Lady\Lady_001.mov
+223,Numbers,Equal,SSL400\Dataset - Original\Numbers\Equal\Equal_016.mov
+255,People,Wife,SSL400\Dataset - Original\People\Wife\Wife_002.mov
+61,Colors,Green,SSL400\Dataset - Original\Colors\Green\Green_008.mp4
+180,Nouns,Skirt,SSL400\Dataset - Original\Nouns\Skirt\Skirt_019.MOV
+1,Adjectives,Beautiful,SSL400\Dataset - Original\Adjectives\Beautiful\Beautiful_002.mp4
+119,Nouns,Cat,SSL400\Dataset - Original\Nouns\Cat\Cat_012.mp4
+378,Verbs,Want,SSL400\Dataset - Original\Verbs\Want\Want_008.mp4
+6,Adjectives,Different,SSL400\Dataset - Original\Adjectives\Different\Different_004.mp4
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_049.mov
+325,Verbs,Guide,SSL400\Dataset - Original\Verbs\Guide\Guide_001.mp4
+23,Adjectives,Nice,SSL400\Dataset - Original\Adjectives\Nice\Nice_002.MOV
+91,Days,Yesterday,SSL400\Dataset - Original\Days\Yesterday\Yesterday_001.MOV
+167,Nouns,Peace,SSL400\Dataset - Original\Nouns\Peace\Peace_001.mp4
+14,Adjectives,Happy,SSL400\Dataset - Original\Adjectives\Happy\Happy_006.mp4
+172,Nouns,Problem,SSL400\Dataset - Original\Nouns\Problem\Problem_008.mp4
+168,Nouns,Pencil,SSL400\Dataset - Original\Nouns\Pencil\Pencil_008.MP4
+135,Nouns,Fever,SSL400\Dataset - Original\Nouns\Fever\Fever_006.mp4
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_006.mp4
+67,Colors,White,SSL400\Dataset - Original\Colors\White\White_012.mp4
+76,Days,Good night,SSL400\Dataset - Original\Days\Good night\Good night_002.mov
+233,People,Elder bro,SSL400\Dataset - Original\People\Elder bro\Elder bro_007.mp4
+305,Verbs,Cook,SSL400\Dataset - Original\Verbs\Cook\Cook_001.mp4
+68,Colors,Yellow,SSL400\Dataset - Original\Colors\Yellow\Yellow_031.MOV
+352,Verbs,Scratch,SSL400\Dataset - Original\Verbs\Scratch\Scratch_002.mov
+35,Adjectives,Strong,SSL400\Dataset - Original\Adjectives\Strong\Strong_003.MOV
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_038.MOV
+315,Verbs,Eat,SSL400\Dataset - Original\Verbs\Eat\Eat_041.mp4
+173,Nouns,Radio,SSL400\Dataset - Original\Nouns\Radio\Radio_009.MOV
+14,Adjectives,Happy,SSL400\Dataset - Original\Adjectives\Happy\Happy_005.mp4
+317,Verbs,Erase,SSL400\Dataset - Original\Verbs\Erase\Erase_006.mp4
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_016.MOV
+125,Nouns,Clothing,SSL400\Dataset - Original\Nouns\Clothing\Clothing_014.MOV
+351,Verbs,Run,SSL400\Dataset - Original\Verbs\Run\Run_013.mp4
+286,Vehicles,Car,SSL400\Dataset - Original\Vehicles\Car\Car_002.mov
+219,Numbers,9. nine,SSL400\Dataset - Original\Numbers\9. nine\9. nine_005.mov
+57,Colors,Brown,SSL400\Dataset - Original\Colors\Brown\Brown_001.mp4
+150,Nouns,Laptop,SSL400\Dataset - Original\Nouns\Laptop\Laptop_008.MOV
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_082.mp4
+316,Verbs,Enter,SSL400\Dataset - Original\Verbs\Enter\Enter_005.mp4
+359,Verbs,Sleep,SSL400\Dataset - Original\Verbs\Sleep\Sleep_024.mp4
+200,Numbers,1. one,SSL400\Dataset - Original\Numbers\1. one\1. one_013.mov
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_004.mp4
+191,Nouns,Telephone,SSL400\Dataset - Original\Nouns\Telephone\Telephone_010.MOV
+238,People,Grand father,SSL400\Dataset - Original\People\Grand father\Grand father_024.mov
+198,Nouns,Window,SSL400\Dataset - Original\Nouns\Window\Window_007.MOV
+338,Verbs,Listen,SSL400\Dataset - Original\Verbs\Listen\Listen_004.mp4
+314,Verbs,Drink,SSL400\Dataset - Original\Verbs\Drink\Drink_016.mp4
+33,Adjectives,Small,SSL400\Dataset - Original\Adjectives\Small\Small_005.mp4
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_058.mp4
+156,Nouns,Money,SSL400\Dataset - Original\Nouns\Money\Money_006.mp4
+312,Verbs,Done,SSL400\Dataset - Original\Verbs\Done\Done_005.mp4
+324,Verbs,Go,SSL400\Dataset - Original\Verbs\Go\Go_009.mp4
+359,Verbs,Sleep,SSL400\Dataset - Original\Verbs\Sleep\Sleep_013.mp4
+16,Adjectives,Healthy,SSL400\Dataset - Original\Adjectives\Healthy\Healthy_006.MOV
+244,People,Mother,SSL400\Dataset - Original\People\Mother\Mother_002.mp4
+77,Days,Hour,SSL400\Dataset - Original\Days\Hour\Hour_035.MP4
+150,Nouns,Laptop,SSL400\Dataset - Original\Nouns\Laptop\Laptop_001.MOV
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_055.mov
+156,Nouns,Money,SSL400\Dataset - Original\Nouns\Money\Money_011.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_094.mp4
+334,Verbs,Laugh,SSL400\Dataset - Original\Verbs\Laugh\Laugh_003.mov
+199,Nouns,You,SSL400\Dataset - Original\Nouns\You\You_042.mov
+344,Verbs,Open,SSL400\Dataset - Original\Verbs\Open\Open_001.mp4
+359,Verbs,Sleep,SSL400\Dataset - Original\Verbs\Sleep\Sleep_026.mov
+89,Days,Wednesday,SSL400\Dataset - Original\Days\Wednesday\Wednesday_018.mov
+21,Adjectives,Low,SSL400\Dataset - Original\Adjectives\Low\Low_003.MOV
+183,Nouns,Squirrel,SSL400\Dataset - Original\Nouns\Squirrel\Squirrel_014.mp4
+66,Colors,Red,SSL400\Dataset - Original\Colors\Red\Red_029.mp4
+68,Colors,Yellow,SSL400\Dataset - Original\Colors\Yellow\Yellow_047.mov
+118,Nouns,Card,SSL400\Dataset - Original\Nouns\Card\Card_005.mp4
+187,Nouns,Table,SSL400\Dataset - Original\Nouns\Table\Table_010.MP4
+244,People,Mother,SSL400\Dataset - Original\People\Mother\Mother_008.mp4
+40,Adjectives,Wrong,SSL400\Dataset - Original\Adjectives\Wrong\Wrong_020.mp4
+342,Verbs,Meet,SSL400\Dataset - Original\Verbs\Meet\Meet_023.mp4
+77,Days,Hour,SSL400\Dataset - Original\Days\Hour\Hour_013.mp4
+310,Verbs,Cut,SSL400\Dataset - Original\Verbs\Cut\Cut_031.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_078.mp4
+378,Verbs,Want,SSL400\Dataset - Original\Verbs\Want\Want_007.mp4
+324,Verbs,Go,SSL400\Dataset - Original\Verbs\Go\Go_002.mp4
+77,Days,Hour,SSL400\Dataset - Original\Days\Hour\Hour_004.mp4
+227,People,Baby,SSL400\Dataset - Original\People\Baby\Baby_001.mov
+336,Verbs,Let,SSL400\Dataset - Original\Verbs\Let\Let_003.mp4
+28,Adjectives,Present,SSL400\Dataset - Original\Adjectives\Present\Present_001.mp4
+282,Preposition,Up,SSL400\Dataset - Original\Preposition\Up\Up_006.mp4
+263,Places,House,SSL400\Dataset - Original\Places\House\House_030.mp4
+137,Nouns,Food,SSL400\Dataset - Original\Nouns\Food\Food_005.mp4
+310,Verbs,Cut,SSL400\Dataset - Original\Verbs\Cut\Cut_023.mp4
+11,Adjectives,Free,SSL400\Dataset - Original\Adjectives\Free\Free_003.mp4
+92,Determiner,No,SSL400\Dataset - Original\Determiner\No\No_002.mov
+183,Nouns,Squirrel,SSL400\Dataset - Original\Nouns\Squirrel\Squirrel_006.mp4
+180,Nouns,Skirt,SSL400\Dataset - Original\Nouns\Skirt\Skirt_001.mp4
+97,Greetings,Thank you,SSL400\Dataset - Original\Greetings\Thank you\Thank you_040.MOV
+177,Nouns,Shirt,SSL400\Dataset - Original\Nouns\Shirt\Shirt_020.MP4
+348,Verbs,Pull,SSL400\Dataset - Original\Verbs\Pull\Pull_007.mp4
+371,Verbs,Think,SSL400\Dataset - Original\Verbs\Think\Think_005.mp4
+379,Verbs,Wash,SSL400\Dataset - Original\Verbs\Wash\Wash_001.mp4
+284,Vehicles,Boat,SSL400\Dataset - Original\Vehicles\Boat\Boat_012.MOV
+24,Adjectives,Not good,SSL400\Dataset - Original\Adjectives\Not good\Not good_001.mov
+224,Numbers,Multiplication,SSL400\Dataset - Original\Numbers\Multiplication\Multiplication_001.mov
+303,Verbs,Come,SSL400\Dataset - Original\Verbs\Come\Come_026.mov
+124,Nouns,Choice,SSL400\Dataset - Original\Nouns\Choice\Choice_001.mp4
+251,People,Son,SSL400\Dataset - Original\People\Son\Son_021.MP4
+382,Verbs,Write,SSL400\Dataset - Original\Verbs\Write\Write_014.mp4
+369,Verbs,Tell,SSL400\Dataset - Original\Verbs\Tell\Tell_005.mp4
+174,Nouns,Ring,SSL400\Dataset - Original\Nouns\Ring\Ring_017.MP4
+268,Places,Shop,SSL400\Dataset - Original\Places\Shop\Shop_007.MOV
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_062.MOV
+114,Nouns,Bag,SSL400\Dataset - Original\Nouns\Bag\Bag_007.MOV
+1,Adjectives,Beautiful,SSL400\Dataset - Original\Adjectives\Beautiful\Beautiful_005.mp4
+164,Nouns,Paint,SSL400\Dataset - Original\Nouns\Paint\Paint_007.MOV
+231,People,Daughter,SSL400\Dataset - Original\People\Daughter\Daughter_003.mov
+369,Verbs,Tell,SSL400\Dataset - Original\Verbs\Tell\Tell_028.mp4
+85,Days,Time,SSL400\Dataset - Original\Days\Time\Time_006.mp4
+263,Places,House,SSL400\Dataset - Original\Places\House\House_037.mp4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_072.mp4
+348,Verbs,Pull,SSL400\Dataset - Original\Verbs\Pull\Pull_008.mp4
+164,Nouns,Paint,SSL400\Dataset - Original\Nouns\Paint\Paint_002.mp4
+309,Verbs,Cry,SSL400\Dataset - Original\Verbs\Cry\Cry_021.mp4
+303,Verbs,Come,SSL400\Dataset - Original\Verbs\Come\Come_030.mov
+156,Nouns,Money,SSL400\Dataset - Original\Nouns\Money\Money_033.MP4
+310,Verbs,Cut,SSL400\Dataset - Original\Verbs\Cut\Cut_028.mp4
+257,People,Younger sister,SSL400\Dataset - Original\People\Younger sister\Younger sister_006.mov
+123,Nouns,Children,SSL400\Dataset - Original\Nouns\Children\Children_004.mp4
+347,Verbs,Play,SSL400\Dataset - Original\Verbs\Play\Play_025.mov
+44,Adverb,Cant,SSL400\Dataset - Original\Adverb\Cant\Cant_002.mov
+89,Days,Wednesday,SSL400\Dataset - Original\Days\Wednesday\Wednesday_017.mov
+52,Adverb,When,SSL400\Dataset - Original\Adverb\When\When_002.mov
+249,People,Sister,SSL400\Dataset - Original\People\Sister\Sister_001.mov
+29,Adjectives,Quick,SSL400\Dataset - Original\Adjectives\Quick\Quick_001.mp4
+240,People,Grand son,SSL400\Dataset - Original\People\Grand son\Grand son_001.mov
+84,Days,Thursday,SSL400\Dataset - Original\Days\Thursday\Thursday_003.mov
+177,Nouns,Shirt,SSL400\Dataset - Original\Nouns\Shirt\Shirt_010.MOV
+13,Adjectives,Good,SSL400\Dataset - Original\Adjectives\Good\Good_044.mp4
+30,Adjectives,Rich,SSL400\Dataset - Original\Adjectives\Rich\Rich_001.mp4
+263,Places,House,SSL400\Dataset - Original\Places\House\House_058.mp4
+251,People,Son,SSL400\Dataset - Original\People\Son\Son_018.MOV
+150,Nouns,Laptop,SSL400\Dataset - Original\Nouns\Laptop\Laptop_011.MOV
+149,Nouns,Key,SSL400\Dataset - Original\Nouns\Key\Key_007.MOV
+275,Preposition,Near,SSL400\Dataset - Original\Preposition\Near\Near_001.mp4
+273,Preposition,In,SSL400\Dataset - Original\Preposition\In\In_006.mp4
+95,Greetings,Hello,SSL400\Dataset - Original\Greetings\Hello\Hello_020.mp4
+206,Numbers,15. fifteen,SSL400\Dataset - Original\Numbers\15. fifteen\15. fifteen_002.mov
+87,Days,Tomorrow,SSL400\Dataset - Original\Days\Tomorrow\Tomorrow_005.MOV
+43,Adverb,Can,SSL400\Dataset - Original\Adverb\Can\Can_010.mov
+125,Nouns,Clothing,SSL400\Dataset - Original\Nouns\Clothing\Clothing_013.MOV
+115,Nouns,Bed,SSL400\Dataset - Original\Nouns\Bed\Bed_014.MP4
+314,Verbs,Drink,SSL400\Dataset - Original\Verbs\Drink\Drink_012.mp4
+342,Verbs,Meet,SSL400\Dataset - Original\Verbs\Meet\Meet_003.mp4
+382,Verbs,Write,SSL400\Dataset - Original\Verbs\Write\Write_006.mp4
+232,People,Doctor,SSL400\Dataset - Original\People\Doctor\Doctor_004.mp4
+230,People,Child,SSL400\Dataset - Original\People\Child\Child_013.MOV
