@@ -270,6 +270,8 @@ def build_dataset(
     dataset = dataset.batch(batch_size, drop_remainder=False)
 
     if prefetch:
+        # User has Colab Pro with 167GB System RAM + A100 GPU
+        # Re-enabling AUTOTUNE to maximize data throughput and prevent GPU starvation
         dataset = dataset.prefetch(tf.data.AUTOTUNE)
 
     return dataset
