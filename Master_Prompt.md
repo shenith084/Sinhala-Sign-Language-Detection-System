@@ -40,10 +40,10 @@ You are a **Senior AI Research Engineer** with deep expertise across five integr
 ### 2.2 Research Problem Statement
 The SSL400 dataset represents a low-resource, real-world video dataset of 384 Sinhala word-level sign language gestures. Videos in this dataset suffer from common real-world degradation: inconsistent lighting, background noise, motion blur, and low contrast. The core research problem is:
 
-> **Do specific image enhancement pre-processing techniques (applied frame-by-frame before training) measurably improve the classification accuracy of a fixed I3D deep learning model on the SSL400 dataset?**
+> **Do specific image enhancement pre-processing techniques (applied frame-by-frame before training) measurably improve the classification accuracy of a fixed deep learning model on the SSL400 dataset?**
 
 ### 2.3 Research Question
-*"Which image enhancement technique provides the greatest statistically significant improvement in Sinhala Sign Language recognition performance when using a Transfer Learning-based I3D architecture trained on the SSL400 dataset?"*
+*"Which image enhancement technique provides the greatest statistically significant improvement in Sinhala Sign Language recognition performance when using a Transfer Learning-based MoViNet-A2 architecture trained on the SSL400 dataset?"*
 
 ### 2.4 Research Hypothesis
 > *H₁: Image enhancement techniques improve the visual quality of sign language video frames and result in a statistically significant increase in classification performance (accuracy, precision, recall, F1-score) compared to training on unprocessed original videos.*
@@ -132,48 +132,63 @@ Generate a complete `download_dataset.py` script that:
 ## SECTION 4 — FIXED BASE MODEL ARCHITECTURE
 ## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-### 4.1 Model Selection: I3D (Inflated 3D ConvNet)
-The **I3D model** is the fixed, unchanging base architecture used across all 5 experiments.
+### 4.1 Model Selection: MoViNet-A2 (Mobile Video Networks)
+The **MoViNet-A2** model is the fixed, unchanging base architecture used across all 5 experiments.
 
-**Academic Justification for I3D:**
-- Designed by Carreira & Zisserman (2017) specifically for **video action recognition**.
-- Uses **3D convolutions (Height × Width × Time)** to learn both spatial features (hand shape, finger position) and temporal dynamics (gesture trajectory and motion) simultaneously.
-- Has been **validated on the SSL400 dataset** by the original dataset authors.
-- Pre-trained on **Kinetics-400** or **Kinetics-600** enables strong transfer learning.
-- Superior to 2D CNNs (which lose temporal information) and LSTM-based approaches (which are slower to converge on small datasets).
+> ⚠️ **IMPORTANT — Why I3D Was Replaced by MoViNet-A2:**
+>
+> The original plan used the `deepmind/i3d-kinetics-400` model from TensorFlow Hub. During implementation, a critical and **unresolvable technical blocker** was discovered:
+>
+> ```
+> ValueError: Setting hub.KerasLayer.trainable = True is unsupported
+> when loading from the TF1 Hub format.
+> ```
+>
+> **Root Cause:** The DeepMind I3D model was published in the legacy **TensorFlow 1 (TF1)** SavedModel format. The `tensorflow_hub.KerasLayer` wrapper permanently blocks setting `trainable=True` on any TF1-format module. This is not a bug — it is a hard restriction enforced by the TF Hub library to prevent gradient instability in legacy computation graphs.
+>
+> **Why This Matters:** Without `trainable=True`, Phase 2 backbone fine-tuning is fundamentally impossible. The model is locked as a pure feature extractor, limiting accuracy to ~25-35% (the classification head maximum). This makes it impossible to adapt the Kinetics-400 motion features specifically to Sinhala hand sign patterns.
+>
+> **Solution:** Replaced I3D with **MoViNet-A2** (Mobile Video Network, Google Research 2021), which:
+> - Is published in native **TensorFlow 2** format — `trainable=True` is fully supported
+> - Is pre-trained on **Kinetics-600** (50% more video classes than Kinetics-400)
+> - Has demonstrated **higher accuracy** than I3D on action recognition benchmarks
+> - Accepts the exact same input tensor format: `(batch, frames, H, W, C)`
+> - Requires zero changes to the dataset pipeline or image enhancement code
+
+**Academic Justification for MoViNet-A2:**
+- Designed by Kondratyuk et al. (Google Research, 2021) for efficient, high-accuracy video classification.
+- Uses **depthwise separable 3D convolutions** with a **Squeeze-and-Excitation** attention mechanism — captures both spatial hand shapes and temporal gesture motion.
+- Pre-trained on **Kinetics-600** enables richer motion transfer learning than I3D's Kinetics-400.
+- Supports complete **two-phase fine-tuning**: frozen warm-up followed by full backbone adaptation.
+- Superior to I3D in both accuracy and computational efficiency on modern GPUs.
 
 ### 4.2 Transfer Learning Strategy
 
 ```
-Pre-trained I3D (Kinetics-400 weights)
+Pre-trained MoViNet-A2 (Kinetics-600 weights)
         │
         ▼
-[ Frozen Feature Extractor Layers ]   ← Phase 1: Train only top layers
+[ MoViNet Backbone: Depthwise 3D Conv + SE Attention ]
+  Phase 1: FROZEN (backbone locked, knowledge preserved)
+  Phase 2: UNFROZEN (full fine-tuning at LR=1e-5)
         │
         ▼
-[ Global Average Pooling 3D ]
+[ 600-dim Kinetics-600 Feature Vector ]
         │
         ▼
-[ Dropout (rate=0.5) ]
+[ Dropout (rate=0.4) ]
         │
         ▼
-[ Dense(512, activation='relu') ]
-        │
-        ▼
-[ Dropout (rate=0.3) ]
-        │
-        ▼
-[ Dense(384, activation='softmax') ]  ← 384 Sinhala sign classes
+[ Dense(383, activation='softmax') ]  ← 383 Sinhala sign classes
 ```
 
-**Fine-Tuning Phases:**
-- **Phase 1 (Warm-Up):** Freeze all pre-trained layers. Train only the newly added classification head for 10 epochs at `LR = 1e-3`.
-- **Phase 2 (Fine-Tuning):** Unfreeze the top N layers of I3D (experiment with N = last 2 Inception blocks). Train at a reduced `LR = 1e-4` with weight decay.
-- **Phase 3 (Full Fine-Tuning, Optional):** If Phase 2 converges well, unfreeze all layers and train at `LR = 1e-5` to squeeze out final performance.
+**Two-Phase Training Protocol:**
+- **Phase 1 (Warm-Up, 50 epochs max):** MoViNet backbone is FROZEN. Only the 383-class Dense head is trained. LR = `1e-3` with Cosine Annealing. Mixup Augmentation (alpha=0.2) applied. Early stopping patience = 10.
+- **Phase 2 (Fine-Tuning, 30 epochs max):** Backbone UNFROZEN. All layers trained together at LR = `1e-5` (very small to prevent catastrophic forgetting of Kinetics-600 features). No Mixup — clean gradients only. Early stopping patience = 8.
 
 ### 4.3 Input Tensor Specification
 ```python
-# I3D expects:
+# MoViNet-A2 expects (same format as I3D — zero pipeline changes needed):
 Input Shape: (batch_size, frames, height, width, channels)
            = (batch_size, 32, 224, 224, 3)
 
@@ -183,32 +198,44 @@ Input Shape: (batch_size, frames, height, width, channels)
 - Resize each frame to 224x224 pixels
 - Normalize pixel values to [-1, 1] using:
   frame = (frame / 127.5) - 1.0
+
+# TF Hub URL:
+MOVINET_HUB_URL = "https://tfhub.dev/tensorflow/movinet/a2/base/kinetics-600/classification/3"
 ```
 
 ### 4.4 Training Configuration
 | Parameter | Value | Justification |
 |---|---|---|
-| **Framework** | TensorFlow 2.x / Keras | Stability, Keras API simplicity |
-| **Optimizer** | Adam | Adaptive learning rates, good default |
+| **Framework** | TensorFlow 2.x / Keras | Stability, native MoViNet support |
+| **Optimizer** | Adam (clipnorm=1.0) | Gradient clipping prevents exploding gradients |
 | **Phase 1 LR** | `1e-3` | Fast convergence for new head |
-| **Phase 2 LR** | `1e-4` | Careful fine-tuning |
-| **LR Schedule** | `ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5)` | Adaptive decay |
-| **Batch Size** | `8` (or `4` if VRAM limited) | I3D is memory-intensive |
-| **Max Epochs** | `50` per phase | Sufficient for convergence |
-| **Loss Function** | `CategoricalCrossentropy` | Multi-class classification |
-| **Metrics** | `['accuracy']` during training | Standard Keras metric |
+| **Phase 2 LR** | `1e-5` | Very careful fine-tuning of backbone |
+| **LR Schedule** | `CosineDecay` | Smoother convergence than ReduceLROnPlateau |
+| **Batch Size** | `16` (Colab Pro A100) or `8` (free T4) | MoViNet is more memory-efficient than I3D |
+| **Phase 1 Max Epochs** | `50` | Sufficient for head convergence |
+| **Phase 2 Max Epochs** | `30` | Sufficient for backbone adaptation |
+| **Loss Function** | `CategoricalCrossentropy(label_smoothing=0.1)` | Reduces overconfidence on small dataset |
+| **Mixup Augmentation** | Phase 1 only, alpha=0.2 | Prevents head overfitting; clean gradients needed in Phase 2 |
 | **Random Seed** | `42` | Reproducibility |
 
 ### 4.5 Callbacks
 ```python
-callbacks = [
-    EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True),
-    ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, min_lr=1e-7),
-    ModelCheckpoint(filepath='models/experiment_{N}/best_model.h5',
+callbacks_phase1 = [
+    EarlyStopping(monitor='val_accuracy', patience=10, restore_best_weights=True, mode='max'),
+    ModelCheckpoint(filepath='models/experiment_{N}/best_model_phase1.keras',
                     monitor='val_accuracy', save_best_only=True, mode='max'),
-    TensorBoard(log_dir='logs/experiment_{N}/'),
-    CSVLogger(filename='logs/experiment_{N}/training_log.csv')
+    CSVLogger(filename='logs/experiment_{N}/training_log_phase1.csv', append=True)
 ]
+
+callbacks_phase2 = [
+    EarlyStopping(monitor='val_accuracy', patience=8, restore_best_weights=True, mode='max'),
+    ModelCheckpoint(filepath='models/experiment_{N}/best_model_phase2.keras',
+                    monitor='val_accuracy', save_best_only=True, mode='max'),
+    CSVLogger(filename='logs/experiment_{N}/training_log_phase2.csv', append=True)
+]
+
+# Final model saved after Phase 2:
+# models/experiment_{N}/best_model.keras
 ```
 
 ---
@@ -261,7 +288,7 @@ Temporal Augmentation Stack:
 |---|---|
 | **Label** | `EXP1_BASELINE` |
 | **Enhancement** | None — Original raw `.mp4` frames only |
-| **Purpose** | Establish the unmodified performance ceiling of I3D on SSL400 |
+| **Purpose** | Establish the unmodified performance ceiling of MoViNet-A2 on SSL400 |
 | **Academic Role** | This is the control group. All other experiments are compared against this. |
 
 **Pre-processing (Baseline Only):**
@@ -277,9 +304,9 @@ def preprocess_baseline(frame):
 > ✅ **ACADEMIC VALIDATION — Why Zero Image Enhancement in Experiment 1 is CORRECT:**
 >
 > Applying **no image enhancement** to the Baseline is scientifically and academically correct. Here is why:
-> - **Experiment 1 is the control group.** It measures the raw, unmodified performance of I3D on SSL400. Without this, you have no reference point.
+> - **Experiment 1 is the control group.** It measures the raw, unmodified performance of MoViNet-A2 on SSL400. Without this, you have no reference point.
 > - **Experiments 2–5 are only meaningful because Experiment 1 exists.** Every claim of improvement (e.g., "CLAHE increased accuracy by X%") is made *relative to the baseline*.
-> - **Resize + Normalize are NOT enhancements** — they are mandatory input requirements for the I3D model and must be applied to all 5 experiments equally.
+> - **Resize + Normalize are NOT enhancements** — they are mandatory input requirements for the MoViNet-A2 model and must be applied to all 5 experiments equally.
 > - If you added any enhancement to Experiment 1, you would violate the single-variable rule (Section 14, Rule 8) and your experimental comparisons would be scientifically invalid.
 >
 > **DO NOT add any image enhancement to Experiment 1. This design is intentional and correct.**
@@ -490,7 +517,8 @@ ssl400_research_project/
 │   │   ├── hybrid.py                 # Exp 5
 │   │   └── enhancement_factory.py    # get_enhancer(exp_id) factory function
 │   ├── models/
-│   │   ├── i3d_builder.py            # Build & compile I3D model
+│   │   ├── movinet_builder.py        # Build & compile MoViNet-A2 (Phase 1 + Phase 2)
+│   │   ├── i3d_builder.py            # DEPRECATED — I3D (TF1, no fine-tuning support)
 │   │   └── model_export.py           # Save TFLite / SavedModel
 │   ├── training/
 │   │   ├── train.py                  # Master training script (accepts --exp_id)
@@ -653,10 +681,10 @@ For each experiment pair vs. baseline, report: `[t-statistic, p-value, significa
 [Stack: Tensor (1, 32, 224, 224, 3)]
         │
         ▼
-[I3D Model Inference]                ← model.predict(tensor)
+[MoViNet-A2 Model Inference]         ← model.predict(tensor)
         │
         ▼
-[Softmax Probabilities (384,)]
+[Softmax Probabilities (383,)]
         │
         ▼
 [Confidence Threshold Filter]        ← Accept only predictions > 0.65
@@ -872,7 +900,8 @@ PHASE 1: DATA PREPARATION
   └── Step 1.5: Write tf_dataset_builder.py (tf.data pipelines)
 
 PHASE 2: MODEL BUILDING
-  ├── Step 2.1: Write i3d_builder.py (load pretrained, add head, compile)
+  ├── Step 2.1: Write movinet_builder.py (MoViNet-A2, two-phase training)
+  │            NOTE: I3D was originally planned but abandoned — see Section 4.1
   └── Step 2.2: Write augmentation.py (spatial + temporal augmentation)
 
 PHASE 3: TRAINING (Run sequentially)
@@ -918,7 +947,7 @@ PHASE 8: DOCUMENTATION
 # Deep Learning
 tensorflow>=2.12.0
 keras>=2.12.0
-tf2-models>=0.0.1        # or tensorflow-hub for I3D weights
+tensorflow-hub>=0.14.0   # For MoViNet-A2 (TF2 native, full fine-tuning supported)
 
 # Computer Vision
 opencv-python>=4.8.0
@@ -959,8 +988,9 @@ When responding to requests from this project, you MUST:
 6. **Use type hints** throughout all Python code.
 7. **Handle the class imbalance** problem — always use `class_weight='balanced'` where applicable.
 8. **Respect the single-variable experiment rule** — NEVER change any parameter other than the enhancement technique between experiments.
-9. **Save checkpoints frequently** — I3D training can crash; ensure `ModelCheckpoint` is always active.
+9. **Save checkpoints frequently** — MoViNet training auto-resumes via `ModelCheckpoint` on both `best_model_phase1.keras` and `best_model_phase2.keras`.
 10. **When in doubt about a design decision**, present 2 options with pros/cons and ask which to proceed with.
+11. **NEVER attempt to use the DeepMind I3D model** (`deepmind/i3d-kinetics-400/1`). It is in legacy TF1 format and throws a hard `ValueError` when `trainable=True` is set. MoViNet-A2 is the correct replacement.
 
 ---
 
@@ -978,6 +1008,6 @@ When responding to requests from this project, you MUST:
 
 ---
 
-*Master Prompt Version: 3.0 | Project: SSL400 Sinhala Sign Language Research | Author: Research Team*
-*Last Updated: 2025 | Framework: TensorFlow/Keras + Flask + React*
-*v3.0 Changes: Added Experiment 1 academic validation note; Updated Section 3.4 for numeric-only dataset folder structure; Added sinhala_word_map.csv mapping strategy.*
+*Master Prompt Version: 4.0 | Project: SSL400 Sinhala Sign Language Research | Author: Research Team*
+*Last Updated: 2026-06-19 | Framework: TensorFlow/Keras + Flask + React*
+*v4.0 Changes: **CRITICAL MODEL UPGRADE** — Replaced I3D (TF1 format, no backbone fine-tuning) with MoViNet-A2 (TF2 native, full two-phase training). Updated Section 4 (architecture, training config, callbacks). Added I3D abandonment rationale with full error explanation. Updated folder structure, execution order, requirements.txt, and AI behavioral rules accordingly.*

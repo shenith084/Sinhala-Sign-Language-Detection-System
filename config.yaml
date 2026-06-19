@@ -80,21 +80,25 @@ normalization:
   shift: 1.0
 
 # ── Model Architecture ───────────────────────────────────────
+# UPGRADED: MoViNet-A2 (TF2) replaces I3D (TF1) to enable Phase 2 backbone
+# fine-tuning. MoViNet is trained on Kinetics-600 (superior to I3D Kinetics-400)
+# and natively supports trainable=True — I3D blocked this with a ValueError.
 model:
-  hub_url: "https://tfhub.dev/deepmind/i3d-kinetics-400/1"
+  hub_url: "https://tfhub.dev/tensorflow/movinet/a2/base/kinetics-600/classification/3"
   input_shape: [32, 224, 224, 3]
   num_classes: 383          # Confirmed by dataset_scanner.py (4236 total videos)
-  dropout_1: 0.5
+  dropout_1: 0.4            # MoViNet needs less regularization than I3D
   dense_units: 512
   dropout_2: 0.3
 
 # ── Training Hyperparameters ─────────────────────────────────
 training:
-  max_epochs_phase1: 50    # Warm-up: only classification head
+  max_epochs_phase1: 50    # Warm-up: train head only (backbone frozen)
+  max_epochs_phase2: 30    # Fine-tune: full backbone unfrozen
   batch_size_train: 8
   batch_size_val: 8
-  lr_phase1: 0.001        # 1e-4
-  lr_phase3: 0.00001       # 1e-5 (optional full fine-tune)
+  lr_phase1: 0.001         # 1e-3 for head warm-up
+  lr_phase2: 0.00001       # 1e-5 VERY small to avoid destroying Kinetics-600 weights
   weight_decay: 0.0001
   label_smoothing: 0.1     # Helps with class imbalance
 
