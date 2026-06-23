@@ -1,31 +1,14 @@
-# ============================================================
-# SSL400 Sinhala Sign Language Research Project
-# requirements.txt
-# Python 3.12 compatible
-# ============================================================
-
-# ── Deep Learning ────────────────────────────────────────────
-tensorflow==2.16.1
-tensorflow-hub>=0.16.0
-keras>=3.3.0
-
-# ── Computer Vision ──────────────────────────────────────────
-opencv-python>=4.8.0
-Pillow>=10.0.0
-
-# ── Data Science ─────────────────────────────────────────────
-numpy>=1.26.0
-pandas>=2.0.0
-scikit-learn>=1.4.0
-scipy>=1.12.0
-matplotlib>=3.8.0
-seaborn>=0.13.0
-
-# ── Backend ──────────────────────────────────────────────────
-flask>=3.0.0
-flask-cors>=4.0.0
-gunicorn>=21.0.0
-
-# ── Utilities ────────────────────────────────────────────────
-tqdm>=4.66.0
-pyyaml>=6.0.0
+tensorflow>=2.16.0
+tf-keras>=2.16.0
+tf-models-official>=2.16.0
+numpy
+pandas
+scikit-learn
+opencv-python
+matplotlib
+seaborn
+tqdm
+pyyaml
+Pillow
+Flask
+flask-cors

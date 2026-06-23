@@ -1,39 +1,75 @@
+import os
 import sys
+import threading
 from pathlib import Path
+import numpy as np
 import tensorflow as tf
-from backend.utils.logger import get_logger
 
-logger = get_logger(__name__)
+# Import MoViNet so Keras registers the custom layers
+from official.projects.movinet.modeling import movinet
+from official.projects.movinet.modeling import movinet_model
 
-_MODEL = None
-_TARGET_FRAMES = 32
+from utils.logger import logger
 
-def load_model(exp_id: int, config: dict):
-    global _MODEL, _TARGET_FRAMES
-    exp_config = config["experiments"][exp_id]
-    model_path = Path(exp_config["model_dir"]) / "best_model.keras"
-    
-    if not model_path.exists():
-        logger.error(f"Model not found at {model_path}. Train or generate dummy model first.")
-        sys.exit(1)
-        
-    logger.info(f"Loading Model for EXP{exp_id}: {exp_config['name']} ...")
-    import tensorflow_hub as hub
-    from src.models.i3d_builder import SSL400I3DModel
-    _MODEL = tf.keras.models.load_model(str(model_path), custom_objects={
-        'SSL400I3DModel': SSL400I3DModel,
-        'KerasLayer': hub.KerasLayer
-    }, compile=False)
-    _TARGET_FRAMES = config["video"]["target_frames"]
-    logger.info("Model loaded successfully.")
+# Add src to path to import models if needed
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-def get_model():
-    return _MODEL
+class ModelService:
+    _instance = None
+    _lock = threading.Lock()
 
-def get_target_frames() -> int:
-    return _TARGET_FRAMES
+    def __new__(cls):
+        with cls._lock:
+            if cls._instance is None:
+                cls._instance = super(ModelService, cls).__new__(cls)
+                cls._instance._initialized = False
+            return cls._instance
 
-def predict_batch(batch_clip: tf.Tensor):
-    if _MODEL is None:
-        raise ValueError("Model is not loaded.")
-    return _MODEL.predict(batch_clip, verbose=0)[0]
+    def __init__(self):
+        if self._initialized:
+            return
+            
+        self.model = None
+        self.active_exp_id = None
+        self.model_lock = threading.Lock()
+        self._initialized = True
+
+    def load_model(self, exp_id: int, model_path: str) -> bool:
+        """Load a Keras model into memory in a thread-safe way."""
+        path = Path(model_path)
+        if not path.exists():
+            logger.error(f"Model path not found: {path}")
+            return False
+
+        with self.model_lock:
+            try:
+                logger.info(f"Loading EXP{exp_id} model from {path}...")
+                os.environ["TF_USE_LEGACY_KERAS"] = "1"
+                try:
+                    import tf_keras as keras
+                except ImportError:
+                    keras = tf.keras
+                    
+                self.model = keras.models.load_model(str(path))
+                self.active_exp_id = exp_id
+                
+                # Warmup inference
+                dummy = np.random.randn(1, 32, 224, 224, 3).astype(np.float32)
+                self.model.predict(dummy, verbose=0)
+                
+                logger.info(f"✅ Successfully loaded and warmed up EXP{exp_id} model.")
+                return True
+            except Exception as e:
+                logger.error(f"Failed to load model: {e}")
+                return False
+
+    def predict(self, tensor: np.ndarray) -> np.ndarray:
+        """Run inference on a preprocessed tensor."""
+        if self.model is None:
+            raise ValueError("No model loaded.")
+            
+        with self.model_lock:
+            logits = self.model.predict(tensor, verbose=0)
+            probs = tf.nn.softmax(logits[0]).numpy()
+            return probs

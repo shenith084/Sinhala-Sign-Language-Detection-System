@@ -1,181 +1,111 @@
 """
 generate_splits.py
 ==================
-Phase 1, Step 1.1 — Stratified Train/Val/Test Split Generator
-
-Reads the video_index.csv (produced by dataset_scanner.py) and creates
-stratified 70/10/20 splits. The resulting CSVs are shared identically
-across ALL 5 experiments — only the enhancement function changes per
-experiment, not the data split.
-
-Usage:
-    python src/data/generate_splits.py
+Generates train/val/test splits (70/10/20) for the SSL400 dataset.
+Pure Python implementation (no pandas/sklearn required).
 """
 
-import logging
-import yaml
-import pandas as pd
+import csv
+import random
 from pathlib import Path
-from sklearn.model_selection import train_test_split
 
-# ── Logging ──────────────────────────────────────────────────────────────────
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    datefmt="%H:%M:%S",
-)
-logger = logging.getLogger(__name__)
+# Fix seed for reproducible splits
+random.seed(42)
 
+def main():
+    base_dir = Path("SSL400/Dataset - Original")
+    output_dir = Path("data/splits")
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-def load_config(path: str = "config.yaml") -> dict:
-    """Load YAML configuration file."""
-    with open(path, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+    # Auto-detect classes from folders
+    all_classes = []
+    for category_dir in base_dir.iterdir():
+        if category_dir.is_dir():
+            for word_dir in category_dir.iterdir():
+                if word_dir.is_dir():
+                    all_classes.append(word_dir.name)
+    all_classes = sorted(list(set(all_classes)))
+    
+    # Auto-generate or load Sinhala word map
+    class_map = {}
+    map_path = output_dir / "sinhala_word_map.csv"
+    
+    if map_path.exists():
+        with open(map_path, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                class_map[row["class_name_english"]] = int(row["class_id"])
+                
+        # If the map doesn't have our current folders, we need to regenerate
+        if not all(c in class_map for c in all_classes):
+            print("Existing word map does not match current folders. Regenerating...")
+            class_map = {}
+            
+    if not class_map:
+        print(f"Generating new word map for {len(all_classes)} classes...")
+        with open(map_path, "w", encoding="utf-8", newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(["class_id", "class_name_sinhala", "class_name_english"])
+            for idx, c in enumerate(all_classes):
+                writer.writerow([idx, c, c]) # Placeholder sinhala name
+                class_map[c] = idx
 
+    # Gather all video files
+    all_videos = []
+    for ext in ["*.mp4", "*.avi", "*.mov"]:
+        for file in base_dir.rglob(ext):
+            class_name = file.parent.name
+            if class_name in class_map:
+                all_videos.append({
+                    "video_path": str(file).replace("\\", "/"),
+                    "class_name": class_name,
+                    "class_id": class_map[class_name]
+                })
 
-def generate_splits(
-    video_index_path: Path,
-    splits_dir: Path,
-    train_ratio: float = 0.70,
-    val_ratio: float = 0.10,
-    test_ratio: float = 0.20,
-    seed: int = 42,
-) -> None:
-    """
-    Create stratified train/val/test splits from a video index CSV.
+    print(f"Found {len(all_videos)} valid videos across {len(class_map)} classes.")
 
-    Strategy:
-        1. First split: (train+val) vs test  at ratio (80% vs 20%)
-        2. Second split: train vs val         at ratio (87.5% vs 12.5%)
-           → 70% train, 10% val of total
+    # Group by class
+    by_class = {}
+    for v in all_videos:
+        c_id = v["class_id"]
+        if c_id not in by_class:
+            by_class[c_id] = []
+        by_class[c_id].append(v)
 
-    The same indices are reused identically across all 5 experiments.
+    # Stratified split
+    train_data, val_data, test_data = [], [], []
 
-    Args:
-        video_index_path: Path to data/splits/video_index.csv
-        splits_dir:       Output directory for split CSVs
-        train_ratio:      Fraction of data for training (default 0.70)
-        val_ratio:        Fraction of data for validation (default 0.10)
-        test_ratio:       Fraction of data for testing (default 0.20)
-        seed:             Random seed for reproducibility (default 42)
+    for c_id, vids in by_class.items():
+        random.shuffle(vids)
+        total = len(vids)
+        
+        train_count = int(total * 0.70)
+        val_count = int(total * 0.10)
+        
+        # Ensure at least 1 for val and test if possible
+        if val_count == 0 and total >= 3:
+            val_count = 1
+        if (total - train_count - val_count) == 0 and total >= 2:
+            train_count -= 1
 
-    Raises:
-        FileNotFoundError: If video_index.csv does not exist
-        ValueError:        If ratios do not sum to 1.0
-    """
-    assert abs(train_ratio + val_ratio + test_ratio - 1.0) < 1e-6, \
-        "Train/val/test ratios must sum to 1.0"
+        train_data.extend(vids[:train_count])
+        val_data.extend(vids[train_count:train_count+val_count])
+        test_data.extend(vids[train_count+val_count:])
 
-    if not video_index_path.exists():
-        raise FileNotFoundError(
-            f"Video index not found: {video_index_path}\n"
-            "Run dataset_scanner.py first."
-        )
+    # Save to CSV
+    def save_csv(data, filename):
+        path = output_dir / filename
+        with open(path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=["video_path", "class_name", "class_id"])
+            writer.writeheader()
+            writer.writerows(data)
+        print(f"Saved {len(data)} samples to {path}")
 
-    logger.info(f"Loading video index from: {video_index_path}")
-    df = pd.read_csv(video_index_path)
-    total = len(df)
-    num_classes = df["class_id"].nunique()
-
-    logger.info(f"  Total videos : {total}")
-    logger.info(f"  Num classes  : {num_classes}")
-
-    # ── Filter out classes with only 1 video (can't stratify) ────────────────
-    class_counts = df["class_id"].value_counts()
-    single_video_classes = class_counts[class_counts < 2].index.tolist()
-
-    if single_video_classes:
-        logger.warning(
-            f"  ⚠  {len(single_video_classes)} classes have only 1 video — "
-            "they will go entirely into training (cannot stratify)."
-        )
-        single_df = df[df["class_id"].isin(single_video_classes)].copy()
-        df = df[~df["class_id"].isin(single_video_classes)].copy()
-    else:
-        single_df = pd.DataFrame()
-
-    # ── Split 1: (train+val) vs test ─────────────────────────────────────────
-    trainval_df, test_df = train_test_split(
-        df,
-        test_size=test_ratio,
-        stratify=df["class_id"],
-        random_state=seed,
-    )
-
-    # ── Split 2: train vs val ─────────────────────────────────────────────────
-    val_ratio_adjusted = val_ratio / (train_ratio + val_ratio)
-    train_df, val_df = train_test_split(
-        trainval_df,
-        test_size=val_ratio_adjusted,
-        stratify=trainval_df["class_id"],
-        random_state=seed,
-    )
-
-    # ── Merge single-video classes into training ──────────────────────────────
-    if not single_df.empty:
-        train_df = pd.concat([train_df, single_df], ignore_index=True)
-
-    # ── Save splits ───────────────────────────────────────────────────────────
-    splits_dir.mkdir(parents=True, exist_ok=True)
-
-    train_path = splits_dir / "train_split.csv"
-    val_path   = splits_dir / "val_split.csv"
-    test_path  = splits_dir / "test_split.csv"
-
-    train_df.to_csv(train_path, index=False)
-    val_df.to_csv(val_path,     index=False)
-    test_df.to_csv(test_path,   index=False)
-
-    logger.info("")
-    logger.info("  Split Results:")
-    logger.info(f"  ├── Train : {len(train_df):>5} videos  ({len(train_df)/total*100:.1f}%)")
-    logger.info(f"  ├── Val   : {len(val_df):>5} videos  ({len(val_df)/total*100:.1f}%)")
-    logger.info(f"  └── Test  : {len(test_df):>5} videos  ({len(test_df)/total*100:.1f}%)")
-    logger.info("")
-    logger.info(f"  ✅ Saved → {train_path}")
-    logger.info(f"  ✅ Saved → {val_path}")
-    logger.info(f"  ✅ Saved → {test_path}")
-
-    # ── Verify class coverage ─────────────────────────────────────────────────
-    train_classes = set(train_df["class_id"].unique())
-    val_classes   = set(val_df["class_id"].unique())
-    test_classes  = set(test_df["class_id"].unique())
-    all_classes   = set(df["class_id"].unique()) | set(single_df["class_id"].unique() if not single_df.empty else [])
-
-    logger.info(f"  Class coverage — Train: {len(train_classes)}, "
-                f"Val: {len(val_classes)}, Test: {len(test_classes)}, "
-                f"Total: {len(all_classes)}")
-
-    missing_from_val = all_classes - val_classes
-    if missing_from_val:
-        logger.warning(
-            f"  ⚠  {len(missing_from_val)} classes missing from val set "
-            "(expected for very sparse classes)."
-        )
-
-    logger.info("  Phase 1 splits generation complete ✅")
-
-
-def main() -> None:
-    """Entry point for split generation."""
-    config = load_config()
-
-    video_index_path = Path("data/splits/video_index.csv")
-    splits_dir       = Path(config["dataset"]["splits_dir"])
-    seed             = config["project"]["seed"]
-    train_ratio      = config["splits"]["train"]
-    val_ratio        = config["splits"]["val"]
-    test_ratio       = config["splits"]["test"]
-
-    generate_splits(
-        video_index_path=video_index_path,
-        splits_dir=splits_dir,
-        train_ratio=train_ratio,
-        val_ratio=val_ratio,
-        test_ratio=test_ratio,
-        seed=seed,
-    )
-
+    save_csv(train_data, "train_split.csv")
+    save_csv(val_data, "val_split.csv")
+    save_csv(test_data, "test_split.csv")
+    
+    print("Dataset splitting complete.")
 
 if __name__ == "__main__":
     main()

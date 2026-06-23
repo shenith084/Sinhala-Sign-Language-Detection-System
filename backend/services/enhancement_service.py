@@ -1,30 +1,60 @@
 import sys
 from pathlib import Path
-from backend.utils.logger import get_logger
+import cv2
+import numpy as np
 
-# Import enhancement factory from src
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from src.enhancement.enhancement_factory import get_enhancer
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-logger = get_logger(__name__)
+from enhancement.enhancement_factory import get_enhancer
+from utils.logger import logger
 
-_ENHANCER_FN = None
+class EnhancementService:
+    def __init__(self):
+        self.enhancers = {}
+        # Pre-load all enhancer functions
+        for exp_id in range(1, 6):
+            try:
+                self.enhancers[exp_id] = get_enhancer(exp_id)
+            except Exception as e:
+                logger.warning(f"Failed to load enhancer for EXP{exp_id}: {e}")
 
-def init_enhancer(exp_id: int, config_path: str = "config.yaml"):
-    global _ENHANCER_FN
-    try:
-        _ENHANCER_FN = get_enhancer(exp_id, config_path)
-        logger.info(f"Enhancement service initialized for EXP{exp_id}.")
-    except Exception as e:
-        logger.error(f"Failed to initialize enhancement service: {e}")
-        sys.exit(1)
+    def get_enhancer(self, exp_id: int):
+        if exp_id not in self.enhancers:
+            raise ValueError(f"No enhancer found for experiment {exp_id}")
+        return self.enhancers[exp_id]
 
-def apply_enhancement(video_clip):
-    if _ENHANCER_FN is None:
-        raise ValueError("Enhancer function not loaded.")
-    
-    import numpy as np
-    enhanced_frames = []
-    for frame in video_clip:
-        enhanced_frames.append(_ENHANCER_FN(frame))
-    return np.array(enhanced_frames)
+    def preprocess_frames(self, frames: list, exp_id: int, num_frames: int = 32, target_size=(224, 224)) -> np.ndarray:
+        """
+        Takes a list of raw BGR numpy frames, applies enhancement, samples, 
+        and normalizes into a tensor for model input.
+        """
+        enhance_fn = self.get_enhancer(exp_id)
+        
+        # Uniform sampling
+        total = len(frames)
+        if total == 0:
+            raise ValueError("Empty frame list provided.")
+            
+        indices = np.linspace(0, total - 1, num=num_frames, dtype=int)
+        
+        processed = []
+        for idx in indices:
+            frame = frames[idx].copy()
+            # Apply enhancement
+            try:
+                frame = enhance_fn(frame)
+            except Exception as e:
+                logger.debug(f"Enhancement failed: {e}")
+                
+            # Resize
+            frame = cv2.resize(frame, target_size, interpolation=cv2.INTER_LINEAR)
+            # BGR -> RGB
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            # Normalize [-1, 1]
+            frame = frame.astype(np.float32)
+            frame = (frame / 127.5) - 1.0
+            processed.append(frame)
+            
+        tensor = np.stack(processed, axis=0)
+        return tensor[np.newaxis, ...]  # Shape: (1, 32, 224, 224, 3)

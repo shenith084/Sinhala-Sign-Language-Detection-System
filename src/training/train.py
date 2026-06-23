@@ -1,233 +1,392 @@
 """
 train.py
 ========
-Master Training Script
+Master training script for the SSL400 research project.
 
-Trains the I3D model for a specified experiment ID using a single-phase
-feature extraction strategy:
-  Phase 1 (Feature Extraction): Backbone FROZEN, LR=1e-3, custom head trained.
+Runs the full two-phase training protocol for a single experiment:
+  Phase 1: Frozen backbone → train LSTM + Dense head (50 epochs max)
+  Phase 2: Full fine-tuning → train all layers (30 epochs max)
 
-The ONLY variable between experiments is the image enhancement function.
-All other hyperparameters, splits, and seeds are identical.
+RESUME SUPPORT:
+  If 'models/experiment_{N}/best_model_phase1.keras' already exists,
+  Phase 1 is skipped and training resumes directly at Phase 2.
+  If 'models/experiment_{N}/best_model_phase2.keras' already exists,
+  both phases are skipped (experiment already complete).
 
-Usage (laptop CPU — small scale test):
+  This is critical for free Google Colab where sessions disconnect after ~12 hours.
+
+Usage:
     python src/training/train.py --exp_id 1
-
-Usage (Colab / GPU — full training):
-    python src/training/train.py --exp_id 1 --batch_size 8 --full
-
-Arguments:
-    --exp_id      Experiment ID 1–5 (required)
-    --batch_size  Batch size (default: 4 for CPU, 8 for GPU)
-    --full        If set, runs full epoch counts. Otherwise runs quick test.
-    --config      Path to config.yaml (default: config.yaml)
+    python src/training/train.py --exp_id 2 --batch_size 16  # A100 Colab
+    python src/training/train.py --exp_id 3 --drive_dir /content/drive/MyDrive/SSL400_Research
 """
 
 import argparse
 import logging
 import os
+import random
 import sys
 import time
 from pathlib import Path
 
 import numpy as np
-import tensorflow as tf
 import yaml
 
-# ── Environment Setup ─────────────────────────────────────────────────────────
-os.environ["TF_CPP_MIN_LOG_LEVEL"]    = "2"          # Suppress TF C++ logs
-os.environ["TF_ENABLE_ONEDNN_OPTS"]   = "0"          # Suppress oneDNN warnings
-os.environ["PYTHONIOENCODING"]         = "utf-8"      # Fix Windows console encoding
+# ---------------------------------------------------------------------------
+# Critical: Must set env var BEFORE importing tensorflow
+# ---------------------------------------------------------------------------
+os.environ["TF_USE_LEGACY_KERAS"] = "1"
+os.environ["TF_XLA_FLAGS"] = "--tf_xla_auto_jit=0"
 
-# ── Path Setup ────────────────────────────────────────────────────────────────
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+import tensorflow as tf
+tf.config.optimizer.set_jit(False)
 
-from src.models.i3d_builder import (
-    build_and_compile_phase1,
-    compile_model,
-)
-from src.data.tf_dataset_builder import build_dataset
-from src.training.callbacks import build_callbacks
+try:
+    import tf_keras as keras
+except ImportError:
+    keras = tf.keras
 
-# ── Logging ───────────────────────────────────────────────────────────────────
+# ---------------------------------------------------------------------------
+# Setup
+# ---------------------------------------------------------------------------
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    datefmt="%H:%M:%S",
-    handlers=[logging.StreamHandler(sys.stdout)],
+    format="%(asctime)s [%(levelname)s] %(message)s"
 )
 logger = logging.getLogger(__name__)
 
-
-def load_config(path: str = "config.yaml") -> dict:
-    """Load YAML configuration file."""
-    with open(path, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 
-def set_global_seeds(seed: int) -> None:
-    """Set all random seeds for full reproducibility."""
-    import random
+def set_seeds(seed: int = 42) -> None:
+    """Set all random seeds for reproducibility."""
     random.seed(seed)
     np.random.seed(seed)
     tf.random.set_seed(seed)
     os.environ["PYTHONHASHSEED"] = str(seed)
+    logger.info(f"All seeds set to: {seed}")
 
 
-def run_phase1(
-    exp_id: int,
-    config: dict,
-    batch_size: int,
+def load_config() -> dict:
+    """Load the central config.yaml."""
+    with open(PROJECT_ROOT / "config.yaml", "r") as f:
+        return yaml.safe_load(f)
+
+
+def get_experiment_config(config: dict, exp_id: int) -> dict:
+    """Retrieve experiment-specific config by ID."""
+    for exp in config["experiments"]:
+        if exp["id"] == exp_id:
+            return exp
+    raise ValueError(f"Experiment ID {exp_id} not found in config.yaml")
+
+
+def get_initial_epoch(log_path: str) -> int:
+    """Read the CSV log to determine how many epochs were completed."""
+    if not os.path.exists(log_path):
+        return 0
+    try:
+        with open(log_path, 'r') as f:
+            lines = f.readlines()
+            if len(lines) <= 1:
+                return 0
+            return len(lines) - 1
+    except Exception as e:
+        logger.warning(f"Failed to read log {log_path} for resume: {e}")
+        return 0
+
+
+def train_phase(
+    model: keras.Model,
+    train_ds: tf.data.Dataset,
+    val_ds: tf.data.Dataset,
+    callbacks: list,
     max_epochs: int,
-    config_path: str,
-) -> tf.keras.Model:
+    phase_name: str,
+    initial_epoch: int = 0
+) -> keras.callbacks.History:
     """
-    Phase 1 Warm-Up: Train classification head only (backbone frozen).
+    Run one training phase and return the history.
 
     Args:
-        exp_id:       Experiment ID (1–5)
-        config:       Loaded config dictionary
-        batch_size:   Batch size for DataLoader
-        max_epochs:   Maximum training epochs for Phase 1
-        config_path:  Path to config.yaml
+        model:      Compiled Keras model.
+        train_ds:   Training tf.data.Dataset.
+        val_ds:     Validation tf.data.Dataset.
+        callbacks:  List of Keras callbacks.
+        max_epochs: Maximum training epochs for this phase.
+        phase_name: Display name ('Phase 1' or 'Phase 2') for logging.
+        initial_epoch: Epoch to resume from.
 
     Returns:
-        Trained model after Phase 1
+        Keras History object with per-epoch metrics.
     """
-    logger.info("")
-    logger.info("=" * 60)
-    logger.info(f"  EXPERIMENT {exp_id} — PHASE 1 (WARM-UP)")
-    logger.info(f"  Enhancement: {config['experiments'][exp_id]['name']}")
-    logger.info("=" * 60)
-
-    num_classes   = config["model"]["num_classes"]
-    target_frames = config["video"]["target_frames"]
-    seed          = config["project"]["seed"]
-
-    # ── Build Datasets ────────────────────────────────────────────────────────
-    logger.info("Building training dataset...")
-    train_ds = build_dataset(
-        split_csv="data/splits/train_split.csv",
-        exp_id=exp_id,
-        batch_size=batch_size,
-        num_classes=num_classes,
-        target_frames=target_frames,
-        augment=True,
-        shuffle=True,
-        seed=seed,
-        config_path=config_path,
-    )
-
-    logger.info("Building validation dataset...")
-    val_ds = build_dataset(
-        split_csv="data/splits/val_split.csv",
-        exp_id=exp_id,
-        batch_size=batch_size,
-        num_classes=num_classes,
-        target_frames=target_frames,
-        augment=False,
-        shuffle=False,
-        seed=seed,
-        config_path=config_path,
-    )
-
-    # ── Build Model ───────────────────────────────────────────────────────────
-    logger.info("Building I3D model (backbone frozen)...")
-    model = build_and_compile_phase1(config_path=config_path)
-
-    # ── Build Callbacks ───────────────────────────────────────────────────────
-    callbacks = build_callbacks(exp_id=exp_id, phase=1, config_path=config_path)
-
-    # ── Train Phase 1 ─────────────────────────────────────────────────────────
-    logger.info(f"Starting Phase 1 training (max {max_epochs} epochs)...")
+    logger.info(f"\n{'='*60}")
+    logger.info(f"  Starting {phase_name}")
+    logger.info(f"{'='*60}")
     start_time = time.time()
 
     history = model.fit(
         train_ds,
         validation_data=val_ds,
         epochs=max_epochs,
+        initial_epoch=initial_epoch,
         callbacks=callbacks,
-        verbose=1,  # Show progress bar
+        verbose=0  # Suppress default verbose; ProgressLogger handles output
     )
 
-    duration_min = (time.time() - start_time) / 60
-    best_val_acc = max(history.history.get("val_accuracy", [0]))
-
-    logger.info("")
-    logger.info(f"  Training Complete:")
-    logger.info(f"  Duration      : {duration_min:.1f} minutes")
-    logger.info(f"  Best val_acc  : {best_val_acc:.4f}")
-    logger.info(f"  Epochs run    : {len(history.history['loss'])}")
-
-    # ── Save Final Model ──────────────────────────────────────────────────────
-    exp_config = config["experiments"][exp_id]
-    final_path = Path(exp_config["model_dir"]) / "best_model.keras"
-    model.save(str(final_path))
-    logger.info(f"  Final model saved → {final_path}")
-
-    return model
+    elapsed = (time.time() - start_time) / 60.0
+    logger.info(f"  {phase_name} complete in {elapsed:.1f} minutes.")
+    logger.info(f"  Best val_accuracy: "
+                f"{max(history.history.get('val_accuracy', [0])):.4f}")
+    return history
 
 
+def main(args: argparse.Namespace) -> None:
+    """Main training entry point."""
+    set_seeds(42)
+    config = load_config()
+    exp = get_experiment_config(config, args.exp_id)
 
-def main() -> None:
-    """Main entry point for training pipeline."""
-    parser = argparse.ArgumentParser(
-        description="SSL400 I3D Training Script"
-    )
-    parser.add_argument(
-        "--exp_id", type=int, required=True,
-        choices=[1, 2, 3, 4, 5],
-        help="Experiment ID (1=Baseline, 2=CLAHE, 3=Bilateral, 4=Unsharp, 5=Hybrid)"
-    )
-    parser.add_argument(
-        "--batch_size", type=int, default=4,
-        help="Batch size (4 for CPU/laptop, 8 for GPU)"
-    )
+    logger.info(f"\n{'#'*60}")
+    logger.info(f"  EXPERIMENT {args.exp_id}: {exp['name']}")
+    logger.info(f"{'#'*60}")
 
-    parser.add_argument(
-        "--full", action="store_true",
-        help="Run full epoch counts (default: quick test with 3 epochs per phase)"
-    )
-    parser.add_argument(
-        "--config", type=str, default="config.yaml",
-        help="Path to config.yaml"
-    )
-    args = parser.parse_args()
-
-    config = load_config(args.config)
-    seed = config["project"]["seed"]
-    set_global_seeds(seed)
-
-    if args.full:
-        max_epochs = 50 # Increased max epochs since it's the only phase
+    # Resolve paths
+    model_dir = str(PROJECT_ROOT / exp["model_dir"])
+    log_dir = str(PROJECT_ROOT / exp["log_dir"])
+    # CRITICAL: Read dataset directly from Google Drive to avoid copying 10GB!
+    drive_root = Path("/content/drive/MyDrive/SSL400_Research")
+    if drive_root.exists():
+        splits_dir = drive_root / config["paths"]["splits"]
+        raw_dir = drive_root / config["paths"]["raw_dataset"]
     else:
-        max_epochs = 3   # Quick sanity check for laptop
+        splits_dir = PROJECT_ROOT / config["paths"]["splits"]
+        raw_dir = PROJECT_ROOT / config["paths"]["raw_dataset"]
 
-    logger.info("")
-    logger.info("SSL400 Sinhala Sign Language Research — Training")
-    logger.info(f"Experiment     : EXP{args.exp_id} — {config['experiments'][args.exp_id]['name']}")
-    logger.info(f"Batch size     : {args.batch_size}")
-    logger.info(f"Mode           : {'FULL TRAINING' if args.full else 'QUICK TEST (3 epochs)'}")
-    logger.info(f"Seed           : {seed}")
-    logger.info(f"TF version     : {tf.__version__}")
-    logger.info(f"GPU available  : {len(tf.config.list_physical_devices('GPU')) > 0}")
-    logger.info("")
+    train_csv = str(splits_dir / "train_split.csv")
+    val_csv = str(splits_dir / "val_split.csv")
 
-    model = None
+    num_classes = config["dataset"]["num_classes"]
+    num_frames = config["frames"]["num_frames"]
+    batch_size = args.batch_size or config["phase1"]["batch_size"]
 
-    # ── Train ───────────────────────────────────────────────────────────────
-    model = run_phase1(
-        exp_id=args.exp_id,
-        config=config,
-        batch_size=args.batch_size,
-        max_epochs=max_epochs,
-        config_path=args.config,
+    # Phase parameters
+    p1 = config["phase1"]
+    p2 = config["phase2"]
+
+    # Import builders
+    from models.movinet_builder import build_model, compile_phase1, compile_phase2, load_kinetics_weights
+    from data.tf_dataset_builder import build_dataset
+    from training.callbacks import get_callbacks, find_resume_checkpoint
+    from enhancement.enhancement_factory import get_enhancer
+
+    enhance_fn = get_enhancer(args.exp_id)
+
+    # -------------------------------------------------------------------------
+    # CHECK RESUME STATE
+    # -------------------------------------------------------------------------
+    phase2_ckpt = find_resume_checkpoint(model_dir, "phase2")
+    phase1_ckpt = find_resume_checkpoint(model_dir, "phase1")
+    
+    log_path_p1 = str(Path(log_dir) / "training_log_phase1.csv")
+    log_path_p2 = str(Path(log_dir) / "training_log_phase2.csv")
+    
+    initial_epoch_p1 = get_initial_epoch(log_path_p1)
+    initial_epoch_p2 = get_initial_epoch(log_path_p2)
+
+    if phase2_ckpt:
+        if initial_epoch_p2 >= p2["max_epochs"]:
+            logger.info(f"✅ Experiment {args.exp_id} Phase 2 checkpoint found. "
+                        "Both phases already complete — SKIP.")
+            logger.info(f"   Checkpoint: {phase2_ckpt}")
+            return
+        else:
+            logger.info(f"⚠️ Resuming Phase 2 from epoch {initial_epoch_p2}...")
+
+    # -------------------------------------------------------------------------
+    # BUILD MODEL
+    # -------------------------------------------------------------------------
+    logger.info("Building model...")
+    model = build_model(
+        num_classes=num_classes,
+        num_frames=num_frames,
+        img_height=config["frames"]["height"],
+        img_width=config["frames"]["width"],
+        lstm_units=config["model"]["lstm_units"],
+        dropout_rate=config["model"]["dropout_rate"]
+    )
+    model.summary(print_fn=logger.info)
+
+    # -------------------------------------------------------------------------
+    # DOWNLOAD KINETICS-600 CHECKPOINT
+    # -------------------------------------------------------------------------
+    import tarfile
+    ckpt_url = "https://storage.googleapis.com/tf_model_garden/vision/movinet/movinet_a2_base.tar.gz"
+    ckpt_dir = PROJECT_ROOT / "pretrained_weights" / "movinet_a2_base"
+    
+    if not ckpt_dir.exists():
+        logger.info(f"Downloading Kinetics-600 weights from {ckpt_url}...")
+        ckpt_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            tar_path = keras.utils.get_file(
+                "movinet_a2_base.tar.gz",
+                ckpt_url,
+                cache_subdir="pretrained_weights",
+                cache_dir=str(PROJECT_ROOT)
+            )
+            with tarfile.open(tar_path, "r:gz") as tar:
+                tar.extractall(path=str(PROJECT_ROOT / "pretrained_weights"))
+            logger.info("Weights downloaded and extracted.")
+        except Exception as e:
+            logger.warning(f"Failed to download weights: {e}")
+
+    # -------------------------------------------------------------------------
+    # PHASE 1 — Warm-up (Frozen Backbone)
+    # -------------------------------------------------------------------------
+    # CRITICAL FIX: Always load Kinetics weights first. 
+    # Keras load_weights silently fails to load nested subclassed backbones from .keras files.
+    if ckpt_dir.exists():
+        load_kinetics_weights(model, str(ckpt_dir))
+        
+    if not phase1_ckpt:
+        logger.info("\n--- PHASE 1: Frozen backbone warm-up ---")
+        model = compile_phase1(
+            model,
+            learning_rate=p1["learning_rate"],
+            num_classes=num_classes,
+            label_smoothing=p1["label_smoothing"]
+        )
+
+        # Build datasets (with Mixup for Phase 1)
+        train_ds = build_dataset(
+            split_csv=train_csv,
+            raw_dir=str(raw_dir),
+            num_classes=num_classes,
+            batch_size=batch_size,
+            is_training=True,
+            enhance_fn=enhance_fn,
+            use_mixup=False,
+            mixup_alpha=p1["mixup_alpha"],
+            num_frames=num_frames,
+            target_size=(config["frames"]["width"], config["frames"]["height"]),
+            seed=42
+        )
+        val_ds = build_dataset(
+            split_csv=val_csv,
+            raw_dir=str(raw_dir),
+            num_classes=num_classes,
+            batch_size=batch_size,
+            is_training=False,
+            enhance_fn=enhance_fn,
+            num_frames=num_frames,
+            target_size=(config["frames"]["width"], config["frames"]["height"])
+        )
+
+        callbacks_p1 = get_callbacks(
+            exp_id=args.exp_id,
+            phase="phase1",
+            model_dir=model_dir,
+            log_dir=log_dir,
+            drive_model_dir=args.drive_dir,
+            early_stopping_patience=p1["early_stopping_patience"]
+        )
+
+        train_phase(
+            model, train_ds, val_ds, callbacks_p1,
+            max_epochs=p1["max_epochs"],
+            phase_name="Phase 1 (Frozen Backbone)",
+            initial_epoch=initial_epoch_p1
+        )
+
+        # Reload best Phase 1 weights
+        phase1_ckpt = find_resume_checkpoint(model_dir, "phase1")
+
+    # Load best weights before Phase 2
+    if phase2_ckpt:
+        logger.info(f"\n--- Resuming Phase 2 best weights from {phase2_ckpt} ---")
+        model.load_weights(phase2_ckpt)
+    elif phase1_ckpt:
+        logger.info(f"\n--- Loading Phase 1 best weights from {phase1_ckpt} ---")
+        model.load_weights(phase1_ckpt)
+
+    # -------------------------------------------------------------------------
+    # PHASE 2 — Full Fine-Tuning (All Layers Unfrozen)
+    # -------------------------------------------------------------------------
+    logger.info("\n--- PHASE 2: Full fine-tuning ---")
+    model = compile_phase2(
+        model,
+        learning_rate=p2["learning_rate"],
+        num_classes=num_classes,
+        label_smoothing=p2["label_smoothing"]
     )
 
-    logger.info("")
-    logger.info(f"Training for EXP{args.exp_id} complete.")
-    logger.info("Next: run evaluation with: python src/evaluation/evaluate.py --exp_id N")
+    # No Mixup in Phase 2 — clean gradients for fine-tuning
+    train_ds = build_dataset(
+        split_csv=train_csv,
+        raw_dir=str(raw_dir),
+        num_classes=num_classes,
+        batch_size=batch_size,
+        is_training=True,
+        enhance_fn=enhance_fn,
+        use_mixup=False,
+        num_frames=num_frames,
+        target_size=(config["frames"]["width"], config["frames"]["height"]),
+        seed=42
+    )
+    val_ds = build_dataset(
+        split_csv=val_csv,
+        raw_dir=str(raw_dir),
+        num_classes=num_classes,
+        batch_size=batch_size,
+        is_training=False,
+        enhance_fn=enhance_fn,
+        num_frames=num_frames,
+        target_size=(config["frames"]["width"], config["frames"]["height"])
+    )
+
+    callbacks_p2 = get_callbacks(
+        exp_id=args.exp_id,
+        phase="phase2",
+        model_dir=model_dir,
+        log_dir=log_dir,
+        drive_model_dir=args.drive_dir,
+        early_stopping_patience=p2["early_stopping_patience"]
+    )
+
+    train_phase(
+        model, train_ds, val_ds, callbacks_p2,
+        max_epochs=p2["max_epochs"],
+        phase_name="Phase 2 (Full Fine-Tuning)",
+        initial_epoch=initial_epoch_p2
+    )
+
+    logger.info(f"\n✅ Experiment {args.exp_id} ({exp['name']}) COMPLETE.")
+    logger.info(f"   Best model saved to: {model_dir}/best_model_phase2.keras")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(
+        description="Train SSL400 MoViNet model for a specific experiment."
+    )
+    parser.add_argument(
+        "--exp_id",
+        type=int,
+        required=True,
+        choices=[1, 2, 3, 4, 5],
+        help="Experiment ID: 1=Baseline, 2=CLAHE, 3=Bilateral, 4=Unsharp, 5=Hybrid"
+    )
+    parser.add_argument(
+        "--batch_size",
+        type=int,
+        default=None,
+        help="Override batch size from config (use 16 for A100, 8 for T4)"
+    )
+    parser.add_argument(
+        "--drive_dir",
+        type=str,
+        default=None,
+        help="Google Drive directory for checkpoint sync (Colab only)"
+    )
+    args = parser.parse_args()
+    main(args)

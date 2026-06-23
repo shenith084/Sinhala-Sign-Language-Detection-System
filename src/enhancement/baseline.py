@@ -1,51 +1,30 @@
 """
-baseline.py
-===========
-EXP1 — Baseline Enhancement (Control Group)
+baseline.py — Experiment 1: No Enhancement (Control Group)
+============================================================
+The baseline performs ONLY the mandatory pre-processing steps:
+resize and normalize. No image enhancement is applied.
 
-NO image enhancement is applied. Only mandatory I3D pre-processing:
-  1. Resize to 224×224
-  2. Normalize to [-1, 1]
-
-Academic Note:
-    This is intentionally zero-enhancement. Experiment 1 is the control
-    group against which all other experiments are measured. Resize and
-    normalize are NOT enhancements — they are required I3D input format.
+This is the control group. All other experiments are compared against this.
+DO NOT add any enhancement here — it would break the single-variable rule.
 """
 
 import numpy as np
 import cv2
-from typing import Optional
 
 
-def preprocess_baseline(
-    frame: np.ndarray,
-    target_size: tuple = (224, 224),
-) -> np.ndarray:
+def enhance_baseline(frame: np.ndarray) -> np.ndarray:
     """
-    Baseline pre-processing: resize and normalize only. No enhancement.
+    Apply no image enhancement — return the raw frame as-is.
 
-    This is the CONTROL GROUP for the experiment. Any image passed through
-    this function is only resized and normalized to meet I3D input specs.
+    The baseline experiment establishes the unmodified performance of
+    MoViNet-A2 on SSL400 without any image quality improvements.
+    Resize and normalization are applied later in the pipeline (video_to_frames.py)
+    and are NOT considered enhancements.
 
     Args:
-        frame:       BGR frame as numpy uint8 array (H, W, 3)
-        target_size: Output spatial size (width, height). Default (224, 224)
+        frame: BGR uint8 numpy array (raw OpenCV frame).
 
     Returns:
-        Normalized float32 frame in range [-1, 1], shape (224, 224, 3) RGB
+        The same frame unchanged (BGR uint8).
     """
-    if frame is None or frame.size == 0:
-        raise ValueError("preprocess_baseline received an empty or None frame.")
-
-    # Step 1: Resize to I3D input resolution
-    frame_resized = cv2.resize(frame, target_size, interpolation=cv2.INTER_LINEAR)
-
-    # Step 2: Convert BGR → RGB (TensorFlow models expect RGB)
-    frame_rgb = cv2.cvtColor(frame_resized, cv2.COLOR_BGR2RGB)
-
-    # Step 3: Normalize to [-1, 1]  →  (pixel / 127.5) - 1.0
-    frame_float = frame_rgb.astype(np.float32)
-    frame_normalized = (frame_float / 127.5) - 1.0
-
-    return frame_normalized
+    return frame

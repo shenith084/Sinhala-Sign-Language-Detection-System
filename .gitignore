@@ -1,47 +1,29 @@
-# Python & Environments
+# Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-.env
-.venv
+*.pyc
+*.pyo
 venv/
-ENV/
+env/
+.env
 
-# Data and Models
-data/raw/
-data/processed/
-SSL400/
+# Data and Models (Avoid uploading huge files to GitHub)
+data/
 models/
-logs/
-results/
 *.keras
 *.h5
 *.pb
+*.tflite
+saved_model/
+*.zip
+*.tar.gz
+SSL400/
+ssl400_experiment2_ready/
 
-# Node.js
+# Frontend / Node
 frontend/node_modules/
 frontend/dist/
-frontend/build/
-npm-debug.log*
-
-# OS Files
 .DS_Store
-Thumbs.db
+
+# IDEs
+.vscode/
+.idea/

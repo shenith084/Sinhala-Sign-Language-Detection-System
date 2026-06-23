@@ -1,12 +1,4 @@
-# 🧠 AI MASTER PROMPT
-## Performance Enhancement of Sinhala Sign Language Detection Systems Using Image Enhancement Techniques
 
----
-
-> **HOW TO USE THIS PROMPT:**  
-> Copy this entire document and paste it as your first message to any capable AI model (Claude, GPT-4, Gemini, etc.) to initiate a fully guided, step-by-step research build session. The AI will act as your dedicated research engineer across every phase of this project.
-
----
 
 ## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ## SECTION 1 — EXPERT ROLE DEFINITION
@@ -66,12 +58,12 @@ This project must produce outputs suitable for an **undergraduate final-year the
 | Property | Value |
 |---|---|
 | **Name** | SSL400 — Dynamic Sinhala Sign Language Dataset |
-| **Source** | Kaggle (use Kaggle API for download) |
-| **Total Classes** | 384 word-level Sinhala sign gestures |
-| **Format** | `.mp4` video files |
+| **Source** | Kaggle (use Kaggle API for download) |# i alrady donload it project folder u can use it look SSL folder
+| **Total Classes** | 100.. word-level Sinhala sign gestures |
+| **Format** | `.mp4` and '.mov' video files |
 | **Frame Rate** | 20 FPS |
 | **Duration per Sample** | 3 seconds (≈ 60 frames per video) |
-| **Language** | Sinhala (Unicode) |
+| **Language** | Sinhala (Unicode) | # not mention sinhala name can you translate and you keep it all sinhala classes including csv or anything
 | **Type** | Dynamic (motion-based) gesture recognition |
 
 ### 3.2 Dataset Split Strategy
@@ -87,12 +79,12 @@ Total Dataset
 - **IMPORTANT:** The same train/val/test split indices must be reused identically across ALL 5 experiments.
 
 ### 3.3 Data Scarcity Awareness
-- The SSL400 dataset is **low-resource** — some classes contain as few as **8 videos**.
-- This makes the dataset highly vulnerable to **overfitting**.
-- Heavy **Data Augmentation** (detailed in Section 5) is the primary defense strategy.
+- **The Core Challenge:** The SSL400 dataset is highly **low-resource**. For 150.. classes, there are roughly ~2000.. videos total. This averages to just **~10 videos per class**, which is exceptionally small for fine-tuning a massive 4.8 million parameter video model (MoViNet-A2).
+- This makes the model extremely vulnerable to **Majority Class Collapse** and **Overfitting**.
+- **Defense Strategy:** Heavy Spatial/Temporal Augmentation, and specifically **Mixup Augmentation** (alpha=0.2), mathematically blends videos and labels to force the model to learn continuous transitions between gestures rather than memorizing individual videos.
 - Log and report the **class distribution** (minimum, maximum, mean, std of samples per class) in your research paper.
 
-### 3.4 Kaggle API Download Script
+### 3.4 Kaggle API Download Script # i donload it project folder. look ssl400 folder 
 Generate a complete `download_dataset.py` script that:
 1. Uses `kaggle.api.dataset_download_files()` to pull the SSL400 dataset.
 2. Automatically unzips and organizes the raw `.mp4` files into:
@@ -105,13 +97,13 @@ Generate a complete `download_dataset.py` script that:
    ```
 
 > ⚠️ **IMPORTANT — Real Dataset Folder Structure:**
-> When you download and inspect the SSL400 dataset from Kaggle, the class folders are **numerically named** (e.g., `0/`, `1/`, `2/`, ..., `383/`). They do **NOT** have Sinhala Unicode names in the folder path. This is normal and expected — the Sinhala word labels are stored separately in the dataset's metadata or must be mapped externally.
+> When you download and inspect the SSL400 dataset from Kaggle, the class folders are **numerically named** (e.g., `0/`, `1/`, `2/`, ..., `150./`). They do **NOT** have Sinhala Unicode names in the folder path. This is normal and expected — the Sinhala word labels are stored separately in the dataset's metadata or must be mapped externally.
 >
 > **This does NOT affect training.** The model only needs numeric class indices. Sinhala word names are only needed for the live detection display and reporting. They are loaded from a separate `sinhala_word_map.csv` file (see Step 4 below).
 
 3. Validates the download: counts total videos, verifies 384 class folders exist, logs any missing files.
 4. Generates a `data/splits/sinhala_word_map.csv` with columns: `[class_id, class_name_sinhala, class_name_english]`.
-   - `class_id`: Integer index 0–383 (matching folder name)
+   - `class_id`: Integer index 0–150.. (matching folder name)
    - `class_name_sinhala`: The Sinhala Unicode word for that sign
    - `class_name_english`: English transliteration (optional, for debugging)
    - **If the dataset includes a metadata file** (e.g., `labels.csv`, `classes.txt`, or `README`), parse it to build this map.
@@ -132,35 +124,26 @@ Generate a complete `download_dataset.py` script that:
 ## SECTION 4 — FIXED BASE MODEL ARCHITECTURE
 ## ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-### 4.1 Model Selection: MoViNet-A2 (Mobile Video Networks)
+### 4.1 Model Selection: MoViNet-A2
 The **MoViNet-A2** model is the fixed, unchanging base architecture used across all 5 experiments.
 
-> ⚠️ **IMPORTANT — Why I3D Was Replaced by MoViNet-A2:**
+> ⚠️ **IMPORTANT — Why TF Hub Was Abandoned & The 3 Critical Bugs Solved:**
 >
-> The original plan used the `deepmind/i3d-kinetics-400` model from TensorFlow Hub. During implementation, a critical and **unresolvable technical blocker** was discovered:
+> The original plan used `tensorflow_hub` for 3D Video models, which completely failed due to Colab's mandatory upgrade to TensorFlow 2.16 (Keras 3). It caused irrecoverable hardware-level C++ segmentation faults.
 >
-> ```
-> ValueError: Setting hub.KerasLayer.trainable = True is unsupported
-> when loading from the TF1 Hub format.
-> ```
->
-> **Root Cause:** The DeepMind I3D model was published in the legacy **TensorFlow 1 (TF1)** SavedModel format. The `tensorflow_hub.KerasLayer` wrapper permanently blocks setting `trainable=True` on any TF1-format module. This is not a bug — it is a hard restriction enforced by the TF Hub library to prevent gradient instability in legacy computation graphs.
->
-> **Why This Matters:** Without `trainable=True`, Phase 2 backbone fine-tuning is fundamentally impossible. The model is locked as a pure feature extractor, limiting accuracy to ~25-35% (the classification head maximum). This makes it impossible to adapt the Kinetics-400 motion features specifically to Sinhala hand sign patterns.
->
-> **Solution:** Replaced I3D with **MoViNet-A2** (Mobile Video Network, Google Research 2021), which:
-> - Is published in native **TensorFlow 2** format — `trainable=True` is fully supported
-> - Is pre-trained on **Kinetics-600** (50% more video classes than Kinetics-400)
-> - Has demonstrated **higher accuracy** than I3D on action recognition benchmarks
-> - Accepts the exact same input tensor format: `(batch, frames, H, W, C)`
-> - Requires zero changes to the dataset pipeline or image enhancement code
+> **Solution:** We migrated to the official `tf-models-official` Model Garden implementation of MoViNet-A2. During this migration, we encountered and solved 3 fatal bugs:
+> 
+> 1. **The Keras 3 Legacy Bug**: Official models triggered `AttributeError: '_distribute_strategy'`. 
+>    *Fix:* Forced legacy mode using `os.environ["TF_USE_LEGACY_KERAS"] = "1"` and `import tf_keras as keras`.
+> 2. **The Kinetics-600 Shape Mismatch Bug**: Loading the pretrained weights crashed because our classifier head has 150.. classes, but the checkpoint expected 600 classes.
+>    *Fix:* We built a `CheckpointWrapper(tf.Module)` that isolated the backbone and forced TF to ignore the classifier head during weight restoration.
+> 3. **The `from_logits` Mathematical Bug**: The accuracy completely froze at 2.42%. MoViNet outputs raw logits (negative/positive numbers), but `CategoricalCrossentropy` expected probabilities by default. This mathematically shattered the gradients.
+>    *Fix:* Explicitly passed `from_logits=True` to the loss function, allowing the loss to drop instantly from 9.2 to 5.8.
 
 **Academic Justification for MoViNet-A2:**
-- Designed by Kondratyuk et al. (Google Research, 2021) for efficient, high-accuracy video classification.
-- Uses **depthwise separable 3D convolutions** with a **Squeeze-and-Excitation** attention mechanism — captures both spatial hand shapes and temporal gesture motion.
-- Pre-trained on **Kinetics-600** enables richer motion transfer learning than I3D's Kinetics-400.
-- Supports complete **two-phase fine-tuning**: frozen warm-up followed by full backbone adaptation.
-- Superior to I3D in both accuracy and computational efficiency on modern GPUs.
+- **State-of-the-Art Video Architecture:** MoViNet is explicitly designed by Google for mobile-efficient video streaming and action recognition, capturing spatio-temporal features far better than separated 2D-CNN+LSTM approaches.
+- **Kinetics-600 Pretraining:** Transfer learning from Kinetics-600 provides incredibly robust human-motion priors, heavily reducing the data required to learn complex Sign Language gestures.
+- **Causal Convolutions:** Supports real-time causal streaming, highly beneficial for future live-webcam deployment.
 
 ### 4.2 Transfer Learning Strategy
 
@@ -168,27 +151,24 @@ The **MoViNet-A2** model is the fixed, unchanging base architecture used across 
 Pre-trained MoViNet-A2 (Kinetics-600 weights)
         │
         ▼
-[ MoViNet Backbone: Depthwise 3D Conv + SE Attention ]
-  Phase 1: FROZEN (backbone locked, knowledge preserved)
+[ MoViNet Backbone (Conv3D, Causal) ]  ← Extracts Spatio-Temporal Motion
+  Phase 1: FROZEN
   Phase 2: UNFROZEN (full fine-tuning at LR=1e-5)
-        │
-        ▼
-[ 600-dim Kinetics-600 Feature Vector ]
         │
         ▼
 [ Dropout (rate=0.4) ]
         │
         ▼
-[ Dense(383, activation='softmax') ]  ← 383 Sinhala sign classes
+[ Dense(383) ]  ← Classifier Head (outputs raw logits)
 ```
 
 **Two-Phase Training Protocol:**
-- **Phase 1 (Warm-Up, 50 epochs max):** MoViNet backbone is FROZEN. Only the 383-class Dense head is trained. LR = `1e-3` with Cosine Annealing. Mixup Augmentation (alpha=0.2) applied. Early stopping patience = 10.
-- **Phase 2 (Fine-Tuning, 30 epochs max):** Backbone UNFROZEN. All layers trained together at LR = `1e-5` (very small to prevent catastrophic forgetting of Kinetics-600 features). No Mixup — clean gradients only. Early stopping patience = 8.
+- **Phase 1 (Warm-Up, 50 epochs max):** MobileNetV3 backbone is FROZEN. Only the new LSTM and Dense head are trained. LR = `1e-3` with Cosine Annealing. Mixup Augmentation (alpha=0.2) applied. Early stopping patience = 10.
+- **Phase 2 (Fine-Tuning, 30 epochs max):** Backbone UNFROZEN. All layers trained together at LR = `1e-5` (very small to prevent catastrophic forgetting of ImageNet features). No Mixup — clean gradients only. Early stopping patience = 8.
 
 ### 4.3 Input Tensor Specification
 ```python
-# MoViNet-A2 expects (same format as I3D — zero pipeline changes needed):
+# Input Tensor Format (Same across all models):
 Input Shape: (batch_size, frames, height, width, channels)
            = (batch_size, 32, 224, 224, 3)
 
@@ -198,9 +178,6 @@ Input Shape: (batch_size, frames, height, width, channels)
 - Resize each frame to 224x224 pixels
 - Normalize pixel values to [-1, 1] using:
   frame = (frame / 127.5) - 1.0
-
-# TF Hub URL:
-MOVINET_HUB_URL = "https://tfhub.dev/tensorflow/movinet/a2/base/kinetics-600/classification/3"
 ```
 
 ### 4.4 Training Configuration
@@ -221,16 +198,16 @@ MOVINET_HUB_URL = "https://tfhub.dev/tensorflow/movinet/a2/base/kinetics-600/cla
 ### 4.5 Callbacks
 ```python
 callbacks_phase1 = [
-    EarlyStopping(monitor='val_accuracy', patience=10, restore_best_weights=True, mode='max'),
+    EarlyStopping(monitor='val_loss', patience=15, restore_best_weights=True, mode='min'),
     ModelCheckpoint(filepath='models/experiment_{N}/best_model_phase1.keras',
-                    monitor='val_accuracy', save_best_only=True, mode='max'),
+                    monitor='val_loss', save_best_only=True, mode='min'),
     CSVLogger(filename='logs/experiment_{N}/training_log_phase1.csv', append=True)
 ]
 
 callbacks_phase2 = [
-    EarlyStopping(monitor='val_accuracy', patience=8, restore_best_weights=True, mode='max'),
+    EarlyStopping(monitor='val_loss', patience=15, restore_best_weights=True, mode='min'),
     ModelCheckpoint(filepath='models/experiment_{N}/best_model_phase2.keras',
-                    monitor='val_accuracy', save_best_only=True, mode='max'),
+                    monitor='val_loss', save_best_only=True, mode='min'),
     CSVLogger(filename='logs/experiment_{N}/training_log_phase2.csv', append=True)
 ]
 
@@ -255,6 +232,8 @@ Spatial Augmentation Stack:
 ├── RandomCrop then Resize    (224→196→224) — Framing variation
 ├── RandomBrightness          (±0.2)      — Lighting fluctuations
 └── RandomContrast            (0.8–1.2)   — Camera exposure variation
+
+and you can use best methods
 ```
 
 ### 5.2 Temporal Augmentation (Applied per-clip)
@@ -288,7 +267,7 @@ Temporal Augmentation Stack:
 |---|---|
 | **Label** | `EXP1_BASELINE` |
 | **Enhancement** | None — Original raw `.mp4` frames only |
-| **Purpose** | Establish the unmodified performance ceiling of MoViNet-A2 on SSL400 |
+| **Purpose** | Establish the unmodified performance ceiling of MobileNetV3+LSTM on SSL400 |
 | **Academic Role** | This is the control group. All other experiments are compared against this. |
 
 **Pre-processing (Baseline Only):**
@@ -489,7 +468,7 @@ ssl400_research_project/
 │
 ├── 📁 data/
 │   ├── raw/                          # Original downloaded SSL400 mp4 files
-│   │   └── 0/ 1/ 2/ ... 383/        # ⚠️ Folders are NUMERIC (not Sinhala-named)
+│   │   └── 0/ 1/ 2/ ... 150.../        # ⚠️ Folders are NUMERIC (not Sinhala-named)
 │   ├── processed/
 │   │   ├── exp1_baseline/
 │   │   ├── exp2_clahe_gamma/
@@ -517,7 +496,7 @@ ssl400_research_project/
 │   │   ├── hybrid.py                 # Exp 5
 │   │   └── enhancement_factory.py    # get_enhancer(exp_id) factory function
 │   ├── models/
-│   │   ├── movinet_builder.py        # Build & compile MoViNet-A2 (Phase 1 + Phase 2)
+│   │   ├── mobilenet_builder.py      # Build & compile MobileNetV3+LSTM
 │   │   ├── i3d_builder.py            # DEPRECATED — I3D (TF1, no fine-tuning support)
 │   │   └── model_export.py           # Save TFLite / SavedModel
 │   ├── training/
@@ -945,9 +924,8 @@ PHASE 8: DOCUMENTATION
 
 ```txt
 # Deep Learning
-tensorflow>=2.12.0
-keras>=2.12.0
-tensorflow-hub>=0.14.0   # For MoViNet-A2 (TF2 native, full fine-tuning supported)
+tensorflow>=2.16.0
+keras>=3.0.0
 
 # Computer Vision
 opencv-python>=4.8.0
@@ -1006,8 +984,8 @@ When responding to requests from this project, you MUST:
 > 4. Then proceed to **Phase 0, Step 0.3**: write the full `download_dataset.py` script.
 > 5. **Do not wait for further instructions between steps** — proceed automatically through the phases unless you hit a genuine blocker.
 
----
 
-*Master Prompt Version: 4.0 | Project: SSL400 Sinhala Sign Language Research | Author: Research Team*
-*Last Updated: 2026-06-19 | Framework: TensorFlow/Keras + Flask + React*
-*v4.0 Changes: **CRITICAL MODEL UPGRADE** — Replaced I3D (TF1 format, no backbone fine-tuning) with MoViNet-A2 (TF2 native, full two-phase training). Updated Section 4 (architecture, training config, callbacks). Added I3D abandonment rationale with full error explanation. Updated folder structure, execution order, requirements.txt, and AI behavioral rules accordingly.*
+
+
+NOte: i think use google colab free version , so tranin process for add Resume teuqniue . other wise my traning lose time is over 
+and you can use it colab extantion i alrady instll for this platform. 

@@ -1,169 +1,158 @@
 # ============================================================
 # SSL400 Sinhala Sign Language Research Project
-# config.yaml — Central Configuration File
-# DO NOT modify hardcoded values between experiments.
-# The ONLY variable across experiments is `active_experiment`.
+# config.yaml — Central configuration (all paths & hyperparameters)
 # ============================================================
 
-# ── Project Meta ─────────────────────────────────────────────
+# --- Project Identity ---
 project:
   name: "SSL400 Sinhala Sign Language Research"
   version: "1.0.0"
   seed: 42
 
-# ── Active Experiment ────────────────────────────────────────
-# Change this to run a different experiment: 1, 2, 3, 4, or 5
-active_experiment: 1
+# --- Dataset Paths ---
+paths:
+  raw_dataset:   "SSL400/Dataset - Original"  # Original downloaded data
+  processed:     "data/processed"              # Enhanced frame .npy files
+  splits:        "data/splits"                 # CSV split files
+  models:        "models"                      # Saved model checkpoints
+  logs:          "logs"                        # Training CSV logs
+  results:       "results"                     # Metrics + figures
+  assets:        "assets"                      # Fonts etc.
 
-# ── Dataset Paths ────────────────────────────────────────────
+# --- Dataset Configuration ---
 dataset:
-  raw_source: "SSL400/Dataset - Original"          # Original downloaded data
-  raw_dir: "data/raw"                               # Reorganized flat structure
-  processed_dir: "data/processed"
-  splits_dir: "data/splits"
-  word_map: "data/splits/sinhala_word_map.csv"
-  summary: "data/splits/dataset_summary.csv"
+  num_classes: 50                   # Reduced to Top 50 classes
+  total_videos: 3209                # Total videos in dataset
+  video_extensions: [".mp4", ".mov"]
+  fps: 20                           # Videos recorded at 20 FPS
+  clip_duration_sec: 3              # Each clip ~3 seconds
+  total_frames_per_clip: 60         # 20 FPS × 3 sec = 60 frames
 
-# Experiment processed dirs
+# --- Frame Processing ---
+frames:
+  num_frames: 32          # Restored to 32 for max GPU accuracy
+  height: 224
+  width: 224
+  channels: 3
+  norm_mean: 127.5        # Normalize: (frame / 127.5) - 1.0
+  norm_std: 127.5
+
+# --- Data Split ---
+splits:
+  train_ratio: 0.70
+  val_ratio: 0.10
+  test_ratio: 0.20
+  stratify: true
+  seed: 42
+
+# --- Model Architecture ---
+model:
+  backbone: "MobileNetV3Large"     # TimeDistributed backbone
+  lstm_units: 512
+  dropout_rate: 0.4
+  input_shape: [8, 224, 224, 3]    # (frames, H, W, C)
+
+# --- Training — Phase 1 (Frozen Backbone) ---
+phase1:
+  max_epochs: 50
+  learning_rate: 0.001             # 1e-3
+  batch_size: 16                   # Increased to 16 for Colab A100 GPU
+  early_stopping_patience: 15
+  label_smoothing: 0.1
+  mixup_alpha: 0.0
+  lr_schedule: "CosineDecay"
+  optimizer_clipnorm: 1.0
+
+# --- Training — Phase 2 (Full Fine-Tune) ---
+phase2:
+  max_epochs: 30                   # Restored to full 30 epochs
+  learning_rate: 0.00001           # 1e-5 — very careful fine-tuning
+  batch_size: 16                   # Increased to 16 for Colab A100 GPU
+  early_stopping_patience: 15
+  label_smoothing: 0.1
+  mixup_alpha: 0.0                 # No Mixup in Phase 2
+  lr_schedule: "CosineDecay"
+  optimizer_clipnorm: 1.0
+
+# --- Augmentation ---
+augmentation:
+  horizontal_flip_prob: 0.5
+  rotation_range_deg: 15
+  zoom_range: [0.85, 1.15]
+  brightness_delta: 0.2
+  contrast_range: [0.8, 1.2]
+  # Temporal
+  temporal_jitter: true
+  speed_perturbation: [0.8, 1.2]
+  frame_dropout_max: 2
+
+# --- Enhancement Parameters ---
+enhancement:
+  # EXP2 — CLAHE + Gamma
+  clahe_clip_limit: 2.0
+  clahe_tile_grid: [8, 8]
+  gamma: 1.2
+  # EXP3 — Bilateral Filter
+  bilateral_d: 9
+  bilateral_sigma_color: 75
+  bilateral_sigma_space: 75
+  # EXP4 — Unsharp Masking
+  unsharp_kernel: [5, 5]
+  unsharp_sigma: 1.0
+  unsharp_amount: 1.5
+  unsharp_threshold: 0
+  # EXP5 — Hybrid (moderate amounts)
+  hybrid_unsharp_amount: 1.0
+
+# --- Live Detection ---
+live:
+  confidence_threshold: 0.65
+  temporal_window_size: 5
+  majority_vote_ratio: 0.6
+  sentence_max_words: 10
+  sentence_reset_timeout_sec: 3.0
+  font_path: "assets/fonts/iskpota.ttf"
+  font_size: 28
+
+# --- Experiments ---
 experiments:
-  1:
+  - id: 1
     label: "EXP1_BASELINE"
     name: "Baseline (No Enhancement)"
     processed_dir: "data/processed/exp1_baseline"
     model_dir: "models/experiment_1"
     log_dir: "logs/experiment_1"
-  2:
+
+  - id: 2
     label: "EXP2_CLAHE_GAMMA"
     name: "CLAHE + Gamma Correction"
     processed_dir: "data/processed/exp2_clahe_gamma"
     model_dir: "models/experiment_2"
     log_dir: "logs/experiment_2"
-  3:
+
+  - id: 3
     label: "EXP3_BILATERAL"
     name: "Bilateral Filter"
     processed_dir: "data/processed/exp3_bilateral"
     model_dir: "models/experiment_3"
     log_dir: "logs/experiment_3"
-  4:
+
+  - id: 4
     label: "EXP4_UNSHARP"
     name: "Unsharp Masking"
     processed_dir: "data/processed/exp4_unsharp"
     model_dir: "models/experiment_4"
     log_dir: "logs/experiment_4"
-  5:
+
+  - id: 5
     label: "EXP5_HYBRID"
     name: "Hybrid (Bilateral + CLAHE + Unsharp)"
     processed_dir: "data/processed/exp5_hybrid"
     model_dir: "models/experiment_5"
     log_dir: "logs/experiment_5"
 
-# ── Data Split ───────────────────────────────────────────────
-splits:
-  train: 0.70
-  val:   0.10
-  test:  0.20
-  stratify: true
-  random_seed: 42
-
-# ── Video Processing ─────────────────────────────────────────
-video:
-  target_frames: 32        # Frames uniformly sampled per clip
-  frame_height: 224
-  frame_width: 224
-  channels: 3
-  supported_extensions: [".mov", ".mp4", ".avi"]
-
-# ── Normalization ────────────────────────────────────────────
-normalization:
-  # I3D standard: pixel → [-1, 1]
-  scale: 127.5
-  shift: 1.0
-
-# ── Model Architecture ───────────────────────────────────────
-# UPGRADED: MoViNet-A2 (TF2) replaces I3D (TF1) to enable Phase 2 backbone
-# fine-tuning. MoViNet is trained on Kinetics-600 (superior to I3D Kinetics-400)
-# and natively supports trainable=True — I3D blocked this with a ValueError.
-model:
-  hub_url: "https://tfhub.dev/tensorflow/movinet/a2/base/kinetics-600/classification/3"
-  input_shape: [32, 224, 224, 3]
-  num_classes: 383          # Confirmed by dataset_scanner.py (4236 total videos)
-  dropout_1: 0.4            # MoViNet needs less regularization than I3D
-  dense_units: 512
-  dropout_2: 0.3
-
-# ── Training Hyperparameters ─────────────────────────────────
-training:
-  max_epochs_phase1: 50    # Warm-up: train head only (backbone frozen)
-  max_epochs_phase2: 30    # Fine-tune: full backbone unfrozen
-  batch_size_train: 8
-  batch_size_val: 8
-  lr_phase1: 0.001         # 1e-3 for head warm-up
-  lr_phase2: 0.00001       # 1e-5 VERY small to avoid destroying Kinetics-600 weights
-  weight_decay: 0.0001
-  label_smoothing: 0.1     # Helps with class imbalance
-
-# ── Callbacks ────────────────────────────────────────────────
-callbacks:
-  early_stopping_patience: 10
-  reduce_lr_patience: 5
-  reduce_lr_factor: 0.5
-  min_lr: 0.0000001        # 1e-7
-
-# ── Enhancement Parameters ───────────────────────────────────
-enhancement:
-  clahe:
-    clip_limit: 2.0
-    tile_grid: [8, 8]
-    gamma: 1.2
-  bilateral:
-    d: 9
-    sigma_color: 75
-    sigma_space: 75
-  unsharp:
-    kernel_size: [5, 5]
-    sigma: 1.0
-    amount: 1.5
-    threshold: 0
-  hybrid:
-    bilateral_d: 9
-    bilateral_sigma: 75
-    clahe_clip: 2.0
-    clahe_tile: [8, 8]
-    gamma: 1.2
-    unsharp_amount: 1.0    # Reduced to avoid noise re-introduction
-
-# ── Data Augmentation ────────────────────────────────────────
-augmentation:
-  enabled: true
-  spatial:
-    horizontal_flip_prob: 0.5
-    rotation_range: 15       # degrees
-    zoom_range: [0.85, 1.15]
-    brightness_delta: 0.2
-    contrast_range: [0.8, 1.2]
-  temporal:
-    jitter: true
-    speed_range: [0.8, 1.2]
-    frame_dropout_max: 2
-
-# ── Evaluation ───────────────────────────────────────────────
-evaluation:
-  confidence_threshold: 0.65
-  top_k: 5                 # Top-5 accuracy
-
-# ── Live System ──────────────────────────────────────────────
-live:
-  temporal_window_size: 5
-  confidence_threshold: 0.65
-  sentence_max_words: 10
-  sentence_reset_timeout_sec: 3.0
-  font_path: "assets/fonts/iskpota.ttf"
-  font_size: 28
-
-# ── Paths ────────────────────────────────────────────────────
-paths:
-  results_dir: "results"
-  metrics_dir: "results/metrics"
-  figures_dir: "results/figures"
-  all_metrics_csv: "results/metrics/all_experiments_metrics.csv"
-  statistical_report: "results/statistical_analysis_report.txt"
+# --- Google Drive (Colab) ---
+colab:
+  drive_mount: "/content/drive"
+  project_drive_path: "/content/drive/MyDrive/SSL400_Research"
+  sync_after_epochs: 1             # Sync to Drive every N epochs

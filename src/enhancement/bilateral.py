@@ -1,79 +1,56 @@
 """
-bilateral.py
-============
-EXP3 — Bilateral Filter (Edge-Preserving Noise Reduction)
+bilateral.py — Experiment 3: Bilateral Filter (Edge-Preserving Denoising)
+==========================================================================
+Addresses background motion noise and skin-texture noise in SSL400 videos
+while preserving the precise contours of hand shapes critical for gesture recognition.
 
-Addresses: Background motion noise, skin-texture noise, and compression
-           artifacts that create false edges confusing I3D spatial filters.
+WHY Bilateral Filter over Gaussian Blur:
+  Gaussian blur is spatially uniform — it smooths everything equally, including
+  the sharp edges at finger boundaries and joint contours. This actively DESTROYS
+  the high-frequency spatial features that MoViNet's convolutional layers rely on.
 
-Pipeline:
-    1. Apply Bilateral Filter for edge-preserving smoothing
-    2. Resize + Normalize for I3D input
+  The Bilateral Filter is edge-aware: it computes smoothing weights based on
+  BOTH spatial proximity AND intensity similarity. Pixels with very different
+  intensity values (i.e., across an edge) receive near-zero smoothing weights,
+  preserving the boundary. Homogeneous regions (background, sky, walls) are
+  strongly smoothed, removing noise without touching hand contours.
 
-Academic Justification:
-    Bilateral Filter is preferred over Gaussian Blur because:
-    - Gaussian Blur: indiscriminate smoothing → blurs finger edges and
-      hand contours that I3D relies on for spatial feature extraction.
-    - Bilateral Filter: edge-aware → smooths regions of similar intensity
-      (flat background, skin tone regions) while preserving high-contrast
-      boundaries (finger contours, hand edges, knuckle details).
-    - The filter simultaneously considers spatial closeness (sigma_space)
-      and color similarity (sigma_color), making it ideal for noisy video.
+  This makes it ideal for sign language where hand shape boundaries are the
+  primary discriminative features.
 """
 
-import numpy as np
 import cv2
+import numpy as np
 
 
 def enhance_bilateral(
     frame: np.ndarray,
     d: int = 9,
     sigma_color: float = 75.0,
-    sigma_space: float = 75.0,
-    target_size: tuple = (224, 224),
+    sigma_space: float = 75.0
 ) -> np.ndarray:
     """
-    Apply Bilateral Filter for edge-preserving noise reduction,
-    then normalize for I3D input.
+    Apply Bilateral Filter for edge-preserving noise reduction.
+
+    The bilateral filter smooths homogeneous regions (background noise)
+    while strictly preserving high-contrast edges (finger contours, joint angles).
 
     Args:
-        frame:        BGR frame as numpy uint8 array (H, W, 3)
-        d:            Diameter of each pixel neighborhood.
-                      9 = strong filtering (good for noisy video).
-                      5 = mild filtering (preserves more texture).
-        sigma_color:  Filter sigma in color space. Larger values mean
-                      pixels with more dissimilar colors are blended.
-                      75 = moderate (blends similar skin/background tones).
-        sigma_space:  Filter sigma in coordinate space. Larger values mean
-                      pixels farther away influence each other.
-                      75 = medium spatial radius.
-        target_size:  Output spatial size (width, height). Default (224, 224)
+        frame:       BGR uint8 numpy array (OpenCV frame).
+        d:           Diameter of each pixel's neighborhood.
+                     9 = strong denoising; 5 = mild. Higher values are slower.
+        sigma_color: Filter sigma in color space. Larger values mean more distant
+                     colors are included in the smoothing. 75 = moderate blending.
+        sigma_space: Filter sigma in coordinate space. Larger values mean pixels
+                     further away influence the smoothing. 75 = ~9px effective radius.
 
     Returns:
-        Denoised, normalized float32 frame in range [-1, 1], shape (224, 224, 3) RGB
-
-    Raises:
-        ValueError: If frame is None or empty
+        Denoised BGR uint8 frame with sharp hand edges preserved.
     """
-    if frame is None or frame.size == 0:
-        raise ValueError("enhance_bilateral received an empty or None frame.")
-
-    # ── Step 1: Apply Bilateral Filter ───────────────────────────────────────
-    # Note: Bilateral filter is computationally expensive with large d.
-    # d=9 is a practical balance between quality and speed for video.
-    frame_filtered = cv2.bilateralFilter(
+    filtered = cv2.bilateralFilter(
         frame,
         d=d,
         sigmaColor=sigma_color,
-        sigmaSpace=sigma_space,
+        sigmaSpace=sigma_space
     )
-
-    # ── Step 2: Resize to I3D input size ─────────────────────────────────────
-    frame_resized = cv2.resize(frame_filtered, target_size, interpolation=cv2.INTER_LINEAR)
-
-    # ── Step 3: Convert BGR → RGB + Normalize to [-1, 1] ─────────────────────
-    frame_rgb = cv2.cvtColor(frame_resized, cv2.COLOR_BGR2RGB)
-    frame_float = frame_rgb.astype(np.float32)
-    frame_normalized = (frame_float / 127.5) - 1.0
-
-    return frame_normalized
+    return filtered

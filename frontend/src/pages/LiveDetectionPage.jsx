@@ -1,91 +1,109 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Play, Square, Volume2, VolumeX } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Container, Grid, Box, Typography, Button, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import WebcamFeed from '../components/WebcamFeed';
 import SinhalaTextDisplay from '../components/SinhalaTextDisplay';
-import { sendFramesForPrediction, getTtsAudioUrl } from '../services/api';
+import { predictFrames } from '../services/api';
 
-export default function LiveDetectionPage() {
-  const [isRunning, setIsRunning] = useState(false);
-  const [ttsEnabled, setTtsEnabled] = useState(true);
-  const [predictions, setPredictions] = useState([]);
-  
-  const audioRef = useRef(new Audio());
-  const stabilityCount = useRef(0);
-  const currentTopClass = useRef(null);
-  const lastSpokenWord = useRef("");
+const LiveDetectionPage = () => {
+  const [isDetecting, setIsDetecting] = useState(false);
+  const [expId, setExpId] = useState(1); // Default to Baseline
+  const [currentWord, setCurrentWord] = useState('');
+  const [confidence, setConfidence] = useState(0);
+  const [sentence, setSentence] = useState('');
+  const [lastWordTime, setLastWordTime] = useState(Date.now());
+  const [isProcessing, setIsProcessing] = useState(false);
 
-  const handleBufferReady = async (framesBase64) => {
-    const results = await sendFramesForPrediction(framesBase64);
-    if (results && results.length > 0) {
-      setPredictions(results);
-      handleTtsLogic(results[0]);
-    }
-  };
+  // Auto clear sentence after 3 seconds of inactivity
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (Date.now() - lastWordTime > 3000 && sentence !== '') {
+        setSentence('');
+        setCurrentWord('');
+        setConfidence(0);
+      }
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [lastWordTime, sentence]);
 
-  const handleTtsLogic = (topPred) => {
-    if (!ttsEnabled) return;
-
-    if (topPred.confidence > 0.7) {
-      if (currentTopClass.current === topPred.class_id) {
-        stabilityCount.current += 1;
+  const handleFramesCaptured = async (frames) => {
+    if (isProcessing) return; // Prevent concurrent requests
+    
+    setIsProcessing(true);
+    try {
+      const result = await predictFrames(frames, expId);
+      
+      if (result.confidence > 0.65) {
+        setCurrentWord(result.word_sinhala);
+        setConfidence(result.confidence);
+        setLastWordTime(Date.now());
+        
+        // Add to sentence if different from last word (basic duplicate suppression)
+        setSentence(prev => {
+          const words = prev.split(' ').filter(w => w.length > 0);
+          const lastWord = words[words.length - 1];
+          
+          if (lastWord !== result.word_sinhala) {
+            const newWords = [...words, result.word_sinhala];
+            if (newWords.length > 10) newWords.shift(); // Max 10 words
+            return newWords.join(' ');
+          }
+          return prev;
+        });
       } else {
-        currentTopClass.current = topPred.class_id;
-        stabilityCount.current = 1;
+        setConfidence(result.confidence);
       }
-
-      // 2 consecutive hits (~0.5s stability)
-      if (stabilityCount.current >= 2 && topPred.sinhala_word !== lastSpokenWord.current) {
-        if (audioRef.current.paused) {
-          lastSpokenWord.current = topPred.sinhala_word;
-          audioRef.current.src = getTtsAudioUrl(topPred.sinhala_word);
-          audioRef.current.play().catch(e => console.error("TTS Play error", e));
-        }
-        stabilityCount.current = 0;
-      }
-    } else {
-      stabilityCount.current = 0;
+    } catch (error) {
+      console.error("Prediction failed", error);
+    } finally {
+      setIsProcessing(false);
     }
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <div className="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <h1 className="text-3xl font-bold text-white tracking-tight">Live Translation</h1>
-          <p className="text-gray-400 mt-1">Real-time Sinhala Sign Language detection</p>
-        </div>
+    <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+      <Typography variant="h4" gutterBottom>Live Sign Language Detection</Typography>
+      
+      <Box sx={{ mb: 3, display: 'flex', gap: 2, alignItems: 'center' }}>
+        <Button 
+          variant="contained" 
+          color={isDetecting ? "error" : "primary"}
+          onClick={() => setIsDetecting(!isDetecting)}
+          size="large"
+        >
+          {isDetecting ? "Stop Detection" : "Start Detection"}
+        </Button>
         
-        <div className="flex gap-4">
-          <button
-            onClick={() => setTtsEnabled(!ttsEnabled)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-              ttsEnabled ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50' : 'bg-gray-800 text-gray-400 border border-gray-700'
-            }`}
-          >
-            {ttsEnabled ? <Volume2 size={20} /> : <VolumeX size={20} />}
-            Auto TTS
-          </button>
+        <Button variant="outlined" onClick={() => { setSentence(''); setCurrentWord(''); }}>
+          Clear Text
+        </Button>
 
-          <button
-            onClick={() => setIsRunning(!isRunning)}
-            className={`flex items-center gap-2 px-6 py-2 rounded-lg font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 ${
-              isRunning ? 'bg-red-500 hover:bg-red-600 text-white shadow-red-500/20' : 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white shadow-cyan-500/20'
-            }`}
+        <FormControl sx={{ minWidth: 200, ml: 'auto' }}>
+          <InputLabel>Active Model</InputLabel>
+          <Select
+            value={expId}
+            label="Active Model"
+            onChange={(e) => setExpId(e.target.value)}
+            disabled={isDetecting}
           >
-            {isRunning ? <Square size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" />}
-            {isRunning ? 'Stop Camera' : 'Start Camera'}
-          </button>
-        </div>
-      </div>
+            <MenuItem value={1}>EXP 1: Baseline</MenuItem>
+            <MenuItem value={2}>EXP 2: CLAHE + Gamma</MenuItem>
+            <MenuItem value={3}>EXP 3: Bilateral Filter</MenuItem>
+            <MenuItem value={4}>EXP 4: Unsharp Masking</MenuItem>
+            <MenuItem value={5}>EXP 5: Hybrid (Best)</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-        <div className="lg:col-span-3">
-          <WebcamFeed isRunning={isRunning} onBufferReady={handleBufferReady} />
-        </div>
-        <div className="lg:col-span-2">
-          <SinhalaTextDisplay predictions={predictions} />
-        </div>
-      </div>
-    </div>
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={7}>
+          <WebcamFeed onFramesCaptured={handleFramesCaptured} isDetecting={isDetecting} />
+        </Grid>
+        <Grid item xs={12} md={5}>
+          <SinhalaTextDisplay sentence={sentence} currentWord={currentWord} confidence={confidence} />
+        </Grid>
+      </Grid>
+    </Container>
   );
-}
+};
+
+export default LiveDetectionPage;
