@@ -83,14 +83,14 @@ const LiveDetectionPage = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 1200, height: '100%', display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ width: '100%', height: { xs: 'auto', md: '100%' }, display: 'flex', flexDirection: 'column', overflow: { xs: 'visible', md: 'hidden' }, pb: 1 }}>
       {/* Top Bar */}
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
+      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: { xs: 'flex-start', md: 'center' }, gap: 2, mb: 2, flexShrink: 0 }}>
         <Box>
           <Typography variant="h4" sx={{ fontWeight: 'bold' }}>
             Live <span style={{ color: 'var(--text-muted)' }}>Sign Language Detection</span>
           </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', mt: 0.5 }}>
             <CircleIcon sx={{ fontSize: 12, color: isDetecting ? '#10b981' : '#ef4444', mr: 1 }} />
             <Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>
               {isDetecting ? 'Camera Active' : 'Camera Inactive'}
@@ -98,14 +98,16 @@ const LiveDetectionPage = () => {
           </Box>
         </Box>
         
-        <Box sx={{ display: 'flex', gap: 2 }}>
+        <Box sx={{ display: 'flex', gap: 2, width: { xs: '100%', md: 'auto' } }}>
           <Button 
             variant="contained" 
             onClick={() => setIsDetecting(!isDetecting)}
             startIcon={<VideocamOutlinedIcon />}
             sx={{ 
+              flex: { xs: 1, md: 'none' },
               bgcolor: isDetecting ? 'var(--bg-surface-light)' : 'var(--accent-purple)', 
               color: isDetecting ? 'var(--text-main)' : '#fff',
+              px: 3, py: 1,
               '&:hover': { bgcolor: isDetecting ? 'var(--border-color)' : 'var(--accent-purple-hover)' }
             }}
           >
@@ -115,88 +117,36 @@ const LiveDetectionPage = () => {
             variant="outlined" 
             onClick={handleClear}
             startIcon={<DeleteOutlineIcon />}
-            sx={{ borderColor: 'var(--border-color)', color: 'var(--text-main)' }}
+            sx={{ flex: { xs: 1, md: 'none' }, borderColor: 'var(--border-color)', color: 'var(--text-main)', px: 3, py: 1 }}
           >
             Clear Text
           </Button>
         </Box>
       </Box>
 
-      {/* Main Content */}
-      <Grid container spacing={3} sx={{ flexGrow: 1 }}>
-        {/* Left Column: Camera & Controls */}
-        <Grid item xs={12} md={7} sx={{ display: 'flex', flexDirection: 'column' }}>
-          <Paper className="glass-panel" sx={{ p: 0, overflow: 'hidden', flexGrow: 1, minHeight: 400, display: 'flex', justifyContent: 'center', alignItems: 'center', bgcolor: '#000' }}>
-             <WebcamFeed onFramesCaptured={handleFramesCaptured} isDetecting={isDetecting} />
-          </Paper>
+      {/* Main Content (Camera + Output Cards) */}
+      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2, flexGrow: 1, minHeight: 0 }}>
+        
+        {/* Left: Camera */}
+        <Paper className="glass-panel" sx={{ flex: { xs: 'none', md: 1.2 }, minHeight: { xs: 250, md: 0 }, p: 0, overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', bgcolor: '#000', borderRadius: 3 }}>
+           <WebcamFeed onFramesCaptured={handleFramesCaptured} isDetecting={isDetecting} />
+        </Paper>
 
-          {/* Bottom Info Bar */}
-          <Paper className="glass-panel" sx={{ p: 2, mt: 3, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-              <Box>
-                <Typography variant="caption" sx={{ color: 'var(--text-muted)', display: 'block', mb: 0.5 }}>Model</Typography>
-                <FormControl size="small" sx={{ minWidth: 180 }}>
-                  <Select
-                    value={expId}
-                    onChange={(e) => setExpId(e.target.value)}
-                    disabled={isDetecting}
-                    sx={{ 
-                      color: '#fff', 
-                      bgcolor: 'var(--bg-dark)',
-                      '& .MuiOutlinedInput-notchedOutline': { borderColor: 'var(--border-color)' }
-                    }}
-                  >
-                    <MenuItem value={1}>EXP 1: Baseline</MenuItem>
-                    <MenuItem value={2}>EXP 2: CLAHE + Gamma</MenuItem>
-                    <MenuItem value={3}>EXP 3: Bilateral Filter</MenuItem>
-                    <MenuItem value={4}>EXP 4: Unsharp Masking</MenuItem>
-                    <MenuItem value={5}>EXP 5: Hybrid (Best)</MenuItem>
-                  </Select>
-                </FormControl>
-              </Box>
-              {expId === 5 && (
-                <Box sx={{ bgcolor: 'rgba(16, 185, 129, 0.1)', color: '#10b981', px: 1.5, py: 0.5, borderRadius: 4, fontSize: '0.75rem', fontWeight: 'bold', mt: 2 }}>
-                  Best Performance
-                </Box>
-              )}
-            </Box>
-
-            <Box sx={{ display: 'flex', gap: 4 }}>
-              <Box>
-                <Typography variant="caption" sx={{ color: 'var(--text-muted)' }}>FPS</Typography>
-                <Typography variant="h6" sx={{ color: '#10b981', fontWeight: 'bold' }}>{fps || '--'}</Typography>
-              </Box>
-              <Box>
-                <Typography variant="caption" sx={{ color: 'var(--text-muted)' }}>Detection Time</Typography>
-                <Typography variant="h6" sx={{ fontWeight: 'bold' }}>{detectionTime ? `${detectionTime} ms` : '-- ms'}</Typography>
-              </Box>
-              <Box>
-                <Typography variant="caption" sx={{ color: 'var(--text-muted)' }}>Status</Typography>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mt: 0.5 }}>
-                  <CircleIcon sx={{ fontSize: 10, color: isProcessing ? '#10b981' : 'var(--text-muted)' }} />
-                  <Typography variant="body2" sx={{ fontWeight: 'bold', color: isProcessing ? '#10b981' : 'var(--text-muted)' }}>
-                    {isProcessing ? 'Detecting...' : 'Idle'}
-                  </Typography>
-                </Box>
-              </Box>
-            </Box>
-          </Paper>
-        </Grid>
-
-        {/* Right Column: Output */}
-        <Grid item xs={12} md={5} sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-          {/* Current Sign */}
-          <Paper className="glass-panel" sx={{ p: 3 }}>
+        {/* Right: Output Grid */}
+        <Box sx={{ flex: { xs: 'none', md: 1.5 }, display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1.5fr' }, gridTemplateRows: { xs: 'auto', md: '1fr 1fr' }, gap: 2, minHeight: 0 }}>
+          
+          {/* Current Sign (Tall) */}
+          <Paper className="glass-panel" sx={{ gridRow: { xs: 'auto', md: '1 / 3' }, p: 3, display: 'flex', flexDirection: 'column' }}>
             <Typography variant="subtitle2" sx={{ color: 'var(--text-muted)', mb: 2 }}>Current Sign</Typography>
-            <Box sx={{ height: 120, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <Typography variant="h1" sx={{ color: 'var(--accent-purple)', fontWeight: 'bold', fontSize: '5rem' }}>
+            <Box sx={{ flexGrow: 1, minHeight: { xs: 120, md: 0 }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <Typography variant="h1" sx={{ color: 'var(--accent-purple)', fontWeight: 'bold', fontSize: { xs: '4rem', md: '6rem' } }}>
                 {currentWord}
               </Typography>
             </Box>
             <Box sx={{ mt: 2 }}>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                <Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>Confidence</Typography>
-                <Typography variant="body2" sx={{ fontWeight: 'bold' }}>{(confidence * 100).toFixed(2)}%</Typography>
+              <Typography variant="subtitle2" sx={{ color: 'var(--text-muted)', mb: 1 }}>Confidence</Typography>
+              <Box sx={{ display: 'flex', alignItems: 'flex-end', gap: 1, mb: 1 }}>
+                <Typography variant="h5" sx={{ fontWeight: 'bold', lineHeight: 1 }}>{(confidence * 100).toFixed(2)}%</Typography>
               </Box>
               <Box sx={{ width: '100%', height: 6, bgcolor: 'var(--bg-dark)', borderRadius: 3, overflow: 'hidden' }}>
                 <Box sx={{ width: `${Math.min(confidence * 100, 100)}%`, height: '100%', bgcolor: 'var(--accent-purple)', transition: 'width 0.3s ease' }} />
@@ -204,38 +154,94 @@ const LiveDetectionPage = () => {
             </Box>
           </Paper>
 
-          {/* Constructed Sentence */}
-          <Paper className="glass-panel" sx={{ p: 3, flexGrow: 1 }}>
+          {/* Constructed Sentence (Top Right) */}
+          <Paper className="glass-panel" sx={{ p: 3, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Typography variant="subtitle2" sx={{ color: 'var(--text-muted)', mb: 2 }}>Constructed Sentence</Typography>
-            <Typography variant="h4" sx={{ color: 'var(--accent-purple)', fontWeight: 'bold', lineHeight: 1.4 }}>
+            <Typography variant="h4" sx={{ color: 'var(--accent-purple)', fontWeight: 'bold', lineHeight: 1.4, wordBreak: 'break-word', fontSize: { xs: '1.5rem', md: '2.125rem' } }}>
               {sentence || '...'}
             </Typography>
           </Paper>
 
-          {/* Recent Signs */}
-          <Paper className="glass-panel" sx={{ p: 3 }}>
+          {/* Recent Signs (Bottom Right) */}
+          <Paper className="glass-panel" sx={{ p: 3, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Typography variant="subtitle2" sx={{ color: 'var(--text-muted)', mb: 2 }}>Recent Signs</Typography>
-            <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap' }}>
+            <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap', alignItems: 'center' }}>
               {recentSigns.length === 0 ? (
                 <Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>No signs detected yet</Typography>
               ) : (
-                recentSigns.map((sign, index) => (
-                  <Box key={index} sx={{ 
-                    bgcolor: 'var(--bg-surface-light)', 
-                    color: '#fff', 
-                    px: 2, py: 1, 
-                    borderRadius: 2, 
-                    fontWeight: 600,
-                    opacity: 0.5 + (index / recentSigns.length) * 0.5 // Fade out older signs
-                  }}>
-                    {sign}
-                  </Box>
-                ))
+                <>
+                  {recentSigns.map((sign, index) => (
+                    <Box key={index} sx={{ 
+                      bgcolor: 'var(--bg-surface-light)', 
+                      color: '#fff', 
+                      px: 2, py: 1, 
+                      borderRadius: 2, 
+                      fontWeight: 600,
+                      opacity: 0.5 + (index / recentSigns.length) * 0.5 // Fade out older signs
+                    }}>
+                      {sign}
+                    </Box>
+                  ))}
+                  <Typography sx={{ color: 'var(--text-muted)', ml: 1, fontSize: '1.2rem', display: { xs: 'none', md: 'block' } }}>&gt;</Typography>
+                </>
               )}
             </Box>
           </Paper>
-        </Grid>
-      </Grid>
+
+        </Box>
+      </Box>
+
+      {/* Bottom Bar (Full Width) */}
+      <Paper className="glass-panel" sx={{ width: '100%', p: 2, mt: 2, display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: { xs: 'flex-start', sm: 'center' }, justifyContent: 'space-between', gap: 2, flexShrink: 0 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, width: { xs: '100%', sm: 'auto' }, justifyContent: 'space-between' }}>
+          <Box sx={{ flex: { xs: 1, sm: 'none' } }}>
+            <Typography variant="caption" sx={{ color: 'var(--text-muted)', display: 'block', mb: 0.5 }}>Model</Typography>
+            <FormControl size="small" sx={{ width: { xs: '100%', sm: 180 } }}>
+              <Select
+                value={expId}
+                onChange={(e) => setExpId(e.target.value)}
+                disabled={isDetecting}
+                sx={{ 
+                  color: '#fff', 
+                  bgcolor: 'var(--bg-dark)',
+                  '& .MuiOutlinedInput-notchedOutline': { borderColor: 'var(--border-color)' }
+                }}
+              >
+                <MenuItem value={1}>EXP 1: Baseline</MenuItem>
+                <MenuItem value={2}>EXP 2: CLAHE + Gamma</MenuItem>
+                <MenuItem value={3}>EXP 3: Bilateral Filter</MenuItem>
+                <MenuItem value={4}>EXP 4: Unsharp Masking</MenuItem>
+                <MenuItem value={5}>EXP 5: Hybrid (Best)</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+          {expId === 5 && (
+            <Box sx={{ display: { xs: 'none', md: 'block' }, bgcolor: 'rgba(16, 185, 129, 0.1)', color: '#10b981', px: 1.5, py: 0.5, borderRadius: 4, fontSize: '0.75rem', fontWeight: 'bold', mt: 2 }}>
+              Best Performance
+            </Box>
+          )}
+        </Box>
+
+        <Box sx={{ display: 'flex', gap: { xs: 3, md: 6 }, flexWrap: 'wrap', width: { xs: '100%', sm: 'auto' } }}>
+          <Box>
+            <Typography variant="caption" sx={{ color: 'var(--text-muted)' }}>FPS</Typography>
+            <Typography variant="h6" sx={{ color: '#10b981', fontWeight: 'bold' }}>{fps || '--'}</Typography>
+          </Box>
+          <Box>
+            <Typography variant="caption" sx={{ color: 'var(--text-muted)' }}>Detection Time</Typography>
+            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>{detectionTime ? `${detectionTime} ms` : '-- ms'}</Typography>
+          </Box>
+          <Box>
+            <Typography variant="caption" sx={{ color: 'var(--text-muted)' }}>Status</Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mt: 0.5 }}>
+              <CircleIcon sx={{ fontSize: 10, color: isProcessing ? '#10b981' : 'var(--text-muted)' }} />
+              <Typography variant="body2" sx={{ fontWeight: 'bold', color: isProcessing ? '#10b981' : 'var(--text-muted)' }}>
+                {isProcessing ? 'Detecting...' : 'Idle'}
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Paper>
     </Box>
   );
 };

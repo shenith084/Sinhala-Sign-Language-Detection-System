@@ -10,7 +10,7 @@ const AboutPage = () => {
       <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 4 }}>About SSL400 System</Typography>
 
       <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
+        <Grid xs={12} md={6}>
           {/* Project Overview */}
           <Paper className="glass-panel" sx={{ p: 4, mb: 4 }}>
             <Typography variant="h6" sx={{ color: 'var(--text-main)', mb: 2, fontWeight: 'bold' }}>
@@ -47,7 +47,7 @@ const AboutPage = () => {
           </Paper>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid xs={12} md={6}>
           {/* Dataset */}
           <Paper className="glass-panel" sx={{ p: 3, mb: 3, display: 'flex', alignItems: 'center', gap: 3 }}>
             <Box sx={{ bgcolor: 'var(--bg-surface-light)', p: 2, borderRadius: 2 }}>

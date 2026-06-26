@@ -27,7 +27,7 @@ const Sidebar = () => {
         flexShrink: 0,
         borderRight: '1px solid var(--border-color)',
         bgcolor: 'var(--bg-dark)',
-        display: 'flex',
+        display: { xs: 'none', md: 'flex' },
         flexDirection: 'column',
         p: 2
       }}
@@ -69,9 +69,13 @@ const Sidebar = () => {
                 </ListItemIcon>
                 <ListItemText 
                   primary={item.text} 
-                  primaryTypographyProps={{ 
-                    fontWeight: isActive ? 600 : 500,
-                    fontSize: '0.95rem'
+                  slotProps={{ 
+                    primary: {
+                      sx: {
+                        fontWeight: isActive ? 600 : 500,
+                        fontSize: '0.95rem'
+                      }
+                    }
                   }} 
                 />
               </ListItemButton>

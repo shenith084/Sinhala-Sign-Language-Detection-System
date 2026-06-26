@@ -36,15 +36,19 @@ const WebcamFeed = ({ onFramesCaptured, isDetecting }) => {
   const progress = (frames.length / 32) * 100;
 
   return (
-    <Paper elevation={3} sx={{ overflow: 'hidden', borderRadius: 2, position: 'relative' }}>
+    <Paper elevation={0} sx={{ overflow: 'hidden', borderRadius: 2, position: 'relative', width: '100%', height: '100%', bgcolor: 'transparent' }}>
       <Webcam
         audio={false}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
-        width="100%"
-        height="auto"
         videoConstraints={{ facingMode: "user" }}
-        style={{ display: 'block' }}
+        style={{ 
+          width: '100%', 
+          height: '100%', 
+          objectFit: 'cover',
+          display: 'block',
+          borderRadius: '8px'
+        }}
       />
       {isDetecting && (
         <Box sx={{ width: '100%', position: 'absolute', bottom: 0 }}>

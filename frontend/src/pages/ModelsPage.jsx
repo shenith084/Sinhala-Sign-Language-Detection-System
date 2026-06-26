@@ -1,14 +1,21 @@
 import React from 'react';
-import { Box, Typography, Grid, Paper } from '@mui/material';
+import { Box, Typography, Paper } from '@mui/material';
+import WaterDropOutlinedIcon from '@mui/icons-material/WaterDropOutlined';
+import SettingsBrightnessOutlinedIcon from '@mui/icons-material/SettingsBrightnessOutlined';
+import FilterBAndWOutlinedIcon from '@mui/icons-material/FilterBAndWOutlined';
+import BlurCircularOutlinedIcon from '@mui/icons-material/BlurCircularOutlined';
+import GpsFixedOutlinedIcon from '@mui/icons-material/GpsFixedOutlined';
 
-const ModelCard = ({ title, name, metrics, isBest }) => (
+const ModelCard = ({ title, name, metrics, isBest, icon: Icon, comingSoon }) => (
   <Paper className="glass-panel" sx={{ 
     p: 3, 
     height: '100%', 
     position: 'relative',
     borderColor: isBest ? 'var(--accent-purple)' : 'var(--border-color)',
     borderWidth: isBest ? 2 : 1,
-    overflow: 'visible'
+    overflow: 'visible',
+    display: 'flex',
+    flexDirection: 'column'
   }}>
     {isBest && (
       <Box sx={{
@@ -26,22 +33,40 @@ const ModelCard = ({ title, name, metrics, isBest }) => (
         Best Model
       </Box>
     )}
-    <Typography variant="h5" sx={{ color: 'var(--accent-purple)', fontWeight: 'bold', mb: 1 }}>{title}</Typography>
-    <Typography variant="body1" sx={{ color: 'var(--text-main)', mb: 4, minHeight: 48 }}>{name}</Typography>
+    
+    <Box sx={{ mb: 2 }}>
+      {Icon && <Icon sx={{ fontSize: 32, color: 'var(--accent-purple)' }} />}
+    </Box>
 
-    <Grid container spacing={2}>
-      <Grid item xs={6}><Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>Accuracy</Typography></Grid>
-      <Grid item xs={6} sx={{ textAlign: 'right' }}><Typography variant="body2" sx={{ fontWeight: 'bold' }}>{metrics.accuracy}</Typography></Grid>
+    <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 0.5 }}>{title}</Typography>
+    <Typography variant="body2" sx={{ color: 'var(--text-muted)', mb: 4, minHeight: 40 }}>{name}</Typography>
 
-      <Grid item xs={6}><Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>Precision</Typography></Grid>
-      <Grid item xs={6} sx={{ textAlign: 'right' }}><Typography variant="body2" sx={{ fontWeight: 'bold' }}>{metrics.precision}</Typography></Grid>
-
-      <Grid item xs={6}><Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>Recall</Typography></Grid>
-      <Grid item xs={6} sx={{ textAlign: 'right' }}><Typography variant="body2" sx={{ fontWeight: 'bold' }}>{metrics.recall}</Typography></Grid>
-
-      <Grid item xs={6}><Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>F1 Score</Typography></Grid>
-      <Grid item xs={6} sx={{ textAlign: 'right' }}><Typography variant="body2" sx={{ fontWeight: 'bold' }}>{metrics.f1}</Typography></Grid>
-    </Grid>
+    {comingSoon ? (
+      <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Typography variant="body1" sx={{ color: 'var(--text-muted)', fontStyle: 'italic', opacity: 0.7 }}>
+          Coming Soon
+        </Typography>
+      </Box>
+    ) : (
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>Accuracy</Typography>
+          <Typography variant="body2" sx={{ fontWeight: 'bold' }}>{metrics.accuracy}</Typography>
+        </Box>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>Precision</Typography>
+          <Typography variant="body2" sx={{ fontWeight: 'bold' }}>{metrics.precision}</Typography>
+        </Box>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>Recall</Typography>
+          <Typography variant="body2" sx={{ fontWeight: 'bold' }}>{metrics.recall}</Typography>
+        </Box>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>F1 Score</Typography>
+          <Typography variant="body2" sx={{ fontWeight: 'bold' }}>{metrics.f1}</Typography>
+        </Box>
+      </Box>
+    )}
   </Paper>
 );
 
@@ -49,48 +74,43 @@ const ModelsPage = () => {
   return (
     <Box sx={{ maxWidth: 1200 }}>
       <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 1 }}>Model Comparison</Typography>
-      <Typography variant="body1" sx={{ color: 'var(--text-muted)', mb: 6 }}>
+      <Typography variant="body1" sx={{ color: 'var(--text-muted)', mb: 5 }}>
         Compare the performance of different experiments and preprocessing techniques.
       </Typography>
 
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} md={2.4}>
-          <ModelCard 
-            title="EXP 1" 
-            name="Baseline" 
-            metrics={{ accuracy: '68.42%', precision: '66.21%', recall: '67.89%', f1: '67.03%' }} 
-          />
-        </Grid>
-        <Grid item xs={12} sm={6} md={2.4}>
-          <ModelCard 
-            title="EXP 2" 
-            name="CLAHE + Gamma" 
-            metrics={{ accuracy: '72.81%', precision: '70.45%', recall: '72.11%', f1: '71.27%' }} 
-          />
-        </Grid>
-        <Grid item xs={12} sm={6} md={2.4}>
-          <ModelCard 
-            title="EXP 3" 
-            name="Bilateral Filter" 
-            metrics={{ accuracy: '74.33%', precision: '72.19%', recall: '74.02%', f1: '73.09%' }} 
-          />
-        </Grid>
-        <Grid item xs={12} sm={6} md={2.4}>
-          <ModelCard 
-            title="EXP 4" 
-            name="Unsharp Masking" 
-            metrics={{ accuracy: '75.65%', precision: '74.02%', recall: '75.41%', f1: '74.71%' }} 
-          />
-        </Grid>
-        <Grid item xs={12} sm={6} md={2.4}>
-          <ModelCard 
-            title="EXP 5" 
-            name="Hybrid (Best)" 
-            metrics={{ accuracy: '78.95%', precision: '77.31%', recall: '78.85%', f1: '78.07%' }} 
-            isBest
-          />
-        </Grid>
-      </Grid>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(5, 1fr)' }, gap: 3 }}>
+        <ModelCard 
+          title="EXP 1" 
+          name="Baseline" 
+          icon={WaterDropOutlinedIcon}
+          metrics={{ accuracy: '23.00%', precision: '21.06%', recall: '18.68%', f1: '15.71%' }} 
+        />
+        <ModelCard 
+          title="EXP 2" 
+          name="CLAHE + Gamma" 
+          icon={SettingsBrightnessOutlinedIcon}
+          metrics={{ accuracy: '25.00%', precision: '30.23%', recall: '20.65%', f1: '18.49%' }} 
+          isBest
+        />
+        <ModelCard 
+          title="EXP 3" 
+          name="Bilateral Filter" 
+          icon={FilterBAndWOutlinedIcon}
+          comingSoon
+        />
+        <ModelCard 
+          title="EXP 4" 
+          name="Unsharp Masking" 
+          icon={BlurCircularOutlinedIcon}
+          comingSoon
+        />
+        <ModelCard 
+          title="EXP 5" 
+          name="Hybrid (Best)" 
+          icon={GpsFixedOutlinedIcon}
+          comingSoon
+        />
+      </Box>
       
       <Typography variant="caption" sx={{ color: 'var(--text-muted)', display: 'block', mt: 6 }}>
         * Performance results are evaluated on the SSL400 validation set.
