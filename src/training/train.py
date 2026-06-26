@@ -257,11 +257,15 @@ def main(args: argparse.Namespace) -> None:
                 cache_subdir="pretrained_weights",
                 cache_dir=str(PROJECT_ROOT)
             )
-            with tarfile.open(tar_path, "r:gz") as tar:
+            with tarfile.open(tar_path, "r:*") as tar:
                 tar.extractall(path=str(PROJECT_ROOT / "pretrained_weights"))
             logger.info("Weights downloaded and extracted.")
         except Exception as e:
-            logger.warning(f"Failed to download weights: {e}")
+            import shutil
+            if ckpt_dir.exists():
+                shutil.rmtree(ckpt_dir)
+            logger.error(f"Failed to extract weights: {e}")
+            raise
 
     # -------------------------------------------------------------------------
     # PHASE 1 — Warm-up (Frozen Backbone)
