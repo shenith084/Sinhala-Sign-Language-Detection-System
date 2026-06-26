@@ -12,3 +12,4 @@ pyyaml
 Pillow
 Flask
 flask-cors
+gunicorn
