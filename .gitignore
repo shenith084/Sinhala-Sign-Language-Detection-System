@@ -8,8 +8,6 @@ env/
 
 # Data and Models (Avoid uploading huge files to GitHub)
 data/
-models/
-*.keras
 *.h5
 *.pb
 *.tflite
