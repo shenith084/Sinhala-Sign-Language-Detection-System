@@ -17,23 +17,23 @@ const WebcamFeed = ({ onFramesCaptured, isDetecting }) => {
       if (webcamRef.current) {
         const imageSrc = webcamRef.current.getScreenshot();
         if (imageSrc) {
-          setFrames(prev => {
-            const newFrames = [...prev, imageSrc];
-            // If we hit 60 frames (3 seconds at 20fps), send them
-            if (newFrames.length >= 60) {
-              onFramesCaptured(newFrames);
-              return []; // Reset buffer
-            }
-            return newFrames;
-          });
+          setFrames(prev => [...prev, imageSrc]);
         }
       }
     }, 50); // 50ms = 20 fps
 
     return () => clearInterval(captureInterval);
-  }, [isDetecting, onFramesCaptured]);
+  }, [isDetecting]);
 
-  const progress = (frames.length / 60) * 100;
+  // When we reach 32 frames (1.6s), send them and clear
+  React.useEffect(() => {
+    if (frames.length >= 32) {
+      onFramesCaptured(frames.slice(0, 32));
+      setFrames([]); // Reset buffer
+    }
+  }, [frames, onFramesCaptured]);
+
+  const progress = (frames.length / 32) * 100;
 
   return (
     <Paper elevation={3} sx={{ overflow: 'hidden', borderRadius: 2, position: 'relative' }}>

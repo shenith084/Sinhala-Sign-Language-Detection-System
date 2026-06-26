@@ -21,7 +21,7 @@ paths:
 
 # --- Dataset Configuration ---
 dataset:
-  num_classes: 50                   # Reduced to Top 50 classes
+  num_classes: 10                   # Reduced to Top 10 classes for Kaggle
   total_videos: 3209                # Total videos in dataset
   video_extensions: [".mp4", ".mov"]
   fps: 20                           # Videos recorded at 20 FPS
@@ -54,7 +54,7 @@ model:
 
 # --- Training — Phase 1 (Frozen Backbone) ---
 phase1:
-  max_epochs: 50
+  max_epochs: 30
   learning_rate: 0.001             # 1e-3
   batch_size: 16                   # Increased to 16 for Colab A100 GPU
   early_stopping_patience: 15
@@ -65,10 +65,10 @@ phase1:
 
 # --- Training — Phase 2 (Full Fine-Tune) ---
 phase2:
-  max_epochs: 30                   # Restored to full 30 epochs
-  learning_rate: 0.00001           # 1e-5 — very careful fine-tuning
+  max_epochs: 50                   # Set to 50 epochs for fine-tuning
+  learning_rate: 0.00005           # 5e-5 — higher learning rate to break plateau
   batch_size: 16                   # Increased to 16 for Colab A100 GPU
-  early_stopping_patience: 15
+  early_stopping_patience: 25      # Increased patience for longer training
   label_smoothing: 0.1
   mixup_alpha: 0.0                 # No Mixup in Phase 2
   lr_schedule: "CosineDecay"
@@ -77,10 +77,13 @@ phase2:
 # --- Augmentation ---
 augmentation:
   horizontal_flip_prob: 0.5
-  rotation_range_deg: 15
-  zoom_range: [0.85, 1.15]
+  rotation_range_deg: 5            # Reduced from 15 to keep hands in frame
+  zoom_range: [0.95, 1.05]         # Reduced from 0.85-1.15 to keep hands in frame
   brightness_delta: 0.2
   contrast_range: [0.8, 1.2]
+  hue_delta: 0.1                   # NEW: Color jitter (Hue)
+  saturation_range: [0.8, 1.2]     # NEW: Color jitter (Saturation)
+  gaussian_noise_std: 0.05         # NEW: Gaussian noise to simulate webcam grain
   # Temporal
   temporal_jitter: true
   speed_perturbation: [0.8, 1.2]

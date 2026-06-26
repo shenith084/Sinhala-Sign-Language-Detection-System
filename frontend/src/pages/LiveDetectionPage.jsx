@@ -32,7 +32,7 @@ const LiveDetectionPage = () => {
     try {
       const result = await predictFrames(frames, expId);
       
-      if (result.confidence > 0.65) {
+      if (result.confidence > 0.20) { // Lowered threshold so they can see *something*!
         setCurrentWord(result.word_sinhala);
         setConfidence(result.confidence);
         setLastWordTime(Date.now());
@@ -50,10 +50,12 @@ const LiveDetectionPage = () => {
           return prev;
         });
       } else {
+        setCurrentWord('Too uncertain...');
         setConfidence(result.confidence);
       }
     } catch (error) {
       console.error("Prediction failed", error);
+      setCurrentWord('Error');
     } finally {
       setIsProcessing(false);
     }
@@ -99,7 +101,7 @@ const LiveDetectionPage = () => {
           <WebcamFeed onFramesCaptured={handleFramesCaptured} isDetecting={isDetecting} />
         </Grid>
         <Grid item xs={12} md={5}>
-          <SinhalaTextDisplay sentence={sentence} currentWord={currentWord} confidence={confidence} />
+          <SinhalaTextDisplay sentence={sentence} currentWord={currentWord} confidence={confidence} isProcessing={isProcessing} />
         </Grid>
       </Grid>
     </Container>

@@ -26,17 +26,21 @@ def predict():
         if not data or 'frames' not in data:
             return jsonify({"error": "No frames provided"}), 400
 
-        exp_id = int(data.get('exp_id', 5))  # Default to best hybrid
+        exp_id = int(data.get('exp_id', 1))  # Default to experiment 1
         frames_b64 = data['frames']
+        
+        logger.info(f"Received prediction request for exp_id: {exp_id}, active_exp_id: {model_service.active_exp_id}")
         
         # Ensure correct model is loaded
         if model_service.active_exp_id != exp_id:
-            model_path = PROJECT_ROOT / "models" / f"experiment_{exp_id}" / "best_model_phase2.keras"
-            if not model_path.exists():
-                model_path = PROJECT_ROOT / "models" / f"experiment_{exp_id}" / "best_model_phase1.keras"
+            logger.info("Active exp_id doesn't match! Reloading model...")
+            model_path = PROJECT_ROOT / "models" / f"experiment_{exp_id}" / "saved_model"
             
             if not model_service.load_model(exp_id, str(model_path)):
+                logger.error("load_model returned False!")
                 return jsonify({"error": f"Failed to load model for experiment {exp_id}"}), 500
+        else:
+            logger.info("Model already loaded. Bypassing load_model().")
 
         # Decode base64 frames
         raw_frames = []

@@ -31,34 +31,49 @@ class ModelService:
             return
             
         self.model = None
+        self.model_fn = None
         self.active_exp_id = None
         self.model_lock = threading.Lock()
         self._initialized = True
 
     def load_model(self, exp_id: int, model_path: str) -> bool:
-        """Load a Keras model into memory in a thread-safe way."""
+        """Load a SavedModel or .keras weights into memory in a thread-safe way."""
         path = Path(model_path)
-        if not path.exists():
-            logger.error(f"Model path not found: {path}")
+        keras_path = path.parent / "best_model_phase2.keras"
+
+        if not path.exists() and not keras_path.exists():
+            logger.error(f"Model path not found: {path} and {keras_path}")
             return False
 
         with self.model_lock:
             try:
-                logger.info(f"Loading EXP{exp_id} model from {path}...")
-                os.environ["TF_USE_LEGACY_KERAS"] = "1"
-                try:
-                    import tf_keras as keras
-                except ImportError:
-                    keras = tf.keras
+                logger.info(f"Loading EXP{exp_id} model...")
+                
+                if keras_path.exists():
+                    logger.info(f"Loading .keras weights from {keras_path}")
+                    from models.movinet_builder import build_model
+                    # Build custom model architecture
+                    self.model = build_model(num_classes=10)
+                    self.model.load_weights(str(keras_path))
                     
-                self.model = keras.models.load_model(str(path))
+                    # Define a fast serving wrapper
+                    @tf.function
+                    def serve(x):
+                        return self.model(x, training=False)
+                    
+                    self.model_fn = serve
+                else:
+                    logger.info(f"Loading SavedModel from {path}")
+                    self.model = tf.saved_model.load(str(path))
+                    self.model_fn = self.model.signatures["serving_default"]
+
                 self.active_exp_id = exp_id
                 
                 # Warmup inference
                 dummy = np.random.randn(1, 32, 224, 224, 3).astype(np.float32)
-                self.model.predict(dummy, verbose=0)
+                self.model_fn(tf.constant(dummy))
                 
-                logger.info(f"✅ Successfully loaded and warmed up EXP{exp_id} model.")
+                logger.info(f"Successfully loaded and warmed up EXP{exp_id} model.")
                 return True
             except Exception as e:
                 logger.error(f"Failed to load model: {e}")
@@ -66,10 +81,16 @@ class ModelService:
 
     def predict(self, tensor: np.ndarray) -> np.ndarray:
         """Run inference on a preprocessed tensor."""
-        if self.model is None:
+        if self.model_fn is None:
             raise ValueError("No model loaded.")
             
         with self.model_lock:
-            logits = self.model.predict(tensor, verbose=0)
+            # Run the frozen graph
+            outputs = self.model_fn(tf.constant(tensor))
+            
+            # Extract the logits array from the output dictionary
+            logits = list(outputs.values())[0]
+            
+            # Apply softmax
             probs = tf.nn.softmax(logits[0]).numpy()
             return probs

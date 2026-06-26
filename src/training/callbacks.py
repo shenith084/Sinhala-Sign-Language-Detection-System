@@ -185,16 +185,7 @@ def get_callbacks(
         ),
 
         # 4. Human-readable progress logger
-        ProgressLogger(exp_id=exp_id, phase=phase),
-
-        # 5. ReduceLROnPlateau as a safety net (CosineDecay handles main scheduling)
-        keras.callbacks.ReduceLROnPlateau(
-            monitor="val_loss",
-            factor=0.5,
-            patience=5,
-            min_lr=1e-7,
-            verbose=1
-        )
+        ProgressLogger(exp_id=exp_id, phase=phase)
     ]
 
     # 6. Google Drive sync (Colab only)

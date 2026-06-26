@@ -65,21 +65,39 @@ def apply_spatial_augmentation(
     delta = np.random.uniform(-0.2, 0.2)
     frames = np.clip(frames + delta, -1.0, 1.0)
     
+    # --- NEW: Random Hue & Saturation ---
+    # Convert back to uint8 [0, 255] for HSV conversion
+    frames_uint8 = ((frames + 1.0) * 127.5).astype(np.uint8)
+    for i in range(num_frames):
+        hsv = cv2.cvtColor(frames_uint8[i], cv2.COLOR_RGB2HSV).astype(np.float32)
+        # Random Hue
+        hue_shift = np.random.uniform(-18.0, 18.0) # 0.1 of 180 degrees
+        hsv[:, :, 0] = (hsv[:, :, 0] + hue_shift) % 180.0
+        # Random Saturation
+        sat_scale = np.random.uniform(0.8, 1.2)
+        hsv[:, :, 1] = np.clip(hsv[:, :, 1] * sat_scale, 0, 255)
+        
+        frames_uint8[i] = cv2.cvtColor(hsv.astype(np.uint8), cv2.COLOR_HSV2RGB)
+    
+    # Back to float32 [-1.0, 1.0]
+    frames = (frames_uint8.astype(np.float32) / 127.5) - 1.0
+    
     # --- Random Contrast (factor in [0.8, 1.2]) ---
     contrast_factor = np.random.uniform(0.8, 1.2)
     mean = np.mean(frames, axis=(1, 2), keepdims=True)
     frames = np.clip(mean + contrast_factor * (frames - mean), -1.0, 1.0)
     
-    # --- Random Rotation (±15°) ---
-    angle = np.random.uniform(-15.0, 15.0)
+    # --- Random Rotation (±5°) ---
+    angle = np.random.uniform(-5.0, 5.0)
     center = (w / 2, h / 2)
     M = cv2.getRotationMatrix2D(center, angle, 1.0)
     
     for i in range(num_frames):
         frames[i] = cv2.warpAffine(frames[i], M, (w, h), borderMode=cv2.BORDER_REFLECT101)
         
-    # --- Random Zoom (0.85 – 1.15) ---
-    zoom = np.random.uniform(0.85, 1.15)
+    # --- Random Zoom (0.95 – 1.05) ---
+    zoom_range = [0.95, 1.05]
+    zoom = np.random.uniform(zoom_range[0], zoom_range[1])
     if zoom < 1.0:
         pad_h = int(h * (1.0 - zoom) / 2)
         pad_w = int(w * (1.0 - zoom) / 2)
@@ -95,6 +113,12 @@ def apply_spatial_augmentation(
         for i in range(num_frames):
             frames[i] = cv2.resize(cropped[i], (w, h))
             
+    # --- NEW: Random Gaussian Noise ---
+    noise_std = 0.05
+    if noise_std > 0:
+        noise = np.random.normal(0, noise_std, frames.shape).astype(np.float32)
+        frames = np.clip(frames + noise, -1.0, 1.0)
+        
     return frames.astype(np.float32)
 
 

@@ -35,7 +35,7 @@ if __name__ == "__main__":
     try:
         model_service = ModelService()
         PROJECT_ROOT = Path(__file__).resolve().parent.parent
-        best_model_path = PROJECT_ROOT / "models" / "experiment_1" / "best_model_phase2.keras"
+        best_model_path = PROJECT_ROOT / "models" / "experiment_1" / "saved_model"
         if best_model_path.exists():
             model_service.load_model(1, str(best_model_path))
         else:

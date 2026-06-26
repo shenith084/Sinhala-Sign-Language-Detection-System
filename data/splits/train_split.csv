@@ -1,1280 +1,324 @@
 video_path,class_name,class_id
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_017.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_016.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_003.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_015.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_006.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_014.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_018.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_013.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_025.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_007.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_010.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_002.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_020.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_012.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_011.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Beautiful/Beautiful_023.mp4,Beautiful,10
-SSL400/Dataset - Original/Adjectives/Cold/Cold_006.mp4,Cold,26
-SSL400/Dataset - Original/Adjectives/Cold/Cold_002.mp4,Cold,26
-SSL400/Dataset - Original/Adjectives/Cold/Cold_010.mp4,Cold,26
-SSL400/Dataset - Original/Adjectives/Cold/Cold_001.mp4,Cold,26
-SSL400/Dataset - Original/Adjectives/Cold/Cold_003.mp4,Cold,26
-SSL400/Dataset - Original/Adjectives/Cold/Cold_005.mp4,Cold,26
-SSL400/Dataset - Original/Adjectives/Cold/Cold_008.mp4,Cold,26
-SSL400/Dataset - Original/Adjectives/Cold/Cold_004.mp4,Cold,26
-SSL400/Dataset - Original/Adjectives/Deaf/Deaf_011.mp4,Deaf,35
-SSL400/Dataset - Original/Adjectives/Deaf/Deaf_008.mp4,Deaf,35
-SSL400/Dataset - Original/Adjectives/Deaf/Deaf_002.mp4,Deaf,35
-SSL400/Dataset - Original/Adjectives/Deaf/Deaf_010.mp4,Deaf,35
-SSL400/Dataset - Original/Adjectives/Deaf/Deaf_001.mp4,Deaf,35
-SSL400/Dataset - Original/Adjectives/Deaf/Deaf_009.mp4,Deaf,35
-SSL400/Dataset - Original/Adjectives/Deaf/Deaf_007.mp4,Deaf,35
-SSL400/Dataset - Original/Adjectives/Deep/Deep_002.mp4,Deep,36
-SSL400/Dataset - Original/Adjectives/Deep/Deep_007.mp4,Deep,36
-SSL400/Dataset - Original/Adjectives/Deep/Deep_008.mp4,Deep,36
-SSL400/Dataset - Original/Adjectives/Deep/Deep_004.mp4,Deep,36
-SSL400/Dataset - Original/Adjectives/Deep/Deep_001.mp4,Deep,36
-SSL400/Dataset - Original/Adjectives/Deep/Deep_003.mp4,Deep,36
-SSL400/Dataset - Original/Adjectives/Different/Different_009.mp4,Different,37
-SSL400/Dataset - Original/Adjectives/Different/Different_001.mp4,Different,37
-SSL400/Dataset - Original/Adjectives/Different/Different_004.mp4,Different,37
-SSL400/Dataset - Original/Adjectives/Different/Different_003.mp4,Different,37
-SSL400/Dataset - Original/Adjectives/Different/Different_008.mp4,Different,37
-SSL400/Dataset - Original/Adjectives/Different/Different_006.mp4,Different,37
-SSL400/Dataset - Original/Adjectives/Different/Different_010.mp4,Different,37
-SSL400/Dataset - Original/Adjectives/Fat/Fat_006.mp4,Fat,48
-SSL400/Dataset - Original/Adjectives/Fat/Fat_008.mp4,Fat,48
-SSL400/Dataset - Original/Adjectives/Fat/Fat_005.mp4,Fat,48
-SSL400/Dataset - Original/Adjectives/Fat/Fat_010.mp4,Fat,48
-SSL400/Dataset - Original/Adjectives/Fat/Fat_009.mp4,Fat,48
-SSL400/Dataset - Original/Adjectives/Fat/Fat_003.mp4,Fat,48
-SSL400/Dataset - Original/Adjectives/Fat/Fat_007.mp4,Fat,48
-SSL400/Dataset - Original/Adjectives/Full/Full_011.mp4,Full,53
-SSL400/Dataset - Original/Adjectives/Full/Full_004.mp4,Full,53
-SSL400/Dataset - Original/Adjectives/Full/Full_012.mp4,Full,53
-SSL400/Dataset - Original/Adjectives/Full/Full_001.mp4,Full,53
-SSL400/Dataset - Original/Adjectives/Full/Full_007.mp4,Full,53
-SSL400/Dataset - Original/Adjectives/Full/Full_002.mp4,Full,53
-SSL400/Dataset - Original/Adjectives/Full/Full_009.mp4,Full,53
-SSL400/Dataset - Original/Adjectives/Full/Full_010.mp4,Full,53
-SSL400/Dataset - Original/Adjectives/Good/Good_028.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_027.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_040.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_006.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_034.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_067.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_066.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_025.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_007.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_064.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_059.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_053.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_001.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_045.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_002.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_065.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_058.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_038.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_041.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_017.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_018.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_062.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_046.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_024.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_036.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_009.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_035.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_049.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_031.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_008.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_060.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_022.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_010.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_063.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_050.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_039.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_047.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_056.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_044.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_019.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_005.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Good/Good_061.mp4,Good,56
-SSL400/Dataset - Original/Adjectives/Hard/Hard_004.mp4,Hard,61
-SSL400/Dataset - Original/Adjectives/Hard/Hard_002.mp4,Hard,61
-SSL400/Dataset - Original/Adjectives/Hard/Hard_003.mp4,Hard,61
-SSL400/Dataset - Original/Adjectives/Hard/Hard_006.mp4,Hard,61
-SSL400/Dataset - Original/Adjectives/Past/Past_007.mp4,Past,90
-SSL400/Dataset - Original/Adjectives/Past/Past_005.mp4,Past,90
-SSL400/Dataset - Original/Adjectives/Past/Past_001.mp4,Past,90
-SSL400/Dataset - Original/Adjectives/Past/Past_009.mp4,Past,90
-SSL400/Dataset - Original/Adjectives/Past/Past_008.mp4,Past,90
-SSL400/Dataset - Original/Adjectives/Past/Past_004.mp4,Past,90
-SSL400/Dataset - Original/Adjectives/Rich/Rich_012.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_018.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_007.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_001.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_013.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_002.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_008.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_003.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_016.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_010.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_009.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_015.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Rich/Rich_005.mp4,Rich,103
-SSL400/Dataset - Original/Adjectives/Same/Same_004.mp4,Same,107
-SSL400/Dataset - Original/Adjectives/Same/Same_005.mp4,Same,107
-SSL400/Dataset - Original/Adjectives/Same/Same_007.mp4,Same,107
-SSL400/Dataset - Original/Adjectives/Same/Same_002.mp4,Same,107
-SSL400/Dataset - Original/Adjectives/Same/Same_006.mp4,Same,107
-SSL400/Dataset - Original/Adjectives/Same/Same_003.mp4,Same,107
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_002.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_007.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_001.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_004.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_006.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_005.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_010.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_011.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_014.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_008.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_012.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_017.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_015.mp4,Wrong,145
-SSL400/Dataset - Original/Adjectives/Wrong/Wrong_009.mp4,Wrong,145
-SSL400/Dataset - Original/Adverb/Again/Again_017.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_003.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_005.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_015.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_025.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_007.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_027.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_012.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_019.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_010.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_026.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_001.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_006.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_002.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_020.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_008.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_004.mp4,Again,6
-SSL400/Dataset - Original/Adverb/Again/Again_021.mp4,Again,6
-SSL400/Dataset - Original/Colors/Black/Black_008.mp4,Black,12
-SSL400/Dataset - Original/Colors/Black/Black_028.MP4,Black,12
-SSL400/Dataset - Original/Colors/Black/Black_006.mp4,Black,12
-SSL400/Dataset - Original/Colors/Black/Black_004.mp4,Black,12
-SSL400/Dataset - Original/Colors/Green/Green_022.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_003.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_015.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_024.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_009.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_010.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_012.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_001.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_020.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_025.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_013.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_006.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_017.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_011.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_002.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_004.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_027.mp4,Green,58
-SSL400/Dataset - Original/Colors/Green/Green_014.mp4,Green,58
-SSL400/Dataset - Original/Colors/Purple/Purple_023.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_003.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_020.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_016.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_022.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_010.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_012.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_011.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_001.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_013.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_017.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_026.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_002.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_019.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_030.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_021.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_009.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Purple/Purple_006.mp4,Purple,99
-SSL400/Dataset - Original/Colors/Red/Red_012.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_026.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_029.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_021.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_008.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_019.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_024.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_011.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_020.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_018.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_022.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_017.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_005.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_004.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_003.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_016.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_014.mp4,Red,102
-SSL400/Dataset - Original/Colors/Red/Red_010.mp4,Red,102
-SSL400/Dataset - Original/Colors/White/White_016.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_011.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_009.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_018.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_022.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_005.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_020.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_007.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_015.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_001.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_012.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_014.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_004.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_010.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_023.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_013.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_008.mp4,White,142
-SSL400/Dataset - Original/Colors/White/White_019.mp4,White,142
-SSL400/Dataset - Original/Colors/Yellow/Yellow_007.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_014.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_018.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_006.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_012.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_016.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_020.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_004.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_048.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_017.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_002.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_021.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_019.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_046.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_001.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_003.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_044.mp4,Yellow,146
-SSL400/Dataset - Original/Colors/Yellow/Yellow_015.mp4,Yellow,146
-SSL400/Dataset - Original/Days/Day/Day_008.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_004.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_007.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_003.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_002.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_011.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_017.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_013.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_001.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_016.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_018.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_005.mp4,Day,34
-SSL400/Dataset - Original/Days/Day/Day_019.mp4,Day,34
-SSL400/Dataset - Original/Days/Hour/Hour_019.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_014.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_016.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_012.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_003.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_004.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_006.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_002.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_001.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_013.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_008.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_033.MP4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_034.MP4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_015.mp4,Hour,68
-SSL400/Dataset - Original/Days/Hour/Hour_017.mp4,Hour,68
-SSL400/Dataset - Original/Days/Monday/Monday_013.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_017.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_004.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_014.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_008.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_011.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_019.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_003.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_010.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_002.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_001.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_016.mp4,Monday,81
-SSL400/Dataset - Original/Days/Monday/Monday_007.mp4,Monday,81
-SSL400/Dataset - Original/Days/Time/Time_004.mp4,Time,129
-SSL400/Dataset - Original/Days/Time/Time_003.mp4,Time,129
-SSL400/Dataset - Original/Days/Time/Time_022.MP4,Time,129
-SSL400/Dataset - Original/Days/Time/Time_020.MP4,Time,129
-SSL400/Dataset - Original/Days/Time/Time_007.mp4,Time,129
-SSL400/Dataset - Original/Days/Time/Time_008.mp4,Time,129
-SSL400/Dataset - Original/Days/Time/Time_002.mp4,Time,129
-SSL400/Dataset - Original/Days/Time/Time_021.MP4,Time,129
-SSL400/Dataset - Original/Days/Today/Today_033.MP4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_002.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_009.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_010.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_016.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_013.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_017.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_015.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_032.MP4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_004.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_011.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_007.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_018.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_012.mp4,Today,131
-SSL400/Dataset - Original/Days/Today/Today_003.mp4,Today,131
-SSL400/Dataset - Original/Days/Tomorrow/Tomorrow_013.MP4,Tomorrow,132
-SSL400/Dataset - Original/Days/Wednesday/Wednesday_012.MP4,Wednesday,141
-SSL400/Dataset - Original/Days/Yesterday/Yesterday_014.MP4,Yesterday,147
-SSL400/Dataset - Original/Greetings/Hello/Hello_083.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_021.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_067.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_040.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_020.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_024.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_045.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_013.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_008.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_038.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_035.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_025.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_012.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_093.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_075.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_100.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_043.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_014.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_073.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_102.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_076.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_087.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_031.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_091.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_089.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_085.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_041.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_001.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_018.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_071.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_081.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_084.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_017.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_099.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_080.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_086.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_070.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_027.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_094.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_036.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_069.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_010.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_003.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_078.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_068.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Hello/Hello_016.mp4,Hello,66
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_089.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_116.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_027.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_108.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_054.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_021.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_109.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_071.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_068.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_083.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_104.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_020.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_012.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_015.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_052.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_098.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_080.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_097.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_006.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_111.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_066.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_011.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_028.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_069.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_082.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_063.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_115.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_010.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_086.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_024.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_099.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_107.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_102.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_007.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_094.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_090.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_003.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_002.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_013.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_016.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_018.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_023.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_019.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_091.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_025.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_074.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_075.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_113.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_095.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_022.mp4,Thank you,127
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_008.mp4,Thank you,127
-SSL400/Dataset - Original/Nouns/Bag/Bag_008.MP4,Bag,9
-SSL400/Dataset - Original/Nouns/Bag/Bag_013.MP4,Bag,9
-SSL400/Dataset - Original/Nouns/Bag/Bag_010.MP4,Bag,9
-SSL400/Dataset - Original/Nouns/Bag/Bag_009.MP4,Bag,9
-SSL400/Dataset - Original/Nouns/Bed/Bed_008.MP4,Bed,11
-SSL400/Dataset - Original/Nouns/Bed/Bed_012.MP4,Bed,11
-SSL400/Dataset - Original/Nouns/Bed/Bed_014.MP4,Bed,11
-SSL400/Dataset - Original/Nouns/Bed/Bed_013.MP4,Bed,11
-SSL400/Dataset - Original/Nouns/Book/Book_010.mp4,Book,14
-SSL400/Dataset - Original/Nouns/Book/Book_007.mp4,Book,14
-SSL400/Dataset - Original/Nouns/Book/Book_014.mp4,Book,14
-SSL400/Dataset - Original/Nouns/Book/Book_013.mp4,Book,14
-SSL400/Dataset - Original/Nouns/Book/Book_001.mp4,Book,14
-SSL400/Dataset - Original/Nouns/Book/Book_009.mp4,Book,14
-SSL400/Dataset - Original/Nouns/Book/Book_003.mp4,Book,14
-SSL400/Dataset - Original/Nouns/Book/Book_006.mp4,Book,14
-SSL400/Dataset - Original/Nouns/Book/Book_011.mp4,Book,14
-SSL400/Dataset - Original/Nouns/Book/Book_004.mp4,Book,14
-SSL400/Dataset - Original/Nouns/Book/Book_015.mp4,Book,14
-SSL400/Dataset - Original/Nouns/Camera/Camera_004.mp4,Camera,16
-SSL400/Dataset - Original/Nouns/Camera/Camera_003.mp4,Camera,16
-SSL400/Dataset - Original/Nouns/Camera/Camera_005.mp4,Camera,16
-SSL400/Dataset - Original/Nouns/Camera/Camera_001.mp4,Camera,16
-SSL400/Dataset - Original/Nouns/Camera/Camera_019.MP4,Camera,16
-SSL400/Dataset - Original/Nouns/Cat/Cat_003.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_022.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_024.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_020.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_009.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_004.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_012.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_005.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_006.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_016.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_008.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_019.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_010.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_017.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_023.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Cat/Cat_001.mp4,Cat,19
-SSL400/Dataset - Original/Nouns/Ceiling fan/Ceiling fan_014.MP4,Ceiling fan,20
-SSL400/Dataset - Original/Nouns/Cell phone/Cell phone_014.MP4,Cell phone,21
-SSL400/Dataset - Original/Nouns/Computer/Computer_012.MP4,Computer,28
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_018.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_020.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_014.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_004.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_009.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_012.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_016.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_008.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_003.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_007.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_002.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_017.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_011.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_019.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Crocodile/Crocodile_010.mp4,Crocodile,31
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_010.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_017.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_022.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_005.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_021.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_008.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_007.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_019.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_002.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_004.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_006.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_024.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_018.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_012.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_001.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Elephant/Elephant_016.mp4,Elephant,43
-SSL400/Dataset - Original/Nouns/Fever/Fever_018.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_017.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_009.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_019.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_014.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_001.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_021.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_011.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_002.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_010.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_003.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_006.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_013.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Fever/Fever_020.mp4,Fever,49
-SSL400/Dataset - Original/Nouns/Gun/Gun_012.MP4,Gun,60
-SSL400/Dataset - Original/Nouns/Gun/Gun_014.MP4,Gun,60
-SSL400/Dataset - Original/Nouns/Gun/Gun_010.MP4,Gun,60
-SSL400/Dataset - Original/Nouns/Gun/Gun_008.MP4,Gun,60
-SSL400/Dataset - Original/Nouns/I/I_005.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_003.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_035.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_030.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_025.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_034.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_001.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_029.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_031.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_033.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_032.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_028.mp4,I,70
-SSL400/Dataset - Original/Nouns/I/I_024.mp4,I,70
-SSL400/Dataset - Original/Nouns/Key/Key_010.MP4,Key,73
-SSL400/Dataset - Original/Nouns/Key/Key_012.MP4,Key,73
-SSL400/Dataset - Original/Nouns/Key/Key_008.MP4,Key,73
-SSL400/Dataset - Original/Nouns/Key/Key_014.MP4,Key,73
-SSL400/Dataset - Original/Nouns/Laptop/Laptop_012.MP4,Laptop,74
-SSL400/Dataset - Original/Nouns/List/List_004.mp4,List,75
-SSL400/Dataset - Original/Nouns/List/List_001.mp4,List,75
-SSL400/Dataset - Original/Nouns/List/List_002.mp4,List,75
-SSL400/Dataset - Original/Nouns/List/List_003.mp4,List,75
-SSL400/Dataset - Original/Nouns/List/List_005.mp4,List,75
-SSL400/Dataset - Original/Nouns/List/List_006.mp4,List,75
-SSL400/Dataset - Original/Nouns/Lock/Lock_012.MP4,Lock,77
-SSL400/Dataset - Original/Nouns/Lock/Lock_009.MP4,Lock,77
-SSL400/Dataset - Original/Nouns/Lock/Lock_013.MP4,Lock,77
-SSL400/Dataset - Original/Nouns/Lock/Lock_011.MP4,Lock,77
-SSL400/Dataset - Original/Nouns/Money/Money_036.MP4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_037.MP4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_003.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_035.MP4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_008.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_002.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_014.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_004.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_017.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_033.MP4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_021.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_005.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_038.MP4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_010.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_015.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_018.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_023.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_009.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_012.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_007.mp4,Money,82
-SSL400/Dataset - Original/Nouns/Money/Money_032.MP4,Money,82
-SSL400/Dataset - Original/Nouns/My/My_021.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_002.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_012.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_016.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_020.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_017.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_014.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_011.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_006.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_023.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_005.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_022.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_015.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_007.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_004.mp4,My,85
-SSL400/Dataset - Original/Nouns/My/My_013.mp4,My,85
-SSL400/Dataset - Original/Nouns/Paint/Paint_016.MP4,Paint,89
-SSL400/Dataset - Original/Nouns/Paint/Paint_020.MP4,Paint,89
-SSL400/Dataset - Original/Nouns/Paint/Paint_014.MP4,Paint,89
-SSL400/Dataset - Original/Nouns/Paint/Paint_003.mp4,Paint,89
-SSL400/Dataset - Original/Nouns/Paint/Paint_002.mp4,Paint,89
-SSL400/Dataset - Original/Nouns/Paint/Paint_021.MP4,Paint,89
-SSL400/Dataset - Original/Nouns/Paint/Paint_001.mp4,Paint,89
-SSL400/Dataset - Original/Nouns/Paint/Paint_004.mp4,Paint,89
-SSL400/Dataset - Original/Nouns/Paint/Paint_017.MP4,Paint,89
-SSL400/Dataset - Original/Nouns/Pencil/Pencil_008.MP4,Pencil,91
-SSL400/Dataset - Original/Nouns/Pencil/Pencil_013.MP4,Pencil,91
-SSL400/Dataset - Original/Nouns/Pencil/Pencil_012.MP4,Pencil,91
-SSL400/Dataset - Original/Nouns/Pencil/Pencil_010.MP4,Pencil,91
-SSL400/Dataset - Original/Nouns/Pocket/Pocket_002.mp4,Pocket,95
-SSL400/Dataset - Original/Nouns/Point/Point_007.mp4,Point,96
-SSL400/Dataset - Original/Nouns/Point/Point_009.mp4,Point,96
-SSL400/Dataset - Original/Nouns/Point/Point_010.mp4,Point,96
-SSL400/Dataset - Original/Nouns/Point/Point_002.mp4,Point,96
-SSL400/Dataset - Original/Nouns/Point/Point_011.mp4,Point,96
-SSL400/Dataset - Original/Nouns/Point/Point_001.mp4,Point,96
-SSL400/Dataset - Original/Nouns/Point/Point_008.mp4,Point,96
-SSL400/Dataset - Original/Nouns/Radio/Radio_014.MP4,Radio,101
-SSL400/Dataset - Original/Nouns/Ring/Ring_017.MP4,Ring,104
-SSL400/Dataset - Original/Nouns/Ring/Ring_006.mp4,Ring,104
-SSL400/Dataset - Original/Nouns/Ring/Ring_016.MP4,Ring,104
-SSL400/Dataset - Original/Nouns/Ring/Ring_014.MP4,Ring,104
-SSL400/Dataset - Original/Nouns/Ring/Ring_004.mp4,Ring,104
-SSL400/Dataset - Original/Nouns/Ring/Ring_020.MP4,Ring,104
-SSL400/Dataset - Original/Nouns/Ring/Ring_005.mp4,Ring,104
-SSL400/Dataset - Original/Nouns/Ring/Ring_001.mp4,Ring,104
-SSL400/Dataset - Original/Nouns/Ring/Ring_002.mp4,Ring,104
-SSL400/Dataset - Original/Nouns/Skirt/Skirt_002.mp4,Skirt,114
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_001.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_006.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_014.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_008.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_007.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_023.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_011.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_012.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_021.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_018.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_005.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_010.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_019.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_015.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_017.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Squirrel/Squirrel_002.mp4,Squirrel,119
-SSL400/Dataset - Original/Nouns/Table/Table_012.MP4,Table,122
-SSL400/Dataset - Original/Nouns/Table/Table_008.MP4,Table,122
-SSL400/Dataset - Original/Nouns/Table/Table_009.MP4,Table,122
-SSL400/Dataset - Original/Nouns/Table/Table_013.MP4,Table,122
-SSL400/Dataset - Original/Nouns/Technology/Technology_016.MP4,Technology,124
-SSL400/Dataset - Original/Nouns/Technology/Technology_003.mp4,Technology,124
-SSL400/Dataset - Original/Nouns/Technology/Technology_014.MP4,Technology,124
-SSL400/Dataset - Original/Nouns/Technology/Technology_015.MP4,Technology,124
-SSL400/Dataset - Original/Nouns/Technology/Technology_018.MP4,Technology,124
-SSL400/Dataset - Original/Nouns/Technology/Technology_001.mp4,Technology,124
-SSL400/Dataset - Original/Nouns/Technology/Technology_006.mp4,Technology,124
-SSL400/Dataset - Original/Nouns/Technology/Technology_005.mp4,Technology,124
-SSL400/Dataset - Original/Nouns/Technology/Technology_020.MP4,Technology,124
-SSL400/Dataset - Original/Nouns/Telephone/Telephone_018.MP4,Telephone,125
-SSL400/Dataset - Original/Nouns/Telephone/Telephone_006.mp4,Telephone,125
-SSL400/Dataset - Original/Nouns/Telephone/Telephone_004.mp4,Telephone,125
-SSL400/Dataset - Original/Nouns/Telephone/Telephone_016.MP4,Telephone,125
-SSL400/Dataset - Original/Nouns/Telephone/Telephone_020.MP4,Telephone,125
-SSL400/Dataset - Original/Nouns/Telephone/Telephone_002.mp4,Telephone,125
-SSL400/Dataset - Original/Nouns/Telephone/Telephone_019.MP4,Telephone,125
-SSL400/Dataset - Original/Nouns/Telephone/Telephone_005.mp4,Telephone,125
-SSL400/Dataset - Original/Nouns/Telephone/Telephone_017.MP4,Telephone,125
-SSL400/Dataset - Original/Nouns/Window/Window_012.MP4,Window,143
-SSL400/Dataset - Original/Nouns/Window/Window_014.MP4,Window,143
-SSL400/Dataset - Original/Nouns/Window/Window_011.MP4,Window,143
-SSL400/Dataset - Original/Nouns/Window/Window_010.MP4,Window,143
-SSL400/Dataset - Original/Nouns/You/You_059.mp4,You,148
-SSL400/Dataset - Original/Nouns/You/You_007.mp4,You,148
-SSL400/Dataset - Original/Nouns/You/You_006.mp4,You,148
-SSL400/Dataset - Original/Nouns/You/You_055.mp4,You,148
-SSL400/Dataset - Original/Nouns/You/You_062.mp4,You,148
-SSL400/Dataset - Original/Nouns/You/You_008.mp4,You,148
-SSL400/Dataset - Original/Nouns/You/You_001.mp4,You,148
-SSL400/Dataset - Original/Nouns/You/You_061.mp4,You,148
-SSL400/Dataset - Original/Nouns/You/You_058.mp4,You,148
-SSL400/Dataset - Original/Nouns/You/You_005.mp4,You,148
-SSL400/Dataset - Original/Nouns/You/You_003.mp4,You,148
-SSL400/Dataset - Original/Numbers/1. one/1. one_001.mp4,1. one,0
-SSL400/Dataset - Original/Numbers/1. one/1. one_002.mp4,1. one,0
-SSL400/Dataset - Original/Numbers/1. one/1. one_005.mp4,1. one,0
-SSL400/Dataset - Original/Numbers/1. one/1. one_007.mp4,1. one,0
-SSL400/Dataset - Original/Numbers/1. one/1. one_004.mp4,1. one,0
-SSL400/Dataset - Original/Numbers/2. two/2. two_006.mp4,2. two,1
-SSL400/Dataset - Original/Numbers/2. two/2. two_003.mp4,2. two,1
-SSL400/Dataset - Original/Numbers/2. two/2. two_002.mp4,2. two,1
-SSL400/Dataset - Original/Numbers/2. two/2. two_005.mp4,2. two,1
-SSL400/Dataset - Original/Numbers/4. four/4. four_002.mp4,4. four,3
-SSL400/Dataset - Original/Numbers/4. four/4. four_004.mp4,4. four,3
-SSL400/Dataset - Original/Numbers/4. four/4. four_001.mp4,4. four,3
-SSL400/Dataset - Original/Numbers/5. five/5. five_004.mp4,5. five,4
-SSL400/Dataset - Original/Numbers/5. five/5. five_005.mp4,5. five,4
-SSL400/Dataset - Original/Numbers/5. five/5. five_003.mp4,5. five,4
-SSL400/Dataset - Original/Numbers/Equal/Equal_003.mp4,Equal,44
-SSL400/Dataset - Original/Numbers/Equal/Equal_008.mp4,Equal,44
-SSL400/Dataset - Original/Numbers/Equal/Equal_006.mp4,Equal,44
-SSL400/Dataset - Original/Numbers/Equal/Equal_005.mp4,Equal,44
-SSL400/Dataset - Original/Numbers/Equal/Equal_004.mp4,Equal,44
-SSL400/Dataset - Original/People/Child/Child_009.mp4,Child,23
-SSL400/Dataset - Original/People/Child/Child_005.mp4,Child,23
-SSL400/Dataset - Original/People/Child/Child_002.mp4,Child,23
-SSL400/Dataset - Original/People/Child/Child_006.mp4,Child,23
-SSL400/Dataset - Original/People/Child/Child_003.mp4,Child,23
-SSL400/Dataset - Original/People/Child/Child_004.mp4,Child,23
-SSL400/Dataset - Original/People/Child/Child_001.mp4,Child,23
-SSL400/Dataset - Original/People/Doctor/Doctor_010.mp4,Doctor,38
-SSL400/Dataset - Original/People/Doctor/Doctor_017.mp4,Doctor,38
-SSL400/Dataset - Original/People/Doctor/Doctor_002.mp4,Doctor,38
-SSL400/Dataset - Original/People/Doctor/Doctor_014.mp4,Doctor,38
-SSL400/Dataset - Original/People/Doctor/Doctor_003.mp4,Doctor,38
-SSL400/Dataset - Original/People/Doctor/Doctor_013.mp4,Doctor,38
-SSL400/Dataset - Original/People/Doctor/Doctor_018.mp4,Doctor,38
-SSL400/Dataset - Original/People/Doctor/Doctor_001.mp4,Doctor,38
-SSL400/Dataset - Original/People/Doctor/Doctor_009.mp4,Doctor,38
-SSL400/Dataset - Original/People/Doctor/Doctor_015.mp4,Doctor,38
-SSL400/Dataset - Original/People/Doctor/Doctor_016.mp4,Doctor,38
-SSL400/Dataset - Original/People/Doctor/Doctor_005.mp4,Doctor,38
-SSL400/Dataset - Original/People/Elder bro/Elder bro_020.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_012.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_016.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_007.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_005.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_003.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_002.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_019.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_011.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_008.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_010.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_006.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_009.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder bro/Elder bro_004.mp4,Elder bro,41
-SSL400/Dataset - Original/People/Elder sister/Elder sister_020.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_015.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_003.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_011.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_017.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_013.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_012.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_010.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_019.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_002.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_007.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_014.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_018.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Elder sister/Elder sister_009.mp4,Elder sister,42
-SSL400/Dataset - Original/People/Grand father/Grand father_006.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_005.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_002.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_012.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_013.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_001.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_010.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_011.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_019.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_007.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_003.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_018.mp4,Grand father,57
-SSL400/Dataset - Original/People/Grand father/Grand father_015.mp4,Grand father,57
-SSL400/Dataset - Original/People/Man/Man_019.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_017.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_045.MP4,Man,79
-SSL400/Dataset - Original/People/Man/Man_004.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_012.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_002.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_003.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_014.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_007.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_011.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_018.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_013.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_006.mp4,Man,79
-SSL400/Dataset - Original/People/Man/Man_008.mp4,Man,79
-SSL400/Dataset - Original/People/Mother/Mother_005.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_020.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_009.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_014.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_004.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_010.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_007.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_006.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_012.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_001.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_008.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_003.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_015.mp4,Mother,83
-SSL400/Dataset - Original/People/Mother/Mother_018.mp4,Mother,83
-SSL400/Dataset - Original/People/Us/Us_020.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_016.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_009.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_004.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_018.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_015.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_011.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_012.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_002.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_007.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_010.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_006.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_017.mp4,Us,135
-SSL400/Dataset - Original/People/Us/Us_013.mp4,Us,135
-SSL400/Dataset - Original/People/Younger bro/Younger bro_014.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_015.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_016.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_005.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_001.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_009.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_006.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_020.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_017.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_011.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_013.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_007.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_019.mp4,Younger bro,149
-SSL400/Dataset - Original/People/Younger bro/Younger bro_012.mp4,Younger bro,149
-SSL400/Dataset - Original/Places/House/House_033.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_043.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_048.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_060.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_044.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_015.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_059.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_023.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_002.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_024.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_008.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_005.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_006.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_037.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_009.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_035.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_017.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_058.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_061.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_047.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_053.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_003.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_046.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_021.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_051.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_041.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_039.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_030.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_001.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_025.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_010.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_054.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_020.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_034.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_018.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_057.mp4,House,69
-SSL400/Dataset - Original/Places/House/House_036.mp4,House,69
-SSL400/Dataset - Original/Vehicles/Boat/Boat_021.MP4,Boat,13
-SSL400/Dataset - Original/Vehicles/Plane/Plane_003.mp4,Plane,92
-SSL400/Dataset - Original/Vehicles/Plane/Plane_006.mp4,Plane,92
-SSL400/Dataset - Original/Vehicles/Plane/Plane_002.mp4,Plane,92
-SSL400/Dataset - Original/Vehicles/Plane/Plane_004.mp4,Plane,92
-SSL400/Dataset - Original/Vehicles/Plane/Plane_028.MP4,Plane,92
-SSL400/Dataset - Original/Vehicles/Plane/Plane_027.MP4,Plane,92
-SSL400/Dataset - Original/Verbs/Change/Change_008.mp4,Change,22
-SSL400/Dataset - Original/Verbs/Change/Change_009.mp4,Change,22
-SSL400/Dataset - Original/Verbs/Change/Change_003.mp4,Change,22
-SSL400/Dataset - Original/Verbs/Change/Change_001.mp4,Change,22
-SSL400/Dataset - Original/Verbs/Change/Change_002.mp4,Change,22
-SSL400/Dataset - Original/Verbs/Change/Change_007.mp4,Change,22
-SSL400/Dataset - Original/Verbs/Change/Change_011.mp4,Change,22
-SSL400/Dataset - Original/Verbs/Change/Change_005.mp4,Change,22
-SSL400/Dataset - Original/Verbs/Come/Come_001.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_008.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_017.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_023.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_016.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_022.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_014.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_021.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_006.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_009.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_013.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_004.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_018.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_007.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_020.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Come/Come_011.mp4,Come,27
-SSL400/Dataset - Original/Verbs/Cook/Cook_019.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_025.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_016.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_024.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_017.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_010.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_011.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_007.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_014.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_006.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_021.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_002.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_009.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_022.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_001.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_020.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cook/Cook_023.mp4,Cook,29
-SSL400/Dataset - Original/Verbs/Cough/Cough_009.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_015.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_006.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_004.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_013.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_010.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_020.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_021.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_002.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_007.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_005.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_012.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_017.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cough/Cough_014.mp4,Cough,30
-SSL400/Dataset - Original/Verbs/Cry/Cry_009.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_021.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_004.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_019.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_003.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_006.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_001.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_016.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_017.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_010.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_024.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_002.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_011.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_007.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_020.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cry/Cry_022.mp4,Cry,32
-SSL400/Dataset - Original/Verbs/Cut/Cut_020.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_030.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_006.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_005.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_016.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_003.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_024.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_019.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_001.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_010.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_026.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_014.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_017.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_011.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_023.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_015.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_027.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_007.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_009.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_013.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Cut/Cut_002.mp4,Cut,33
-SSL400/Dataset - Original/Verbs/Drink/Drink_037.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_025.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_031.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_013.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_019.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_017.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_024.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_034.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_002.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_027.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_007.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_039.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_016.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_021.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_003.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_020.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_011.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_008.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_012.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_023.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_029.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_033.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_035.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_004.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_006.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_026.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_009.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Drink/Drink_032.mp4,Drink,39
-SSL400/Dataset - Original/Verbs/Eat/Eat_001.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_025.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_024.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_006.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_017.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_012.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_015.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_040.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_014.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_022.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_041.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_044.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_016.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_023.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_008.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_010.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_013.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_037.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_018.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_019.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_021.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_027.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_009.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_038.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_046.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_005.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_043.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_011.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_039.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Eat/Eat_035.mp4,Eat,40
-SSL400/Dataset - Original/Verbs/Fight/Fight_022.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_001.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_016.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_020.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_003.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_018.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_006.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_010.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_007.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_015.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_017.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_024.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_002.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_008.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_019.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Fight/Fight_005.mp4,Fight,50
-SSL400/Dataset - Original/Verbs/Give/Give_005.mp4,Give,54
-SSL400/Dataset - Original/Verbs/Give/Give_008.mp4,Give,54
-SSL400/Dataset - Original/Verbs/Give/Give_011.mp4,Give,54
-SSL400/Dataset - Original/Verbs/Give/Give_001.mp4,Give,54
-SSL400/Dataset - Original/Verbs/Give/Give_004.mp4,Give,54
-SSL400/Dataset - Original/Verbs/Give/Give_013.mp4,Give,54
-SSL400/Dataset - Original/Verbs/Give/Give_003.mp4,Give,54
-SSL400/Dataset - Original/Verbs/Give/Give_007.mp4,Give,54
-SSL400/Dataset - Original/Verbs/Give/Give_002.mp4,Give,54
-SSL400/Dataset - Original/Verbs/Go/Go_015.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_023.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_003.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_001.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_013.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_011.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_018.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_021.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_022.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_010.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_020.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_002.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_006.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_009.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_014.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_025.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Go/Go_024.mp4,Go,55
-SSL400/Dataset - Original/Verbs/Help/Help_016.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_022.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_015.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_014.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_017.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_013.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_008.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_004.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_019.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_018.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_003.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_002.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_007.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_020.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_021.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Help/Help_005.mp4,Help,67
-SSL400/Dataset - Original/Verbs/Look/Look_025.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_017.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_013.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_001.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_014.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_021.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_004.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_009.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_012.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_007.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_015.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_008.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_018.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_016.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_023.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_022.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Look/Look_006.mp4,Look,78
-SSL400/Dataset - Original/Verbs/Meet/Meet_017.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_026.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_007.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_030.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_009.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_023.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_029.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_028.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_006.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_016.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_019.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_003.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_020.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_005.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_034.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_001.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_025.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_018.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_008.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Meet/Meet_002.mp4,Meet,80
-SSL400/Dataset - Original/Verbs/Order/Order_003.mp4,Order,88
-SSL400/Dataset - Original/Verbs/Order/Order_002.mp4,Order,88
-SSL400/Dataset - Original/Verbs/Order/Order_005.mp4,Order,88
-SSL400/Dataset - Original/Verbs/Order/Order_008.mp4,Order,88
-SSL400/Dataset - Original/Verbs/Order/Order_007.mp4,Order,88
-SSL400/Dataset - Original/Verbs/Order/Order_010.mp4,Order,88
-SSL400/Dataset - Original/Verbs/Order/Order_001.mp4,Order,88
-SSL400/Dataset - Original/Verbs/Play/Play_009.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_005.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_012.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_015.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_023.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_018.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_016.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_002.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_020.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_008.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_017.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_024.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_006.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_001.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_007.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Play/Play_004.mp4,Play,93
-SSL400/Dataset - Original/Verbs/Pull/Pull_005.mp4,Pull,98
-SSL400/Dataset - Original/Verbs/Pull/Pull_001.mp4,Pull,98
-SSL400/Dataset - Original/Verbs/Pull/Pull_007.mp4,Pull,98
-SSL400/Dataset - Original/Verbs/Pull/Pull_008.mp4,Pull,98
-SSL400/Dataset - Original/Verbs/Pull/Pull_006.mp4,Pull,98
-SSL400/Dataset - Original/Verbs/Pull/Pull_003.mp4,Pull,98
-SSL400/Dataset - Original/Verbs/Run/Run_013.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_001.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_009.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_006.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_008.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_018.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_010.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_005.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_015.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_002.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_022.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_024.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_011.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_014.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_016.mp4,Run,106
-SSL400/Dataset - Original/Verbs/Run/Run_019.mp4,Run,106
-SSL400/Dataset - Original/Verbs/See/See_023.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_004.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_013.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_007.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_022.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_009.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_018.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_001.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_010.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_005.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_012.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_014.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_002.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_008.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_003.mp4,See,108
-SSL400/Dataset - Original/Verbs/See/See_017.mp4,See,108
-SSL400/Dataset - Original/Verbs/Sell/Sell_019.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_016.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_011.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_023.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_007.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_014.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_005.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_006.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_004.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_008.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_001.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_022.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_018.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_009.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_021.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sell/Sell_015.mp4,Sell,109
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_018.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_019.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_013.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_001.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_014.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_012.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_025.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_007.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_005.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_024.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_020.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_022.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_010.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_016.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_009.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_021.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Sleep/Sleep_015.mp4,Sleep,115
-SSL400/Dataset - Original/Verbs/Teach/Teach_021.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_015.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_022.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_008.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_001.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_020.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_014.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_012.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_007.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_017.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_006.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_024.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_016.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_019.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_002.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Teach/Teach_023.mp4,Teach,123
-SSL400/Dataset - Original/Verbs/Tell/Tell_024.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_021.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_031.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_035.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_002.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_023.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_019.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_018.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_026.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_029.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_014.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_032.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_015.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_013.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_034.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_004.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_027.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_003.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_020.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_005.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_008.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_025.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_016.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Tell/Tell_011.mp4,Tell,126
-SSL400/Dataset - Original/Verbs/Walk/Walk_022.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_021.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_001.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_020.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_007.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_003.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_017.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_011.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_006.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_013.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_019.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_005.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_016.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_009.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_004.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Walk/Walk_018.mp4,Walk,138
-SSL400/Dataset - Original/Verbs/Want/Want_006.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_013.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_001.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_007.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_010.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_008.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_018.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_011.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_003.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_015.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_021.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_019.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_022.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_014.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Want/Want_017.mp4,Want,139
-SSL400/Dataset - Original/Verbs/Wash/Wash_005.mp4,Wash,140
-SSL400/Dataset - Original/Verbs/Wash/Wash_006.mp4,Wash,140
-SSL400/Dataset - Original/Verbs/Wash/Wash_002.mp4,Wash,140
-SSL400/Dataset - Original/Verbs/Wash/Wash_001.mp4,Wash,140
-SSL400/Dataset - Original/Verbs/Write/Write_007.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_032.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_006.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_019.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_017.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_030.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_009.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_018.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_034.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_022.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_027.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_015.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_029.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_014.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_028.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_016.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_010.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_002.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_020.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_005.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_025.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_021.mp4,Write,144
-SSL400/Dataset - Original/Verbs/Write/Write_023.mp4,Write,144
+SSL400/Dataset - Original/Adjectives/Good/Good_028.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_027.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_040.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_006.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_034.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_067.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_066.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_025.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_007.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_064.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_059.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_053.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_001.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_045.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_002.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_065.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_058.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_038.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_041.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_017.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_018.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_062.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_046.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_024.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_036.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_009.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_035.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_049.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_031.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_008.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_060.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_022.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_010.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_063.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_050.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_039.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_047.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_056.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_044.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_019.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_005.mp4,Good,2
+SSL400/Dataset - Original/Adjectives/Good/Good_061.mp4,Good,2
+SSL400/Dataset - Original/Greetings/Hello/Hello_083.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_021.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_067.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_040.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_020.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_024.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_045.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_013.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_008.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_038.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_035.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_025.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_012.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_093.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_075.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_100.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_043.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_014.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_073.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_102.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_076.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_087.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_031.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_091.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_089.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_085.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_041.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_001.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_018.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_071.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_081.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_084.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_017.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_099.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_080.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_086.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_070.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_027.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_094.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_036.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_069.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_010.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_003.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_078.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_068.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Hello/Hello_016.mp4,Hello,1
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_089.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_116.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_027.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_108.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_054.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_021.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_109.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_071.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_068.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_083.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_104.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_020.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_012.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_015.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_052.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_098.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_080.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_097.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_006.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_111.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_066.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_011.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_028.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_069.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_082.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_063.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_115.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_010.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_086.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_024.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_099.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_107.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_102.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_007.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_094.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_090.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_003.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_002.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_013.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_016.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_018.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_023.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_019.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_091.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_025.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_074.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_075.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_113.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_095.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_022.mp4,Thank you,0
+SSL400/Dataset - Original/Greetings/Thank you/Thank you_008.mp4,Thank you,0
+SSL400/Dataset - Original/Nouns/Money/Money_036.MP4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_037.MP4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_003.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_035.MP4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_008.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_002.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_014.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_004.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_017.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_033.MP4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_021.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_005.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_038.MP4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_010.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_015.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_018.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_023.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_009.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_012.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_007.mp4,Money,8
+SSL400/Dataset - Original/Nouns/Money/Money_032.MP4,Money,8
+SSL400/Dataset - Original/Places/House/House_033.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_043.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_048.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_060.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_044.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_015.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_059.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_023.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_002.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_024.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_008.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_005.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_006.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_037.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_009.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_035.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_017.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_058.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_061.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_047.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_053.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_003.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_046.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_021.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_051.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_041.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_039.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_030.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_001.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_025.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_010.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_054.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_020.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_034.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_018.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_057.mp4,House,3
+SSL400/Dataset - Original/Places/House/House_036.mp4,House,3
+SSL400/Dataset - Original/Verbs/Cut/Cut_020.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_030.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_006.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_005.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_016.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_003.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_024.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_019.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_001.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_010.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_026.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_014.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_017.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_011.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_023.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_015.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_027.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_007.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_009.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_013.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Cut/Cut_002.mp4,Cut,9
+SSL400/Dataset - Original/Verbs/Drink/Drink_037.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_025.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_031.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_013.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_019.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_017.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_024.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_034.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_002.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_027.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_007.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_039.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_016.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_021.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_003.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_020.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_011.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_008.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_012.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_023.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_029.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_033.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_035.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_004.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_006.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_026.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_009.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Drink/Drink_032.mp4,Drink,5
+SSL400/Dataset - Original/Verbs/Eat/Eat_001.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_025.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_024.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_006.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_017.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_012.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_015.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_040.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_014.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_022.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_041.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_044.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_016.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_023.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_008.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_010.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_013.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_037.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_018.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_019.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_021.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_027.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_009.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_038.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_046.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_005.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_043.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_011.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_039.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Eat/Eat_035.mp4,Eat,4
+SSL400/Dataset - Original/Verbs/Tell/Tell_024.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_021.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_031.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_035.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_002.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_023.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_019.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_018.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_026.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_029.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_014.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_032.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_015.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_013.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_034.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_004.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_027.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_003.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_020.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_005.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_008.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_025.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_016.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Tell/Tell_011.mp4,Tell,6
+SSL400/Dataset - Original/Verbs/Write/Write_007.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_032.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_006.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_019.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_017.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_030.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_009.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_018.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_034.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_022.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_027.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_015.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_029.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_014.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_028.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_016.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_010.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_002.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_020.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_005.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_025.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_021.mp4,Write,7
+SSL400/Dataset - Original/Verbs/Write/Write_023.mp4,Write,7

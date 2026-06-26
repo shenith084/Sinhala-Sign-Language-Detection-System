@@ -2,12 +2,12 @@
   "exp_id": 1,
   "exp_name": "Baseline (No Enhancement)",
   "exp_label": "EXP1_BASELINE",
-  "top1_accuracy": 0.06111111111111111,
-  "top5_accuracy": 0.25,
-  "macro_f1": 0.024443338840622372,
-  "macro_precision": 0.02707803049663515,
-  "macro_recall": 0.03508263305322129,
-  "inference_latency_ms": 193.28207969665527,
+  "top1_accuracy": 0.23,
+  "top5_accuracy": 0.69,
+  "macro_f1": 0.15711913923695128,
+  "macro_precision": 0.2105800653594771,
+  "macro_recall": 0.1867857142857143,
+  "inference_latency_ms": 169.92342472076416,
   "training_time_min": -1.0,
-  "test_samples": 360
+  "test_samples": 100
 }

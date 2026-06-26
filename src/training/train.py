@@ -176,12 +176,25 @@ def main(args: argparse.Namespace) -> None:
     p2 = config["phase2"]
 
     # Import builders
-    from models.movinet_builder import build_model, compile_phase1, compile_phase2, load_kinetics_weights
+    from models.movinet_builder import build_model, compile_phase1, compile_phase2, load_kinetics_weights, get_lr_schedule
     from data.tf_dataset_builder import build_dataset
     from training.callbacks import get_callbacks, find_resume_checkpoint
     from enhancement.enhancement_factory import get_enhancer
 
     enhance_fn = get_enhancer(args.exp_id)
+
+    # Calculate decay steps for learning rate schedules
+    import pandas as pd
+    try:
+        num_train_samples = len(pd.read_csv(train_csv))
+    except Exception:
+        num_train_samples = 2240 # Fallback 70% of 3200
+    steps_per_epoch = max(1, num_train_samples // batch_size)
+    decay_steps_p1 = steps_per_epoch * p1["max_epochs"]
+    decay_steps_p2 = steps_per_epoch * p2["max_epochs"]
+    
+    lr_schedule_p1 = get_lr_schedule(p1["learning_rate"], decay_steps_p1, p1.get("lr_schedule", "CosineDecay"))
+    lr_schedule_p2 = get_lr_schedule(p2["learning_rate"], decay_steps_p2, p2.get("lr_schedule", "CosineDecay"))
 
     # -------------------------------------------------------------------------
     # CHECK RESUME STATE
@@ -189,6 +202,15 @@ def main(args: argparse.Namespace) -> None:
     phase2_ckpt = find_resume_checkpoint(model_dir, "phase2")
     phase1_ckpt = find_resume_checkpoint(model_dir, "phase1")
     
+    # Recover log files from model_dir if they were synced there by GoogleDriveSync
+    for p in ["phase1", "phase2"]:
+        synced_log = Path(model_dir) / f"training_log_{p}.csv"
+        target_log = Path(log_dir) / f"training_log_{p}.csv"
+        if synced_log.exists() and not target_log.exists():
+            import shutil
+            target_log.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(synced_log, target_log)
+
     log_path_p1 = str(Path(log_dir) / "training_log_phase1.csv")
     log_path_p2 = str(Path(log_dir) / "training_log_phase2.csv")
     
@@ -249,11 +271,11 @@ def main(args: argparse.Namespace) -> None:
     if ckpt_dir.exists():
         load_kinetics_weights(model, str(ckpt_dir))
         
-    if not phase1_ckpt:
+    if initial_epoch_p1 < p1["max_epochs"] and initial_epoch_p2 == 0:
         logger.info("\n--- PHASE 1: Frozen backbone warm-up ---")
         model = compile_phase1(
             model,
-            learning_rate=p1["learning_rate"],
+            learning_rate=lr_schedule_p1,
             num_classes=num_classes,
             label_smoothing=p1["label_smoothing"]
         )
@@ -266,7 +288,7 @@ def main(args: argparse.Namespace) -> None:
             batch_size=batch_size,
             is_training=True,
             enhance_fn=enhance_fn,
-            use_mixup=False,
+            use_mixup=True,
             mixup_alpha=p1["mixup_alpha"],
             num_frames=num_frames,
             target_size=(config["frames"]["width"], config["frames"]["height"]),
@@ -292,6 +314,10 @@ def main(args: argparse.Namespace) -> None:
             early_stopping_patience=p1["early_stopping_patience"]
         )
 
+        if phase1_ckpt:
+            logger.info(f"Loading previous Phase 1 weights from {phase1_ckpt} to resume Phase 1...")
+            model.load_weights(phase1_ckpt)
+
         train_phase(
             model, train_ds, val_ds, callbacks_p1,
             max_epochs=p1["max_epochs"],
@@ -316,7 +342,7 @@ def main(args: argparse.Namespace) -> None:
     logger.info("\n--- PHASE 2: Full fine-tuning ---")
     model = compile_phase2(
         model,
-        learning_rate=p2["learning_rate"],
+        learning_rate=lr_schedule_p2,
         num_classes=num_classes,
         label_smoothing=p2["label_smoothing"]
     )
