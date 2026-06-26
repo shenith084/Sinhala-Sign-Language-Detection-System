@@ -1,20 +1,43 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { ThemeProvider, createTheme, CssBaseline, AppBar, Toolbar, Typography, Box, Button } from '@mui/material';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider, createTheme, CssBaseline, Box } from '@mui/material';
 
+import Sidebar from './components/Sidebar';
 import HomePage from './pages/HomePage';
 import LiveDetectionPage from './pages/LiveDetectionPage';
-// import ExperimentsPage from './pages/ExperimentsPage'; // Will be built later if requested
+import ModelsPage from './pages/ModelsPage';
+import ResultsPage from './pages/ResultsPage';
+import AboutPage from './pages/AboutPage';
 
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
-    primary: { main: '#90caf9' },
-    secondary: { main: '#f48fb1' },
-    background: { default: '#121212', paper: '#1e1e1e' }
+    primary: { main: '#8b5cf6' }, // Neon purple
+    secondary: { main: '#c084fc' },
+    background: { default: '#0a0b10', paper: '#13141f' },
+    text: { primary: '#f8fafc', secondary: '#94a3b8' }
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Inter", system-ui, -apple-system, sans-serif',
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          borderRadius: '8px',
+          fontWeight: 600,
+        }
+      }
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundImage: 'none', // Remove MUI's default elevation overlay
+          border: '1px solid #2e303a'
+        }
+      }
+    }
   }
 });
 
@@ -23,24 +46,20 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Router>
-        <AppBar position="static" color="default" elevation={1}>
-          <Toolbar>
-            <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold' }}>
-              SSL400 System
-            </Typography>
-            <Box sx={{ display: 'flex', gap: 2 }}>
-              <Button color="inherit" component={Link} to="/">Home</Button>
-              <Button color="inherit" component={Link} to="/live">Live Detection</Button>
-              <Button color="inherit" disabled>Experiments</Button>
-            </Box>
-          </Toolbar>
-        </AppBar>
+        <Box sx={{ display: 'flex', width: '100vw', minHeight: '100vh' }}>
+          {/* Persistent Sidebar */}
+          <Sidebar />
 
-        <Box sx={{ minHeight: 'calc(100vh - 64px)' }}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/live" element={<LiveDetectionPage />} />
-          </Routes>
+          {/* Main Content Area */}
+          <Box component="main" sx={{ flexGrow: 1, p: 4, overflowY: 'auto' }}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/live" element={<LiveDetectionPage />} />
+              <Route path="/models" element={<ModelsPage />} />
+              <Route path="/results" element={<ResultsPage />} />
+              <Route path="/about" element={<AboutPage />} />
+            </Routes>
+          </Box>
         </Box>
       </Router>
     </ThemeProvider>

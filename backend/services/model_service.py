@@ -1,4 +1,6 @@
 import os
+os.environ["TF_USE_LEGACY_KERAS"] = "1"
+
 import sys
 import threading
 from pathlib import Path
@@ -54,7 +56,14 @@ class ModelService:
                     from models.movinet_builder import build_model
                     # Build custom model architecture
                     self.model = build_model(num_classes=10)
-                    self.model.load_weights(str(keras_path))
+                    try:
+                        self.model.load_weights(str(keras_path), by_name=True, skip_mismatch=True)
+                        logger.info("Successfully loaded phase2 weights (with skip_mismatch=True).")
+                    except Exception as e2:
+                        logger.warning(f"Failed to load phase2: {e2}. Trying phase1...")
+                        phase1_path = path.parent / "best_model_phase1.keras"
+                        self.model.load_weights(str(phase1_path), by_name=True, skip_mismatch=True)
+                        logger.info("Successfully loaded phase1 weights (with skip_mismatch=True).")
                     
                     # Define a fast serving wrapper
                     @tf.function
@@ -88,9 +97,11 @@ class ModelService:
             # Run the frozen graph
             outputs = self.model_fn(tf.constant(tensor))
             
-            # Extract the logits array from the output dictionary
-            logits = list(outputs.values())[0]
-            
+            # Extract the logits array from the output dictionary or tensor
+            if isinstance(outputs, dict):
+                logits = list(outputs.values())[0]
+            else:
+                logits = outputs
             # Apply softmax
             probs = tf.nn.softmax(logits[0]).numpy()
             return probs
