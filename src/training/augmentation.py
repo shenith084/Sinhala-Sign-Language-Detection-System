@@ -253,6 +253,9 @@ def apply_mixup_batch(
     Returns:
         Tuple of (mixed_frames, mixed_labels) tensors of the same shapes.
     """
+    if alpha <= 0.0:
+        return frames_batch, labels_batch
+
     batch_size = tf.shape(frames_batch)[0]
 
     # Sample λ from Beta(alpha, alpha)
