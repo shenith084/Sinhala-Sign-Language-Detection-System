@@ -104,8 +104,7 @@ def train_phase(
     callbacks: list,
     max_epochs: int,
     phase_name: str,
-    initial_epoch: int = 0,
-    class_weight: dict = None
+    initial_epoch: int = 0
 ) -> keras.callbacks.History:
     """
     Run one training phase and return the history.
@@ -133,7 +132,6 @@ def train_phase(
         epochs=max_epochs,
         initial_epoch=initial_epoch,
         callbacks=callbacks,
-        class_weight=class_weight,
         verbose=0  # Suppress default verbose; ProgressLogger handles output
     )
 
@@ -187,21 +185,10 @@ def main(args: argparse.Namespace) -> None:
 
     # Calculate decay steps for learning rate schedules
     import pandas as pd
-    from sklearn.utils.class_weight import compute_class_weight
     try:
-        train_df = pd.read_csv(train_csv)
-        num_train_samples = len(train_df)
-        
-        # Calculate class weights to handle dataset imbalance
-        y_train = train_df['class_id'].values
-        classes = np.unique(y_train)
-        weights = compute_class_weight('balanced', classes=classes, y=y_train)
-        class_weight_dict = {cls: float(weight) for cls, weight in zip(classes, weights)}
-        logger.info(f"Computed class weights: {class_weight_dict}")
-    except Exception as e:
-        logger.warning(f"Could not compute class weights from {train_csv}: {e}")
+        num_train_samples = len(pd.read_csv(train_csv))
+    except Exception:
         num_train_samples = 2240 # Fallback 70% of 3200
-        class_weight_dict = None
     steps_per_epoch = max(1, num_train_samples // batch_size)
     decay_steps_p1 = steps_per_epoch * p1["max_epochs"]
     decay_steps_p2 = steps_per_epoch * p2["max_epochs"]
@@ -339,8 +326,7 @@ def main(args: argparse.Namespace) -> None:
             model, train_ds, val_ds, callbacks_p1,
             max_epochs=p1["max_epochs"],
             phase_name="Phase 1 (Frozen Backbone)",
-            initial_epoch=initial_epoch_p1,
-            class_weight=class_weight_dict
+            initial_epoch=initial_epoch_p1
         )
 
         # Reload best Phase 1 weights
@@ -402,8 +388,7 @@ def main(args: argparse.Namespace) -> None:
         model, train_ds, val_ds, callbacks_p2,
         max_epochs=p2["max_epochs"],
         phase_name="Phase 2 (Full Fine-Tuning)",
-        initial_epoch=initial_epoch_p2,
-        class_weight=class_weight_dict
+        initial_epoch=initial_epoch_p2
     )
 
     logger.info(f"\n✅ Experiment {args.exp_id} ({exp['name']}) COMPLETE.")
