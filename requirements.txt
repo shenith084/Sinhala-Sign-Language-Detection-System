@@ -13,3 +13,4 @@ Pillow
 Flask
 flask-cors
 gunicorn
+ultralytics

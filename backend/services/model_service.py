@@ -55,7 +55,7 @@ class ModelService:
                     logger.info(f"Loading .keras weights from {keras_path}")
                     from models.movinet_builder import build_model
                     # Build custom model architecture
-                    self.model = build_model(num_classes=10)
+                    self.model = build_model(num_classes=5)
                     try:
                         self.model.load_weights(str(keras_path), by_name=True, skip_mismatch=True)
                         logger.info("Successfully loaded phase2 weights (with skip_mismatch=True).")

@@ -32,35 +32,35 @@ const LiveDetectionPage = () => {
 
   const handleFramesCaptured = async (frames) => {
     if (isProcessing) return;
-    
+
     const startTime = performance.now();
     setIsProcessing(true);
     try {
       const result = await predictFrames(frames, expId);
       const endTime = performance.now();
-      
+
       setDetectionTime(Math.round(endTime - startTime));
       setFps(Math.round(1000 / (endTime - startTime) * 10) / 10);
-      
+
       if (result.confidence > 0.05) {
         setCurrentWord(result.word_sinhala);
         setConfidence(result.confidence);
         setLastWordTime(Date.now());
-        
+
         setSentence(prev => {
           const words = prev.split(' ').filter(w => w.length > 0);
           const lastWord = words[words.length - 1];
           if (lastWord !== result.word_sinhala) {
             const newWords = [...words, result.word_sinhala];
-            
+
             // Update recent signs array
             setRecentSigns(prevSigns => {
               const updated = [...prevSigns, result.word_sinhala];
               if (updated.length > 4) updated.shift();
               return updated;
             });
-            
-            if (newWords.length > 10) newWords.shift();
+
+            if (newWords.length > 4) newWords.shift();
             return newWords.join(' ');
           }
           return prev;
@@ -71,7 +71,10 @@ const LiveDetectionPage = () => {
     } catch (error) {
       console.error("Prediction failed", error);
     } finally {
-      setIsProcessing(false);
+      // Add a 3.5 second cooldown so you have time to prepare the next sign!
+      setTimeout(() => {
+        setIsProcessing(false);
+      }, 5000);
     }
   };
 
@@ -97,15 +100,15 @@ const LiveDetectionPage = () => {
             </Typography>
           </Box>
         </Box>
-        
+
         <Box sx={{ display: 'flex', gap: 2, width: { xs: '100%', md: 'auto' } }}>
-          <Button 
-            variant="contained" 
+          <Button
+            variant="contained"
             onClick={() => setIsDetecting(!isDetecting)}
             startIcon={<VideocamOutlinedIcon />}
-            sx={{ 
+            sx={{
               flex: { xs: 1, md: 'none' },
-              bgcolor: isDetecting ? 'var(--bg-surface-light)' : 'var(--accent-purple)', 
+              bgcolor: isDetecting ? 'var(--bg-surface-light)' : 'var(--accent-purple)',
               color: isDetecting ? 'var(--text-main)' : '#fff',
               px: 3, py: 1,
               '&:hover': { bgcolor: isDetecting ? 'var(--border-color)' : 'var(--accent-purple-hover)' }
@@ -113,8 +116,8 @@ const LiveDetectionPage = () => {
           >
             {isDetecting ? "Stop Detection" : "Start Detection"}
           </Button>
-          <Button 
-            variant="outlined" 
+          <Button
+            variant="outlined"
             onClick={handleClear}
             startIcon={<DeleteOutlineIcon />}
             sx={{ flex: { xs: 1, md: 'none' }, borderColor: 'var(--border-color)', color: 'var(--text-main)', px: 3, py: 1 }}
@@ -126,20 +129,20 @@ const LiveDetectionPage = () => {
 
       {/* Main Content (Camera + Output Cards) */}
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2, flexGrow: 1, minHeight: 0 }}>
-        
+
         {/* Left: Camera */}
         <Paper className="glass-panel" sx={{ flex: { xs: 'none', md: 1.2 }, minHeight: { xs: 250, md: 0 }, p: 0, overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', bgcolor: '#000', borderRadius: 3 }}>
-           <WebcamFeed onFramesCaptured={handleFramesCaptured} isDetecting={isDetecting} />
+          <WebcamFeed onFramesCaptured={handleFramesCaptured} isDetecting={isDetecting} />
         </Paper>
 
         {/* Right: Output Grid */}
-        <Box sx={{ flex: { xs: 'none', md: 1.5 }, display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1.5fr' }, gridTemplateRows: { xs: 'auto', md: '1fr 1fr' }, gap: 2, minHeight: 0 }}>
-          
+        <Box sx={{ flex: { xs: 'none', md: 1.5 }, display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'minmax(0, 1fr) minmax(0, 1fr)' }, gridTemplateRows: { xs: 'auto', md: '1fr 1fr' }, gap: 2, minHeight: 0 }}>
+
           {/* Current Sign (Tall) */}
           <Paper className="glass-panel" sx={{ gridRow: { xs: 'auto', md: '1 / 3' }, p: 3, display: 'flex', flexDirection: 'column' }}>
             <Typography variant="subtitle2" sx={{ color: 'var(--text-muted)', mb: 2 }}>Current Sign</Typography>
             <Box sx={{ flexGrow: 1, minHeight: { xs: 120, md: 0 }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <Typography variant="h1" sx={{ color: 'var(--accent-purple)', fontWeight: 'bold', fontSize: { xs: '4rem', md: '6rem' } }}>
+              <Typography variant="h1" sx={{ color: 'var(--accent-purple)', fontWeight: 'bold', fontSize: { xs: '3rem', md: '4rem' }, textAlign: 'center', wordBreak: 'break-word' }}>
                 {currentWord}
               </Typography>
             </Box>
@@ -157,7 +160,12 @@ const LiveDetectionPage = () => {
           {/* Constructed Sentence (Top Right) */}
           <Paper className="glass-panel" sx={{ p: 3, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <Typography variant="subtitle2" sx={{ color: 'var(--text-muted)', mb: 2 }}>Constructed Sentence</Typography>
-            <Typography variant="h4" sx={{ color: 'var(--accent-purple)', fontWeight: 'bold', lineHeight: 1.4, wordBreak: 'break-word', fontSize: { xs: '1.5rem', md: '2.125rem' } }}>
+            <Typography variant="body1" sx={{
+              color: 'var(--accent-purple)',
+              fontWeight: 'bold',
+              lineHeight: 1.6,
+              fontSize: { xs: '1rem', md: '1.2rem' }
+            }}>
               {sentence || '...'}
             </Typography>
           </Paper>
@@ -171,11 +179,11 @@ const LiveDetectionPage = () => {
               ) : (
                 <>
                   {recentSigns.map((sign, index) => (
-                    <Box key={index} sx={{ 
-                      bgcolor: 'var(--bg-surface-light)', 
-                      color: '#fff', 
-                      px: 2, py: 1, 
-                      borderRadius: 2, 
+                    <Box key={index} sx={{
+                      bgcolor: 'var(--bg-surface-light)',
+                      color: '#fff',
+                      px: 2, py: 1,
+                      borderRadius: 2,
                       fontWeight: 600,
                       opacity: 0.5 + (index / recentSigns.length) * 0.5 // Fade out older signs
                     }}>
@@ -201,8 +209,8 @@ const LiveDetectionPage = () => {
                 value={expId}
                 onChange={(e) => setExpId(e.target.value)}
                 disabled={isDetecting}
-                sx={{ 
-                  color: '#fff', 
+                sx={{
+                  color: '#fff',
                   bgcolor: 'var(--bg-dark)',
                   '& .MuiOutlinedInput-notchedOutline': { borderColor: 'var(--border-color)' }
                 }}

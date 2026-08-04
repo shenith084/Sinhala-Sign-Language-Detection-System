@@ -1,324 +1,429 @@
 video_path,class_name,class_id
-SSL400/Dataset - Original/Adjectives/Good/Good_028.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_027.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_040.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_006.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_034.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_067.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_066.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_025.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_007.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_064.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_059.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_053.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_001.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_045.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_002.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_065.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_058.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_038.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_041.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_017.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_018.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_062.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_046.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_024.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_036.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_009.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_035.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_049.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_031.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_008.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_060.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_022.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_010.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_063.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_050.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_039.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_047.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_056.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_044.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_019.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_005.mp4,Good,2
-SSL400/Dataset - Original/Adjectives/Good/Good_061.mp4,Good,2
-SSL400/Dataset - Original/Greetings/Hello/Hello_083.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_021.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_067.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_040.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_020.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_024.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_045.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_013.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_008.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_038.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_035.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_025.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_012.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_093.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_075.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_100.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_043.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_014.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_073.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_102.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_076.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_087.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_031.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_091.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_089.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_085.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_041.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_001.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_018.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_071.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_081.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_084.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_017.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_099.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_080.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_086.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_070.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_027.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_094.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_036.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_069.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_010.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_003.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_078.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_068.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Hello/Hello_016.mp4,Hello,1
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_089.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_116.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_027.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_108.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_054.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_021.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_109.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_071.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_068.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_083.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_104.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_020.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_012.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_015.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_052.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_098.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_080.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_097.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_006.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_111.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_066.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_011.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_028.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_069.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_082.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_063.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_115.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_010.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_086.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_024.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_099.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_107.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_102.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_007.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_094.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_090.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_003.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_002.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_013.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_016.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_018.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_023.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_019.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_091.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_025.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_074.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_075.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_113.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_095.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_022.mp4,Thank you,0
-SSL400/Dataset - Original/Greetings/Thank you/Thank you_008.mp4,Thank you,0
-SSL400/Dataset - Original/Nouns/Money/Money_036.MP4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_037.MP4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_003.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_035.MP4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_008.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_002.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_014.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_004.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_017.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_033.MP4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_021.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_005.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_038.MP4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_010.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_015.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_018.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_023.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_009.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_012.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_007.mp4,Money,8
-SSL400/Dataset - Original/Nouns/Money/Money_032.MP4,Money,8
-SSL400/Dataset - Original/Places/House/House_033.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_043.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_048.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_060.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_044.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_015.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_059.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_023.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_002.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_024.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_008.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_005.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_006.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_037.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_009.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_035.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_017.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_058.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_061.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_047.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_053.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_003.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_046.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_021.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_051.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_041.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_039.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_030.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_001.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_025.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_010.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_054.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_020.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_034.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_018.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_057.mp4,House,3
-SSL400/Dataset - Original/Places/House/House_036.mp4,House,3
-SSL400/Dataset - Original/Verbs/Cut/Cut_020.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_030.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_006.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_005.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_016.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_003.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_024.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_019.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_001.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_010.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_026.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_014.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_017.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_011.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_023.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_015.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_027.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_007.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_009.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_013.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Cut/Cut_002.mp4,Cut,9
-SSL400/Dataset - Original/Verbs/Drink/Drink_037.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_025.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_031.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_013.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_019.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_017.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_024.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_034.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_002.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_027.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_007.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_039.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_016.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_021.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_003.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_020.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_011.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_008.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_012.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_023.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_029.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_033.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_035.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_004.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_006.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_026.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_009.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Drink/Drink_032.mp4,Drink,5
-SSL400/Dataset - Original/Verbs/Eat/Eat_001.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_025.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_024.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_006.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_017.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_012.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_015.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_040.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_014.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_022.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_041.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_044.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_016.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_023.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_008.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_010.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_013.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_037.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_018.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_019.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_021.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_027.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_009.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_038.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_046.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_005.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_043.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_011.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_039.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Eat/Eat_035.mp4,Eat,4
-SSL400/Dataset - Original/Verbs/Tell/Tell_024.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_021.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_031.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_035.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_002.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_023.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_019.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_018.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_026.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_029.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_014.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_032.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_015.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_013.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_034.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_004.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_027.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_003.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_020.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_005.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_008.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_025.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_016.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Tell/Tell_011.mp4,Tell,6
-SSL400/Dataset - Original/Verbs/Write/Write_007.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_032.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_006.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_019.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_017.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_030.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_009.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_018.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_034.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_022.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_027.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_015.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_029.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_014.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_028.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_016.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_010.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_002.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_020.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_005.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_025.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_021.mp4,Write,7
-SSL400/Dataset - Original/Verbs/Write/Write_023.mp4,Write,7
+data/raw/Drink/WhatsApp Video 2026-06-23 at 4.38.11 PM.mp4,Drink,5
+data/raw/Drink/Drink_024.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-19 at 15.59.32.mp4,Drink,5
+data/raw/Drink/Drink_012.mp4,Drink,5
+data/raw/Drink/Drink_017.mp4,Drink,5
+data/raw/Drink/Drink_021.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-25 at 11.11.26 PM.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-25 at 11.11.33 PM.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-06-23 at 4.31.55 PM.mp4,Drink,5
+data/raw/Drink/Drink_020.mp4,Drink,5
+data/raw/Drink/Drink_010.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-17 at 1.39.28 PM (1).mp4,Drink,5
+data/raw/Drink/Drink_039.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-06-23 at 4.37.22 PM.mp4,Drink,5
+data/raw/Drink/Drink_038.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-06 at 6.39.03 PM.mp4,Drink,5
+data/raw/Drink/Drink_004.mp4,Drink,5
+data/raw/Drink/Drink_022.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-19 at 15.54.03.mp4,Drink,5
+data/raw/Drink/Drink_005.mp4,Drink,5
+data/raw/Drink/Drink_030.mp4,Drink,5
+data/raw/Drink/Drink_011.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-06 at 6.38.00 PM.mp4,Drink,5
+data/raw/Drink/Drink_023.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-06 at 6.38.28 PM.mp4,Drink,5
+data/raw/Drink/Drink_025.mp4,Drink,5
+data/raw/Drink/Drink_001.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-06 at 6.40.39 PM.mp4,Drink,5
+data/raw/Drink/Drink_026.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-19 at 15.55.39.mp4,Drink,5
+data/raw/Drink/Drink_019.mp4,Drink,5
+data/raw/Drink/Drink_029.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-17 at 1.39.28 PM.mp4,Drink,5
+data/raw/Drink/Drink_027.mp4,Drink,5
+data/raw/Drink/Drink_013.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-25 at 11.11.38 PM (1).mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-06-23 at 4.29.28 PM.mp4,Drink,5
+data/raw/Drink/WhatsApp Video 2026-07-19 at 15.57.37.mp4,Drink,5
+data/raw/Drink/Drink_014.mp4,Drink,5
+data/raw/Eat/Eat_018.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-06 at 6.36.34 PM.mp4,Eat,4
+data/raw/Eat/Eat_001.mp4,Eat,4
+data/raw/Eat/Eat_004.mp4,Eat,4
+data/raw/Eat/Eat_021.mp4,Eat,4
+data/raw/Eat/Eat_011.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-25 at 11.11.27 PM.mp4,Eat,4
+data/raw/Eat/Eat_022.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-17 at 12.19.59 PM.mp4,Eat,4
+data/raw/Eat/2-1.mp4,Eat,4
+data/raw/Eat/3-1.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-06 at 6.36.16 PM.mp4,Eat,4
+data/raw/Eat/Eat_014.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-06-23 at 4.42.44 PM.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-17 at 12.19.22 PM.mp4,Eat,4
+data/raw/Eat/Eat_006.mp4,Eat,4
+data/raw/Eat/Eat_023.mp4,Eat,4
+data/raw/Eat/Eat_026.mp4,Eat,4
+data/raw/Eat/Eat_013.mp4,Eat,4
+data/raw/Eat/MostafaMahmoud_eat_5.mp4,Eat,4
+data/raw/Eat/Eat_016.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-06-23 at 4.44.33 PM.mp4,Eat,4
+data/raw/Eat/Eat_002.mp4,Eat,4
+data/raw/Eat/Eat_033.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-25 at 11.11.28 PM (1).mp4,Eat,4
+data/raw/Eat/Person15_eat_1.mp4,Eat,4
+data/raw/Eat/Eat_036.mp4,Eat,4
+data/raw/Eat/Eat_025.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-19 at 16.01.53.mp4,Eat,4
+data/raw/Eat/Eat_046.mp4,Eat,4
+data/raw/Eat/Eat_027.mp4,Eat,4
+data/raw/Eat/Eat_028.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-24 at 16.46.36.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-06 at 6.35.55 PM.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-06-23 at 4.43.24 PM.mp4,Eat,4
+data/raw/Eat/Eat_042.mp4,Eat,4
+data/raw/Eat/Eat_020.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-06-23 at 4.44.01 PM.mp4,Eat,4
+data/raw/Eat/AbdelrahamanKhairy_eat_1.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-06 at 6.35.37 PM.mp4,Eat,4
+data/raw/Eat/AbdullahAshraf_eat_2.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-06 at 6.36.59 PM.mp4,Eat,4
+data/raw/Eat/Eat_009.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-17 at 12.19.58 PM.mp4,Eat,4
+data/raw/Eat/ReemAdel_eat_1.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-06-23 at 4.45.55 PM.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-25 at 11.11.34 PM.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-19 at 18.01.38.mp4,Eat,4
+data/raw/Eat/Person18_eat_4.mp4,Eat,4
+data/raw/Eat/Eat_010.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-17 at 12.19.22 PM (1).mp4,Eat,4
+data/raw/Eat/Eat_029.mp4,Eat,4
+data/raw/Eat/WhatsApp Video 2026-07-24 at 16.45.15.mp4,Eat,4
+data/raw/Eat/Eat_037.mp4,Eat,4
+data/raw/Eat/Eat_035.mp4,Eat,4
+data/raw/Good/Good_048.mp4,Good,2
+data/raw/Good/AhmedAkef_good_1.mp4,Good,2
+data/raw/Good/BasmaRafeeq_good_1.mp4,Good,2
+data/raw/Good/Good_040.mp4,Good,2
+data/raw/Good/Good_062.mp4,Good,2
+data/raw/Good/Good_067.mp4,Good,2
+data/raw/Good/Good_046.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-06 at 6.33.54 PM.mp4,Good,2
+data/raw/Good/Good_057.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-17 at 12.42.45 PM (1).mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-24 at 16.55.43.mp4,Good,2
+data/raw/Good/Good_035.mp4,Good,2
+data/raw/Good/Good_023.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-25 at 11.11.37 PM (2).mp4,Good,2
+data/raw/Good/Good1_1.mp4,Good,2
+data/raw/Good/Good_018.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-06-23 at 10.13.37 PM.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-06 at 6.33.27 PM.mp4,Good,2
+data/raw/Good/Good_010.mp4,Good,2
+data/raw/Good/Good_036.mp4,Good,2
+data/raw/Good/Good_006.mp4,Good,2
+data/raw/Good/Good_007.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-17 at 12.43.18 PM.mp4,Good,2
+data/raw/Good/Good_041.mp4,Good,2
+data/raw/Good/Good_061.mp4,Good,2
+data/raw/Good/Good_020.mp4,Good,2
+data/raw/Good/AsmaaAlsayed_good_1.mp4,Good,2
+data/raw/Good/Good_053.mp4,Good,2
+data/raw/Good/MohamedMosa_good_1.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-25 at 11.11.29 PM (2).mp4,Good,2
+data/raw/Good/Good_056.mp4,Good,2
+data/raw/Good/Good_022.mp4,Good,2
+data/raw/Good/Good_017.mp4,Good,2
+data/raw/Good/MoatazOsman_good_7.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-25 at 11.11.41 PM (1).mp4,Good,2
+data/raw/Good/Good_001.mp4,Good,2
+data/raw/Good/Good_045.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-06-23 at 10.11.43 PM.mp4,Good,2
+data/raw/Good/Good_021.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-25 at 11.11.42 PM (2).mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-06-23 at 10.15.00 PM.mp4,Good,2
+data/raw/Good/Good_005.mp4,Good,2
+data/raw/Good/EmanElsayed_good_1.mp4,Good,2
+data/raw/Good/Good_031.mp4,Good,2
+data/raw/Good/Good_024.mp4,Good,2
+data/raw/Good/Good_038.mp4,Good,2
+data/raw/Good/Good_1.mp4,Good,2
+data/raw/Good/AyaAdel_good_1.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-17 at 12.42.46 PM.mp4,Good,2
+data/raw/Good/Good_044.mp4,Good,2
+data/raw/Good/AbdelrahamanKhairy_good_1.mp4,Good,2
+data/raw/Good/Good_025.mp4,Good,2
+data/raw/Good/Good_059.mp4,Good,2
+data/raw/Good/Good_050.mp4,Good,2
+data/raw/Good/AbdullahAshraf_good_1.mp4,Good,2
+data/raw/Good/Good_032.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-06 at 6.32.41 PM.mp4,Good,2
+data/raw/Good/6-1.mp4,Good,2
+data/raw/Good/Good_004.mp4,Good,2
+data/raw/Good/MahmoudRagab_good_5.mp4,Good,2
+data/raw/Good/Good_047.mp4,Good,2
+data/raw/Good/Good_049.mp4,Good,2
+data/raw/Good/Good_052.mp4,Good,2
+data/raw/Good/Good_042.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-24 at 16.53.04.mp4,Good,2
+data/raw/Good/5-2.mp4,Good,2
+data/raw/Good/Good_058.mp4,Good,2
+data/raw/Good/Good_037.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-17 at 12.42.45 PM.mp4,Good,2
+data/raw/Good/WhatsApp Video 2026-07-25 at 11.11.39 PM (1).mp4,Good,2
+data/raw/Good/Good_065.mp4,Good,2
+data/raw/Hello/Hello_027.mp4,Hello,1
+data/raw/Hello/Hello_070.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-07-06 at 6.30.57 PM.mp4,Hello,1
+data/raw/Hello/Hello_080.mp4,Hello,1
+data/raw/Hello/Hello_082.mp4,Hello,1
+data/raw/Hello/Hello_016.mp4,Hello,1
+data/raw/Hello/Hello_043.mp4,Hello,1
+data/raw/Hello/Hello_083.mp4,Hello,1
+data/raw/Hello/Hello_003.mp4,Hello,1
+data/raw/Hello/Hello_086.mp4,Hello,1
+data/raw/Hello/Hello_012.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-07-25 at 11.11.36 PM (2).mp4,Hello,1
+data/raw/Hello/Hello_075.mp4,Hello,1
+data/raw/Hello/Hello_020.mp4,Hello,1
+data/raw/Hello/Hello_067.mp4,Hello,1
+data/raw/Hello/Hello_069.mp4,Hello,1
+data/raw/Hello/Hello_025.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-07-06 at 6.29.27 PM.mp4,Hello,1
+data/raw/Hello/Hello_042.mp4,Hello,1
+data/raw/Hello/Hello_002.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-06-23 at 10.39.05 PM.mp4,Hello,1
+data/raw/Hello/Hello_013.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-07-17 at 12.37.54 PM.mp4,Hello,1
+data/raw/Hello/Hello_093.mp4,Hello,1
+data/raw/Hello/Hello_078.mp4,Hello,1
+data/raw/Hello/Hello_073.mp4,Hello,1
+data/raw/Hello/Hello_028.mp4,Hello,1
+data/raw/Hello/Hello_097.mp4,Hello,1
+data/raw/Hello/Hello_071.mp4,Hello,1
+data/raw/Hello/Hello_099.mp4,Hello,1
+data/raw/Hello/Hello_029.mp4,Hello,1
+data/raw/Hello/Hello_036.mp4,Hello,1
+data/raw/Hello/Hello_024.mp4,Hello,1
+data/raw/Hello/Hello_096.mp4,Hello,1
+data/raw/Hello/Hello_022.mp4,Hello,1
+data/raw/Hello/Hello_068.mp4,Hello,1
+data/raw/Hello/Hello_081.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-06-23 at 10.39.44 PM.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-07-17 at 12.38.07 PM.mp4,Hello,1
+data/raw/Hello/Hello_089.mp4,Hello,1
+data/raw/Hello/Hello_034.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-06-23 at 10.42.12 PM.mp4,Hello,1
+data/raw/Hello/Hello_040.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-06-23 at 10.41.09 PM.mp4,Hello,1
+data/raw/Hello/Hello_035.mp4,Hello,1
+data/raw/Hello/Hello_014.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-07-25 at 11.11.28 PM.mp4,Hello,1
+data/raw/Hello/Hello_008.mp4,Hello,1
+data/raw/Hello/Hello_001.mp4,Hello,1
+data/raw/Hello/Hello_044.mp4,Hello,1
+data/raw/Hello/Hello_072.mp4,Hello,1
+data/raw/Hello/Hello_005.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-07-06 at 6.31.21 PM.mp4,Hello,1
+data/raw/Hello/Hello_045.mp4,Hello,1
+data/raw/Hello/Hello_100.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-07-17 at 12.37.54 PM (1).mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-07-06 at 6.29.56 PM.mp4,Hello,1
+data/raw/Hello/Hello_037.mp4,Hello,1
+data/raw/Hello/Hello_006.mp4,Hello,1
+data/raw/Hello/WhatsApp Video 2026-07-24 at 16.57.47.mp4,Hello,1
+data/raw/Hello/Hello_021.mp4,Hello,1
+data/raw/Hello/Hello_038.mp4,Hello,1
+data/raw/House/House_029.mp4,House,3
+data/raw/House/House_018.mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-25 at 11.11.29 PM (1).mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-25 at 11.11.31 PM (2).mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-05 at 5.23.38 PM.mp4,House,3
+data/raw/House/House_003.mp4,House,3
+data/raw/House/House_053.mp4,House,3
+data/raw/House/House_014.mp4,House,3
+data/raw/House/House_015.mp4,House,3
+data/raw/House/House_050.mp4,House,3
+data/raw/House/House_002.mp4,House,3
+data/raw/House/House_051.mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-17 at 12.35.51 PM.mp4,House,3
+data/raw/House/House_009.mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-17 at 12.36.16 PM (1).mp4,House,3
+data/raw/House/WhatsApp Video 2026-06-23 at 10.53.08 PM.mp4,House,3
+data/raw/House/House_044.mp4,House,3
+data/raw/House/House_043.mp4,House,3
+data/raw/House/House_057.mp4,House,3
+data/raw/House/House_012.mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-24 at 17.08.15.mp4,House,3
+data/raw/House/House_032.mp4,House,3
+data/raw/House/House_021.mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-25 at 11.11.37 PM (1).mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-05 at 5.24.25 PM.mp4,House,3
+data/raw/House/House_058.mp4,House,3
+data/raw/House/House_049.mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-05 at 5.23.15 PM.mp4,House,3
+data/raw/House/House_005.mp4,House,3
+data/raw/House/House_025.mp4,House,3
+data/raw/House/House_060.mp4,House,3
+data/raw/House/House_041.mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-24 at 17.09.27.mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-05 at 5.24.57 PM.mp4,House,3
+data/raw/House/WhatsApp Video 2026-06-23 at 10.54.44 PM.mp4,House,3
+data/raw/House/House_054.mp4,House,3
+data/raw/House/House_033.mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-24 at 17.11.03.mp4,House,3
+data/raw/House/House_022.mp4,House,3
+data/raw/House/House_028.mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-25 at 11.11.31 PM.mp4,House,3
+data/raw/House/WhatsApp Video 2026-06-23 at 10.52.30 PM.mp4,House,3
+data/raw/House/House_026.mp4,House,3
+data/raw/House/WhatsApp Video 2026-07-05 at 5.23.57 PM.mp4,House,3
+data/raw/House/House_020.mp4,House,3
+data/raw/House/House_037.mp4,House,3
+data/raw/House/House_017.mp4,House,3
+data/raw/House/House_039.mp4,House,3
+data/raw/House/WhatsApp Video 2026-06-23 at 10.52.00 PM.mp4,House,3
+data/raw/House/House_008.mp4,House,3
+data/raw/House/House_042.mp4,House,3
+data/raw/House/House_045.mp4,House,3
+data/raw/House/WhatsApp Video 2026-06-23 at 10.53.48 PM.mp4,House,3
+data/raw/House/House_001.mp4,House,3
+data/raw/Tell/WhatsApp Video 2026-07-05 at 5.16.47 PM.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-06-24 at 5.14.02 PM.mp4,Tell,6
+data/raw/Tell/Tell_032.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-07-05 at 5.15.41 PM.mp4,Tell,6
+data/raw/Tell/Tell_015.mp4,Tell,6
+data/raw/Tell/Tell_019.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-07-24 at 17.18.18.mp4,Tell,6
+data/raw/Tell/Tell_035.mp4,Tell,6
+data/raw/Tell/Tell_002.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-07-17 at 12.27.45 PM.mp4,Tell,6
+data/raw/Tell/Tell_033.mp4,Tell,6
+data/raw/Tell/Tell_004.mp4,Tell,6
+data/raw/Tell/Tell_034.mp4,Tell,6
+data/raw/Tell/Tell_017.mp4,Tell,6
+data/raw/Tell/Tell_013.mp4,Tell,6
+data/raw/Tell/Tell_026.mp4,Tell,6
+data/raw/Tell/Tell_011.mp4,Tell,6
+data/raw/Tell/Tell_021.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-07-25 at 11.11.26 PM (1).mp4,Tell,6
+data/raw/Tell/Tell_027.mp4,Tell,6
+data/raw/Tell/Tell_022.mp4,Tell,6
+data/raw/Tell/Tell_006.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-07-24 at 17.29.22.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-07-24 at 17.21.12.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-06-24 at 5.18.05 PM.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-07-17 at 12.27.46 PM.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-06-24 at 5.14.52 PM.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-07-05 at 5.16.16 PM.mp4,Tell,6
+data/raw/Tell/Tell_018.mp4,Tell,6
+data/raw/Tell/Tell_025.mp4,Tell,6
+data/raw/Tell/Tell_012.mp4,Tell,6
+data/raw/Tell/Tell_007.mp4,Tell,6
+data/raw/Tell/Tell_016.mp4,Tell,6
+data/raw/Tell/Tell_014.mp4,Tell,6
+data/raw/Tell/Tell_023.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-07-05 at 5.14.49 PM.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-07-24 at 17.20.00.mp4,Tell,6
+data/raw/Tell/Tell_020.mp4,Tell,6
+data/raw/Tell/WhatsApp Video 2026-07-25 at 11.11.41 PM (2).mp4,Tell,6
+data/raw/Thank you/Thank you_002.mp4,Thank you,0
+data/raw/Thank you/Thank you_015.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-27 at 18.35.57.mp4,Thank you,0
+data/raw/Thank you/Thank you_089.mp4,Thank you,0
+data/raw/Thank you/Thank you_106.mp4,Thank you,0
+data/raw/Thank you/Thank you_070.mp4,Thank you,0
+data/raw/Thank you/Thank you_063.mp4,Thank you,0
+data/raw/Thank you/Thank you_102.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-06-24 at 4.55.43 PM.mp4,Thank you,0
+data/raw/Thank you/Thank you_097.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-05 at 5.11.15 PM.mp4,Thank you,0
+data/raw/Thank you/Thank you_019.mp4,Thank you,0
+data/raw/Thank you/Thank you_020.mp4,Thank you,0
+data/raw/Thank you/Thank you_108.mp4,Thank you,0
+data/raw/Thank you/Thank you_076.mp4,Thank you,0
+data/raw/Thank you/Thank you_014.mp4,Thank you,0
+data/raw/Thank you/Thank you_116.mp4,Thank you,0
+data/raw/Thank you/Thank you_010.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-17 at 12.26.32 PM.mp4,Thank you,0
+data/raw/Thank you/Thank you_085.mp4,Thank you,0
+data/raw/Thank you/Thank you_098.mp4,Thank you,0
+data/raw/Thank you/Thank you_021.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-27 at 18.37.15.mp4,Thank you,0
+data/raw/Thank you/Thank you_013.mp4,Thank you,0
+data/raw/Thank you/Thank you_094.mp4,Thank you,0
+data/raw/Thank you/Thank you_073.mp4,Thank you,0
+data/raw/Thank you/Thank you_008.mp4,Thank you,0
+data/raw/Thank you/Thank you_109.mp4,Thank you,0
+data/raw/Thank you/Thank you_062.mp4,Thank you,0
+data/raw/Thank you/Thank you_114.mp4,Thank you,0
+data/raw/Thank you/Thank you_100.mp4,Thank you,0
+data/raw/Thank you/Thank you_071.mp4,Thank you,0
+data/raw/Thank you/Thank you_087.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-25 at 11.11.28 PM (2).mp4,Thank you,0
+data/raw/Thank you/Thank you_022.mp4,Thank you,0
+data/raw/Thank you/Thank you_052.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-05 at 5.12.11 PM.mp4,Thank you,0
+data/raw/Thank you/Thank you_053.mp4,Thank you,0
+data/raw/Thank you/Thank you_113.mp4,Thank you,0
+data/raw/Thank you/Thank you_104.mp4,Thank you,0
+data/raw/Thank you/Thank you_023.mp4,Thank you,0
+data/raw/Thank you/Thank you_011.mp4,Thank you,0
+data/raw/Thank you/Thank you_091.mp4,Thank you,0
+data/raw/Thank you/Thank you_024.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-27 at 18.38.36.mp4,Thank you,0
+data/raw/Thank you/Thank you_025.mp4,Thank you,0
+data/raw/Thank you/Thank you_095.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-06-24 at 4.53.20 PM.mp4,Thank you,0
+data/raw/Thank you/Thank you_099.mp4,Thank you,0
+data/raw/Thank you/Thank you_027.mp4,Thank you,0
+data/raw/Thank you/Thank you_016.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-05 at 5.11.46 PM.mp4,Thank you,0
+data/raw/Thank you/Thank you_090.mp4,Thank you,0
+data/raw/Thank you/Thank you_084.mp4,Thank you,0
+data/raw/Thank you/Thank you_083.mp4,Thank you,0
+data/raw/Thank you/Thank you_079.mp4,Thank you,0
+data/raw/Thank you/Thank you_068.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-27 at 18.32.55.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-06-24 at 4.54.49 PM.mp4,Thank you,0
+data/raw/Thank you/Thank you_001.mp4,Thank you,0
+data/raw/Thank you/Thank you_054.mp4,Thank you,0
+data/raw/Thank you/Thank you_082.mp4,Thank you,0
+data/raw/Thank you/Thank you_003.mp4,Thank you,0
+data/raw/Thank you/Thank you_065.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-25 at 11.11.40 PM (1).mp4,Thank you,0
+data/raw/Thank you/Thank you_086.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-05 at 5.10.34 PM.mp4,Thank you,0
+data/raw/Thank you/WhatsApp Video 2026-07-17 at 12.26.31 PM (1).mp4,Thank you,0
+data/raw/Write/Write_021.mp4,Write,7
+data/raw/Write/Write_012.mp4,Write,7
+data/raw/Write/Write_033.mp4,Write,7
+data/raw/Write/Write_019.mp4,Write,7
+data/raw/Write/Write_024.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-05 at 5.04.36 PM.mp4,Write,7
+data/raw/Write/Write_011.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-29 at 13.15.18.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-29 at 13.13.35.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-25 at 11.11.40 PM.mp4,Write,7
+data/raw/Write/Write_018.mp4,Write,7
+data/raw/Write/Write_027.mp4,Write,7
+data/raw/Write/Write_034.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-05 at 5.07.16 PM.mp4,Write,7
+data/raw/Write/Write_014.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-17 at 12.25.06 PM.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-29 at 13.11.30.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-17 at 12.24.42 PM.mp4,Write,7
+data/raw/Write/Write_025.mp4,Write,7
+data/raw/Write/Write_005.mp4,Write,7
+data/raw/Write/Write_022.mp4,Write,7
+data/raw/Write/Write_023.mp4,Write,7
+data/raw/Write/Write_010.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-06-24 at 4.49.48 PM.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-05 at 5.06.29 PM.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-25 at 11.11.36 PM.mp4,Write,7
+data/raw/Write/Write_031.mp4,Write,7
+data/raw/Write/Write_009.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-25 at 11.11.36 PM (1).mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-29 at 13.14.32.mp4,Write,7
+data/raw/Write/Write_015.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-17 at 12.24.43 PM.mp4,Write,7
+data/raw/Write/Write_032.mp4,Write,7
+data/raw/Write/Write_004.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-07-05 at 5.05.04 PM.mp4,Write,7
+data/raw/Write/WhatsApp Video 2026-06-24 at 4.46.26 PM.mp4,Write,7
+data/raw/Write/Write_029.mp4,Write,7
+data/raw/Write/Write_026.mp4,Write,7
+data/raw/Write/Write_002.mp4,Write,7
+data/raw/Write/Write_008.mp4,Write,7

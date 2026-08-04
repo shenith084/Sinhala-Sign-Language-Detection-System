@@ -12,8 +12,8 @@ from utils.logger import logger
 class EnhancementService:
     def __init__(self):
         self.enhancers = {}
-        # Pre-load all enhancer functions
-        for exp_id in range(1, 6):
+        # Pre-load all enhancer functions (1 to 4)
+        for exp_id in range(1, 5):
             try:
                 self.enhancers[exp_id] = get_enhancer(exp_id)
             except Exception as e:
@@ -41,14 +41,15 @@ class EnhancementService:
         processed = []
         for idx in indices:
             frame = frames[idx].copy()
+            # Resize FIRST for massive performance boost
+            frame = cv2.resize(frame, target_size, interpolation=cv2.INTER_LINEAR)
+            
             # Apply enhancement
             try:
                 frame = enhance_fn(frame)
             except Exception as e:
                 logger.debug(f"Enhancement failed: {e}")
                 
-            # Resize
-            frame = cv2.resize(frame, target_size, interpolation=cv2.INTER_LINEAR)
             # BGR -> RGB
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             # Normalize [-1, 1]

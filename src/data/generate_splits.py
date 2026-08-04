@@ -13,17 +13,15 @@ from pathlib import Path
 random.seed(42)
 
 def main():
-    base_dir = Path("SSL400/Dataset - Original")
+    base_dir = Path("data/raw")
     output_dir = Path("data/splits")
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Auto-detect classes from folders
     all_classes = []
-    for category_dir in base_dir.iterdir():
-        if category_dir.is_dir():
-            for word_dir in category_dir.iterdir():
-                if word_dir.is_dir():
-                    all_classes.append(word_dir.name)
+    for word_dir in base_dir.iterdir():
+        if word_dir.is_dir():
+            all_classes.append(word_dir.name)
     all_classes = sorted(list(set(all_classes)))
     
     # Auto-generate or load Sinhala word map

@@ -5,7 +5,7 @@ This repository contains the complete implementation for the research project:
 
 ## Project Architecture
 
-The system uses a native **Keras 3 TimeDistributed MobileNetV3 + Bidirectional LSTM** architecture, evaluated across 5 experimental setups using different image enhancement pipelines to improve recognition accuracy on the low-resource SSL400 dataset.
+The system uses a native **Keras 3 TimeDistributed MobileNetV3 + Bidirectional LSTM** architecture, evaluated across 4 experimental setups using different image enhancement pipelines to improve recognition accuracy on the low-resource SSL400 dataset.
 
 ## Setup Instructions
 
@@ -28,7 +28,7 @@ Due to hardware constraints, training should be performed on Google Colab using 
 1. Upload the `SSL400_Training_Colab.ipynb` notebook to Google Colab.
 2. Mount your Google Drive.
 3. Upload the `ssl400_research_project` folder to your Drive (e.g., to `/MyDrive/SSL400_Research`).
-4. In the Colab notebook (Cell 4), set the `EXP_ID` to 1, 2, 3, 4, or 5.
+4. In the Colab notebook (Cell 4), set the `EXP_ID` to 1, 2, 3, or 4.
 5. Run all cells to begin training.
 6. The training loop includes **resume support** and will save checkpoints back to your Google Drive automatically after every epoch.
 
@@ -51,15 +51,14 @@ npm run dev
 ```
 *Note: The frontend runs on `http://localhost:5173`*
 
-## The 5 Experiments
+## The 4 Experiments
 
 | Experiment ID | Enhancement Technique | Purpose |
 | --- | --- | --- |
 | **EXP 1** | Baseline | Control group; no enhancement applied. |
 | **EXP 2** | CLAHE + Gamma | Improves local contrast and global illumination. |
-| **EXP 3** | Bilateral Filter | Edge-preserving denoising. |
-| **EXP 4** | Unsharp Masking | Amplifies fine spatial details and finger contours. |
-| **EXP 5** | Hybrid | Sequentially applies Bilateral → CLAHE → Unsharp. |
+| **EXP 3** | Edge-Preserving Sharpening (Bilateral + Unsharp) | Removes noise while amplifying fine spatial details and finger contours. |
+| **EXP 4** | Hybrid | Sequentially applies Bilateral → CLAHE → Unsharp. |
 
 ## Documentation
 
