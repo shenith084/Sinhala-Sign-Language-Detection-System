@@ -173,10 +173,12 @@ def main(args: argparse.Namespace) -> None:
     p2 = config["phase2"]
 
     # Import builders
-    if config["model"]["backbone"] == "MobileNetV3Large":
-        from models.mobilenet_builder import build_model, compile_phase1, compile_phase2, get_lr_schedule
+    if config["model"]["backbone"] == "EfficientNetV2S":
+        from models.efficientnet_builder import build_model, compile_phase1, compile_phase2, get_lr_schedule
+    elif config["model"]["backbone"] == "MobileNetV3Large":
+        from models.backup.mobilenet_builder import build_model, compile_phase1, compile_phase2, get_lr_schedule
     else:
-        from models.movinet_builder import build_model, compile_phase1, compile_phase2, load_kinetics_weights, get_lr_schedule
+        from models.backup.movinet_builder import build_model, compile_phase1, compile_phase2, load_kinetics_weights, get_lr_schedule
     from data.tf_dataset_builder import build_dataset
     from training.callbacks import get_callbacks, find_resume_checkpoint
     
@@ -273,7 +275,7 @@ def main(args: argparse.Namespace) -> None:
     # -------------------------------------------------------------------------
     # DOWNLOAD KINETICS-600 CHECKPOINT (If MoViNet)
     # -------------------------------------------------------------------------
-    if config["model"]["backbone"] != "MobileNetV3Large":
+    if config["model"]["backbone"] not in ["MobileNetV3Large", "EfficientNetV2S"]:
         import tarfile
         ckpt_url = "https://storage.googleapis.com/tf_model_garden/vision/movinet/movinet_a2_base.tar.gz"
         ckpt_dir = PROJECT_ROOT / "pretrained_weights" / "movinet_a2_base"
@@ -304,7 +306,7 @@ def main(args: argparse.Namespace) -> None:
     # CRITICAL FIX: Load Kinetics weights first, then OVERRIDE with any existing
     # checkpoint. Previously, Kinetics weights were loaded after checkpoint weights,
     # which completely wiped out any Phase 1 progress on resume!
-    if config["model"]["backbone"] != "MobileNetV3Large":
+    if config["model"]["backbone"] not in ["MobileNetV3Large", "EfficientNetV2S"]:
         if ckpt_dir.exists():
             load_kinetics_weights(model, str(ckpt_dir))
 

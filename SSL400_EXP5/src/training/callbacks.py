@@ -98,26 +98,41 @@ class GoogleDriveSync(keras.callbacks.Callback):
             return False
 
     def on_epoch_end(self, epoch: int, logs=None) -> None:
-        """Sync to Google Drive at the specified frequency."""
+        """Sync to Google Drive at the specified frequency (BOTH folders)."""
         if not self._is_colab:
             return
         if (epoch + 1) % self.sync_every_n != 0:
             return
 
         try:
-            self.drive_dir.mkdir(parents=True, exist_ok=True)
-            # Sync model files
-            for f in self.local_dir.iterdir():
-                if f.is_file() and f.suffix in [".keras", ".h5", ".csv", ".txt"]:
-                    shutil.copy2(str(f), str(self.drive_dir / f.name))
+            # We want to backup to both Colab_Upload and Research folders
+            drive_roots = [
+                Path("/content/drive/MyDrive/SSL400_Colab_Upload/models"),
+                Path("/content/drive/MyDrive/SSL400_Research/models")
+            ]
+            
+            # The current self.drive_dir is just one of them. We extract the experiment folder name.
+            exp_folder = self.drive_dir.name  # e.g., 'experiment_1'
+            
+            for base_root in drive_roots:
+                if not base_root.parent.exists():
+                    continue  # Skip if this Drive folder doesn't exist
                     
-            # Sync log files
-            if self.local_log_dir and self.local_log_dir.exists():
-                for f in self.local_log_dir.iterdir():
-                    if f.is_file() and f.suffix in [".csv", ".txt"]:
-                        shutil.copy2(str(f), str(self.drive_dir / f.name))
+                target_drive_dir = base_root / exp_folder
+                target_drive_dir.mkdir(parents=True, exist_ok=True)
+                
+                # Sync model files
+                for f in self.local_dir.iterdir():
+                    if f.is_file() and f.suffix in [".keras", ".h5", ".csv", ".txt"]:
+                        shutil.copy2(str(f), str(target_drive_dir / f.name))
                         
-            logger.info(f"[Drive Sync] Epoch {epoch + 1}: synced → {self.drive_dir}")
+                # Sync log files
+                if self.local_log_dir and self.local_log_dir.exists():
+                    for f in self.local_log_dir.iterdir():
+                        if f.is_file() and f.suffix in [".csv", ".txt"]:
+                            shutil.copy2(str(f), str(target_drive_dir / f.name))
+                            
+            logger.info(f"[Drive Sync] Epoch {epoch + 1}: synced to both Google Drive folders")
         except Exception as e:
             logger.warning(f"[Drive Sync] Failed at epoch {epoch + 1}: {e}")
 

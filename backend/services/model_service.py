@@ -7,9 +7,7 @@ from pathlib import Path
 import numpy as np
 import tensorflow as tf
 
-# Import MoViNet so Keras registers the custom layers
-from official.projects.movinet.modeling import movinet
-from official.projects.movinet.modeling import movinet_model
+# (MoViNet imports removed; using EfficientNetV2S)
 
 from utils.logger import logger
 
@@ -53,9 +51,9 @@ class ModelService:
                 
                 if keras_path.exists():
                     logger.info(f"Loading .keras weights from {keras_path}")
-                    from models.movinet_builder import build_model
+                    from models.efficientnet_builder import build_model
                     # Build custom model architecture
-                    self.model = build_model(num_classes=5)
+                    self.model = build_model(num_classes=8, num_frames=32)
                     try:
                         self.model.load_weights(str(keras_path), by_name=True, skip_mismatch=True)
                         logger.info("Successfully loaded phase2 weights (with skip_mismatch=True).")

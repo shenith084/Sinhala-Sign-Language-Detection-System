@@ -22,7 +22,7 @@ paths:
 # --- Dataset Configuration ---
 dataset:
   num_classes: 8                    # Increased from 5 to 8 to make the problem harder
-  total_videos: 618                 # Total videos in new dataset
+  total_videos: 785                 # Total videos in new dataset
   video_extensions: [".mp4", ".mov"]
   fps: 20                           # Videos recorded at 20 FPS
   clip_duration_sec: 3              # Each clip ~3 seconds
@@ -30,7 +30,7 @@ dataset:
 
 # --- Frame Processing ---
 frames:
-  num_frames: 42
+  num_frames: 32
   height: 224             # Restored back to 224
   width: 224              # Restored back to 224
   channels: 3
@@ -47,31 +47,31 @@ splits:
 
 # --- Model Architecture ---
 model:
-  backbone: "MobileNetV3Large"     # TimeDistributed backbone
+  backbone: "EfficientNetV2S"      # TimeDistributed backbone
   lstm_units: 512
   dropout_rate: 0.4
-  input_shape: [42, 224, 224, 3]   # (frames, H, W, C)
+  input_shape: [32, 224, 224, 3]   # (frames, H, W, C)
 
 # --- Training — Phase 1 (Frozen Backbone) ---
 phase1:
   max_epochs: 30
   learning_rate: 0.001             # 1e-3
-  batch_size: 16                   # Increased to 16 for Colab A100 GPU
+  batch_size: 2                    # Reduced to 2 for EfficientNetV2 on T4/P100
   early_stopping_patience: 15
   label_smoothing: 0.1
   mixup_alpha: 0.2                 # Re-enabled Mixup
-  lr_schedule: "CosineDecay"
+  lr_schedule: "ReduceLROnPlateau"
   optimizer_clipnorm: 1.0
 
 # --- Training — Phase 2 (Full Fine-Tune) ---
 phase2:
   max_epochs: 50                   # Set to 50 epochs for fine-tuning
   learning_rate: 0.0001            # 1e-4 — reduced learning rate for smooth fine-tuning without shock
-  batch_size: 16                   # Increased to 16 for Colab A100 GPU
+  batch_size: 2                    # Reduced to 2 for EfficientNetV2 on T4/P100
   early_stopping_patience: 25      # Increased patience for longer training
   label_smoothing: 0.1
   mixup_alpha: 0.2                 # Re-enabled Mixup
-  lr_schedule: "CosineDecay"
+  lr_schedule: "ReduceLROnPlateau"
   optimizer_clipnorm: 1.0
 
 # --- Augmentation ---
@@ -148,6 +148,11 @@ experiments:
     processed_dir: "data/processed/exp4_hybrid"
     model_dir: "models/experiment_4"
     log_dir: "logs/experiment_4"
+
+# --- Kaggle Environment ---
+kaggle:
+  working_dir: "/kaggle/working"
+  input_dir: "/kaggle/input/ssl400-dataset"
 
 # --- Google Drive (Colab) ---
 colab:
