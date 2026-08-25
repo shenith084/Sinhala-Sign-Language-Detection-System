@@ -448,8 +448,8 @@ if __name__ == "__main__":
         "--exp_id",
         type=int,
         required=True,
-        choices=[1, 2, 3, 4, 5],
-        help="Experiment ID: 1=Baseline, 2=CLAHE, 3=Bilateral, 4=Unsharp, 5=Hybrid"
+        choices=[1, 2, 3, 4],
+        help="Experiment ID: 1=Baseline, 2=CLAHE, 3=Bilateral, 4=Hybrid"
     )
     parser.add_argument(
         "--batch_size",

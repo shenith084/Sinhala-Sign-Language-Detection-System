@@ -36,7 +36,7 @@ def load_npy_on_the_fly(
     """
     path = npy_path.numpy().decode("utf-8")
 
-    # 1. Load pre-processed numpy array
+    # 1. Load pre-processed numpy array (currently in [-1, 1])
     tensor = np.load(path)  # shape (num_frames, H, W, 3)
 
     # 2. One-hot label
@@ -157,6 +157,17 @@ def build_dataset(
             return m_f, m_l
 
         ds = ds.map(_mixup, num_parallel_calls=1)
+
+    # -----------------------------------------------------------------------
+    # CRITICAL BUG FIX: Un-normalize for EfficientNetV2
+    # EfficientNetV2 expects inputs in [0, 255]. Our data is in [-1, 1].
+    # We un-normalize it here, AFTER all spatial/mixup augmentations (which expect [-1, 1]).
+    # -----------------------------------------------------------------------
+    def _unnormalize(frames, labels):
+        frames = (frames + 1.0) * 127.5
+        return frames, labels
+    
+    ds = ds.map(_unnormalize, num_parallel_calls=AUTOTUNE)
 
     ds = ds.prefetch(AUTOTUNE)
 
