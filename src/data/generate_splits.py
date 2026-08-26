@@ -1,7 +1,7 @@
 """
 generate_splits.py
 ==================
-Generates train/val/test splits (70/10/20) for the SSL400 dataset.
+Generates train/val/test splits (70/15/15) for the SSL400 dataset.
 Pure Python implementation (no pandas/sklearn required).
 """
 
@@ -78,7 +78,7 @@ def main():
         total = len(vids)
         
         train_count = int(total * 0.70)
-        val_count = int(total * 0.10)
+        val_count = int(total * 0.15)
         
         # Ensure at least 1 for val and test if possible
         if val_count == 0 and total >= 3:

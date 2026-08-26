@@ -1,8 +1,4 @@
 video_path,class_name,class_id
-data/raw/Drink/WhatsApp Video 2026-07-06 at 6.38.00 PM.mp4,Drink,5
-data/raw/Drink/WhatsApp Video 2026-06-23 at 4.29.28 PM.mp4,Drink,5
-data/raw/Drink/WhatsApp Video 2026-08-21 at 11.58.52 AM.mp4,Drink,5
-data/raw/Drink/Drink_028.mp4,Drink,5
 data/raw/Drink/WhatsApp Video 2026-08-21 at 11.14.27 AM (1).mp4,Drink,5
 data/raw/Drink/WhatsApp Video 2026-08-21 at 11.58.51 AM.mp4,Drink,5
 data/raw/Drink/Drink_005.mp4,Drink,5
@@ -16,11 +12,6 @@ data/raw/Drink/Drink_039.mp4,Drink,5
 data/raw/Drink/WhatsApp Video 2026-06-23 at 4.37.22 PM.mp4,Drink,5
 data/raw/Drink/Drink_004.mp4,Drink,5
 data/raw/Drink/Drink_015.mp4,Drink,5
-data/raw/Eat/Eat_002.mp4,Eat,4
-data/raw/Eat/Eat_038.mp4,Eat,4
-data/raw/Eat/Eat_023.mp4,Eat,4
-data/raw/Eat/WhatsApp Video 2026-07-24 at 16.45.15.mp4,Eat,4
-data/raw/Eat/WhatsApp Video 2026-08-10 at 10.27.05 PM.mp4,Eat,4
 data/raw/Eat/WhatsApp Video 2026-08-21 at 11.17.11 AM.mp4,Eat,4
 data/raw/Eat/Eat_045.mp4,Eat,4
 data/raw/Eat/WhatsApp Video 2026-06-23 at 4.45.55 PM.mp4,Eat,4
@@ -36,12 +27,6 @@ data/raw/Eat/WhatsApp Video 2026-08-10 at 10.12.18 PM.mp4,Eat,4
 data/raw/Eat/WhatsApp Video 2026-08-10 at 10.12.24 PM.mp4,Eat,4
 data/raw/Eat/Eat_029.mp4,Eat,4
 data/raw/Eat/WhatsApp Video 2026-08-10 at 10.12.07 PM.mp4,Eat,4
-data/raw/Good/Good_065.mp4,Good,2
-data/raw/Good/Good_021.mp4,Good,2
-data/raw/Good/Good_050.mp4,Good,2
-data/raw/Good/WhatsApp Video 2026-06-23 at 10.11.43 PM.mp4,Good,2
-data/raw/Good/Good_063.mp4,Good,2
-data/raw/Good/Good_027.mp4,Good,2
 data/raw/Good/Good_010.mp4,Good,2
 data/raw/Good/Good_066.mp4,Good,2
 data/raw/Good/Good_056.mp4,Good,2
@@ -61,11 +46,6 @@ data/raw/Good/Good_1.mp4,Good,2
 data/raw/Good/WhatsApp Video 2026-08-10 at 10.21.33 PM.mp4,Good,2
 data/raw/Good/Good_024.mp4,Good,2
 data/raw/Good/AsmaaAlsayed_good_1.mp4,Good,2
-data/raw/Hello/Hello_071.mp4,Hello,1
-data/raw/Hello/WhatsApp Video 2026-08-08 at 12.37.50.mp4,Hello,1
-data/raw/Hello/WhatsApp Video 2026-06-23 at 10.41.09 PM.mp4,Hello,1
-data/raw/Hello/WhatsApp Video 2026-07-06 at 6.30.57 PM.mp4,Hello,1
-data/raw/Hello/Hello_011.mp4,Hello,1
 data/raw/Hello/Hello_036.mp4,Hello,1
 data/raw/Hello/Hello_068.mp4,Hello,1
 data/raw/Hello/Hello_032.mp4,Hello,1
@@ -84,11 +64,6 @@ data/raw/Hello/WhatsApp Video 2026-08-21 at 11.20.02 AM (1).mp4,Hello,1
 data/raw/Hello/WhatsApp Video 2026-08-10 at 10.16.23 PM.mp4,Hello,1
 data/raw/Hello/Hello_043.mp4,Hello,1
 data/raw/Hello/Hello_082.mp4,Hello,1
-data/raw/House/WhatsApp Video 2026-08-08 at 12.43.16.mp4,House,3
-data/raw/House/House_053.mp4,House,3
-data/raw/House/House_045.mp4,House,3
-data/raw/House/House_007.mp4,House,3
-data/raw/House/House_020.mp4,House,3
 data/raw/House/WhatsApp Video 2026-06-23 at 10.52.30 PM.mp4,House,3
 data/raw/House/House_022.mp4,House,3
 data/raw/House/WhatsApp Video 2026-08-21 at 11.21.12 AM.mp4,House,3
@@ -105,10 +80,6 @@ data/raw/House/WhatsApp Video 2026-07-24 at 17.11.03.mp4,House,3
 data/raw/House/WhatsApp Video 2026-06-23 at 10.52.00 PM.mp4,House,3
 data/raw/House/WhatsApp Video 2026-08-10 at 10.35.17 PM.mp4,House,3
 data/raw/House/WhatsApp Video 2026-07-24 at 17.09.27.mp4,House,3
-data/raw/Tell/WhatsApp Video 2026-07-17 at 12.28.13 PM (1).mp4,Tell,6
-data/raw/Tell/WhatsApp Video 2026-08-21 at 11.22.33 AM (1).mp4,Tell,6
-data/raw/Tell/Tell_021.mp4,Tell,6
-data/raw/Tell/WhatsApp Video 2026-07-25 at 11.11.34 PM (2).mp4,Tell,6
 data/raw/Tell/WhatsApp Video 2026-07-05 at 5.15.41 PM.mp4,Tell,6
 data/raw/Tell/WhatsApp Video 2026-08-10 at 10.20.44 PM.mp4,Tell,6
 data/raw/Tell/WhatsApp Video 2026-07-05 at 5.14.49 PM.mp4,Tell,6
@@ -122,12 +93,6 @@ data/raw/Tell/Tell_026.mp4,Tell,6
 data/raw/Tell/WhatsApp Video 2026-08-10 at 10.37.07 PM.mp4,Tell,6
 data/raw/Tell/WhatsApp Video 2026-08-10 at 10.20.45 PM.mp4,Tell,6
 data/raw/Tell/Tell_001.mp4,Tell,6
-data/raw/Thank you/Thank you_097.mp4,Thank you,0
-data/raw/Thank you/Thank you_019.mp4,Thank you,0
-data/raw/Thank you/WhatsApp Video 2026-08-10 at 10.41.35 PM.mp4,Thank you,0
-data/raw/Thank you/Thank you_115.mp4,Thank you,0
-data/raw/Thank you/Thank you_010.mp4,Thank you,0
-data/raw/Thank you/Thank you_098.mp4,Thank you,0
 data/raw/Thank you/Thank you_108.mp4,Thank you,0
 data/raw/Thank you/WhatsApp Video 2026-08-21 at 11.24.08 AM.mp4,Thank you,0
 data/raw/Thank you/Thank you_026.mp4,Thank you,0
@@ -147,10 +112,6 @@ data/raw/Thank you/Thank you_104.mp4,Thank you,0
 data/raw/Thank you/Thank you_086.mp4,Thank you,0
 data/raw/Thank you/WhatsApp Video 2026-07-25 at 11.11.30 PM (2).mp4,Thank you,0
 data/raw/Thank you/WhatsApp Video 2026-07-25 at 11.11.40 PM (1).mp4,Thank you,0
-data/raw/Write/Write_032.mp4,Write,7
-data/raw/Write/WhatsApp Video 2026-08-08 at 12.57.59.mp4,Write,7
-data/raw/Write/WhatsApp Video 2026-08-10 at 10.13.30 PM.mp4,Write,7
-data/raw/Write/WhatsApp Video 2026-06-24 at 4.49.48 PM.mp4,Write,7
 data/raw/Write/WhatsApp Video 2026-07-05 at 5.04.36 PM.mp4,Write,7
 data/raw/Write/WhatsApp Video 2026-07-05 at 5.07.16 PM.mp4,Write,7
 data/raw/Write/WhatsApp Video 2026-08-08 at 13.00.58.mp4,Write,7

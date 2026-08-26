@@ -324,7 +324,6 @@ def main(args: argparse.Namespace) -> None:
             label_smoothing=p1["label_smoothing"]
         )
 
-        # Build datasets (with Mixup for Phase 1 if augmentation is enabled)
         train_ds = build_dataset(
             split_csv=train_csv,
             processed_dir=processed_dir,
@@ -332,7 +331,7 @@ def main(args: argparse.Namespace) -> None:
             batch_size=batch_size,
             is_training=True,
             use_augmentation=exp.get("use_augmentation", True),
-            use_mixup=(p1["mixup_alpha"] > 0),
+            use_mixup=(p1["mixup_alpha"] > 0 and exp.get("use_augmentation", True)),
             mixup_alpha=p1["mixup_alpha"],
             num_frames=num_frames,
             target_size=(config["frames"]["width"], config["frames"]["height"]),
@@ -403,7 +402,7 @@ def main(args: argparse.Namespace) -> None:
         batch_size=batch_size,
         is_training=True,
         use_augmentation=exp.get("use_augmentation", True),
-        use_mixup=(p2["mixup_alpha"] > 0),
+        use_mixup=(p2["mixup_alpha"] > 0 and exp.get("use_augmentation", True)),
         mixup_alpha=p2["mixup_alpha"],
         num_frames=num_frames,
         target_size=(config["frames"]["width"], config["frames"]["height"]),
