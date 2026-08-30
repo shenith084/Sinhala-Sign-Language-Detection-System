@@ -40,8 +40,8 @@ frames:
 # --- Data Split ---
 splits:
   train_ratio: 0.70
-  val_ratio: 0.10
-  test_ratio: 0.20
+  val_ratio: 0.15
+  test_ratio: 0.15
   stratify: true
   seed: 42
 
