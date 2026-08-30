@@ -130,7 +130,9 @@ class GoogleDriveSync(keras.callbacks.Callback):
                 if self.local_log_dir and self.local_log_dir.exists():
                     for f in self.local_log_dir.iterdir():
                         if f.is_file() and f.suffix in [".csv", ".txt"]:
-                            shutil.copy2(str(f), str(target_drive_dir / f.name))
+                            target_log_dir = base_root.parent / "logs" / exp_folder
+                            target_log_dir.mkdir(parents=True, exist_ok=True)
+                            shutil.copy2(str(f), str(target_log_dir / f.name))
                             
             logger.info(f"[Drive Sync] Epoch {epoch + 1}: synced to both Google Drive folders")
         except Exception as e:

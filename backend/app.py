@@ -1,5 +1,4 @@
 import os
-os.environ["TF_USE_LEGACY_KERAS"] = "1"
 from flask import Flask, jsonify
 from flask_cors import CORS
 
@@ -32,13 +31,13 @@ def health_check():
 if __name__ == "__main__":
     logger.info("Starting SSL400 Backend API...")
     
-    # Try to load best model (Exp 1) on startup to reduce initial latency
+    # Try to load best model (Exp 2) on startup to reduce initial latency
     try:
         model_service = ModelService()
         PROJECT_ROOT = Path(__file__).resolve().parent.parent
-        best_model_path = PROJECT_ROOT / "models" / "experiment_1" / "saved_model"
+        best_model_path = PROJECT_ROOT / "models" / "experiment_2" / "best_model_phase2.keras"
         if best_model_path.exists():
-            model_service.load_model(1, str(best_model_path))
+            model_service.load_model(2, str(best_model_path))
         else:
             logger.info("No trained models found on startup. API ready, but model load will happen on first request if available.")
     except Exception as e:

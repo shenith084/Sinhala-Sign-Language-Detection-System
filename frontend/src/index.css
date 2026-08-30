@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-dark: #0a0b10;
-  --bg-surface: #13141f;
-  --bg-surface-light: #1e1f2f;
-  --accent-purple: #8b5cf6;
-  --accent-purple-hover: #7c3aed;
-  --accent-purple-glow: rgba(139, 92, 246, 0.5);
+  --bg-dark: #0f0c29;
+  --bg-surface: rgba(30, 27, 75, 0.6);
+  --bg-surface-light: rgba(49, 46, 129, 0.8);
+  --accent-purple: #a855f7;
+  --accent-purple-hover: #c084fc;
+  --accent-purple-glow: rgba(168, 85, 247, 0.4);
   --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border-color: #2e303a;
+  --text-muted: #cbd5e1;
+  --border-color: rgba(255, 255, 255, 0.1);
   
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 }
@@ -17,7 +17,8 @@
 body {
   margin: 0;
   font-family: var(--font-main);
-  background-color: var(--bg-dark);
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background-attachment: fixed;
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

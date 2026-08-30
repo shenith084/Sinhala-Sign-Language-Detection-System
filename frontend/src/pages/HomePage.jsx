@@ -117,7 +117,7 @@ const HomePage = () => {
         </Box>
         
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: 'repeat(2, 1fr)', sm: 'repeat(4, 1fr)' }, gap: 1.5, flex: 1.5, minWidth: 0 }}>
-          <StatBox title="10" subtitle="Classes" />
+          <StatBox title="8" subtitle="Classes" />
           <StatBox title="1279+" subtitle="Training Videos" />
           <StatBox title="Deep Learning" subtitle="MoViNet-A2" />
           <StatBox title="Real-time" subtitle="Prediction" />

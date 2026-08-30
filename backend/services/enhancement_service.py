@@ -7,6 +7,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from enhancement.enhancement_factory import get_enhancer
+from data.video_to_frames import smart_crop_frame
 from utils.logger import logger
 
 class EnhancementService:
@@ -18,6 +19,15 @@ class EnhancementService:
                 self.enhancers[exp_id] = get_enhancer(exp_id)
             except Exception as e:
                 logger.warning(f"Failed to load enhancer for EXP{exp_id}: {e}")
+                
+        # Initialize YOLOv8 model for dynamic cropping
+        try:
+            from ultralytics import YOLO
+            self.yolo_model = YOLO("yolov8n.pt")
+            logger.info("YOLOv8 initialized for real-time dynamic cropping.")
+        except ImportError:
+            logger.warning("ultralytics not installed. YOLO cropping disabled in live inference.")
+            self.yolo_model = None
 
     def get_enhancer(self, exp_id: int):
         if exp_id not in self.enhancers:
@@ -26,8 +36,8 @@ class EnhancementService:
 
     def preprocess_frames(self, frames: list, exp_id: int, num_frames: int = 32, target_size=(224, 224)) -> np.ndarray:
         """
-        Takes a list of raw BGR numpy frames, applies enhancement, samples, 
-        and normalizes into a tensor for model input.
+        Takes a list of raw BGR numpy frames, applies YOLOv8 cropping, enhancement, 
+        samples, resizes, and normalizes into a tensor for model input.
         """
         enhance_fn = self.get_enhancer(exp_id)
         
@@ -41,7 +51,12 @@ class EnhancementService:
         processed = []
         for idx in indices:
             frame = frames[idx].copy()
-            # Resize FIRST for massive performance boost
+            
+            # Apply smart crop if detector is provided and not baseline
+            if self.yolo_model is not None and exp_id != 1:
+                frame = smart_crop_frame(frame, self.yolo_model)
+                
+            # Resize
             frame = cv2.resize(frame, target_size, interpolation=cv2.INTER_LINEAR)
             
             # Apply enhancement
@@ -52,9 +67,8 @@ class EnhancementService:
                 
             # BGR -> RGB
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            # Normalize [-1, 1]
+            # EfficientNetV2 expects [0, 255] range!
             frame = frame.astype(np.float32)
-            frame = (frame / 127.5) - 1.0
             processed.append(frame)
             
         tensor = np.stack(processed, axis=0)

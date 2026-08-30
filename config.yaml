@@ -31,8 +31,8 @@ dataset:
 # --- Frame Processing ---
 frames:
   num_frames: 32
-  height: 224             # Restored back to 224
-  width: 224              # Restored back to 224
+  height: 224             # 224x224 — required for EfficientNetV2S (minimum 128, optimal 224+)
+  width: 224
   channels: 3
   norm_mean: 127.5        # Normalize: (frame / 127.5) - 1.0
   norm_std: 127.5
@@ -66,7 +66,7 @@ phase1:
 # --- Training — Phase 2 (Full Fine-Tune) ---
 phase2:
   max_epochs: 50                   # Set to 50 epochs for fine-tuning
-  learning_rate: 0.0001            # 1e-4 — reduced learning rate for smooth fine-tuning without shock
+  learning_rate: 0.0001            # 1e-5 — reduced 10x to prevent catastrophic forgetting on unfreeze
   batch_size: 2                    # Reduced to 2 for EfficientNetV2 on T4/P100
   early_stopping_patience: 25      # Increased patience for longer training
   label_smoothing: 0.1

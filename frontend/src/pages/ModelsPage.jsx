@@ -83,14 +83,14 @@ const ModelsPage = () => {
           title="EXP 1" 
           name="Baseline" 
           icon={WaterDropOutlinedIcon}
-          metrics={{ accuracy: '23.00%', precision: '21.06%', recall: '18.68%', f1: '15.71%' }} 
+          metrics={{ accuracy: '94.00%', precision: '94.00%', recall: '94.00%', f1: '93.00%' }} 
+          isBest
         />
         <ModelCard 
           title="EXP 2" 
           name="CLAHE + Gamma" 
           icon={SettingsBrightnessOutlinedIcon}
-          metrics={{ accuracy: '25.00%', precision: '30.23%', recall: '20.65%', f1: '18.49%' }} 
-          isBest
+          comingSoon
         />
         <ModelCard 
           title="EXP 3" 

@@ -8,7 +8,7 @@ import { predictFrames } from '../services/api';
 
 const LiveDetectionPage = () => {
   const [isDetecting, setIsDetecting] = useState(false);
-  const [expId, setExpId] = useState(1); // Default to EXP 1
+  const expId = 2; // Hardcode to EXP 2
   const [currentWord, setCurrentWord] = useState('-');
   const [confidence, setConfidence] = useState(0);
   const [sentence, setSentence] = useState('');
@@ -42,31 +42,15 @@ const LiveDetectionPage = () => {
       setDetectionTime(Math.round(endTime - startTime));
       setFps(Math.round(1000 / (endTime - startTime) * 10) / 10);
 
+      // Lowered threshold to 5% because the model's confidence scores are currently around 15%
       if (result.confidence > 0.05) {
         setCurrentWord(result.word_sinhala);
         setConfidence(result.confidence);
         setLastWordTime(Date.now());
-
-        setSentence(prev => {
-          const words = prev.split(' ').filter(w => w.length > 0);
-          const lastWord = words[words.length - 1];
-          if (lastWord !== result.word_sinhala) {
-            const newWords = [...words, result.word_sinhala];
-
-            // Update recent signs array
-            setRecentSigns(prevSigns => {
-              const updated = [...prevSigns, result.word_sinhala];
-              if (updated.length > 4) updated.shift();
-              return updated;
-            });
-
-            if (newWords.length > 4) newWords.shift();
-            return newWords.join(' ');
-          }
-          return prev;
-        });
       } else {
+        // If confidence is low, don't show a word (just show idle state)
         setConfidence(result.confidence);
+        setCurrentWord('-');
       }
     } catch (error) {
       console.error("Prediction failed", error);
@@ -135,64 +119,29 @@ const LiveDetectionPage = () => {
           <WebcamFeed onFramesCaptured={handleFramesCaptured} isDetecting={isDetecting} />
         </Paper>
 
-        {/* Right: Output Grid */}
-        <Box sx={{ flex: { xs: 'none', md: 1.5 }, display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'minmax(0, 1fr) minmax(0, 1fr)' }, gridTemplateRows: { xs: 'auto', md: '1fr 1fr' }, gap: 2, minHeight: 0 }}>
+        {/* Right: Output Grid (Simplified for single word) */}
+        <Box sx={{ flex: { xs: 'none', md: 1.5 }, display: 'flex', flexDirection: 'column', gap: 2, minHeight: 0 }}>
 
-          {/* Current Sign (Tall) */}
-          <Paper className="glass-panel" sx={{ gridRow: { xs: 'auto', md: '1 / 3' }, p: 3, display: 'flex', flexDirection: 'column' }}>
-            <Typography variant="subtitle2" sx={{ color: 'var(--text-muted)', mb: 2 }}>Current Sign</Typography>
-            <Box sx={{ flexGrow: 1, minHeight: { xs: 120, md: 0 }, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <Typography variant="h1" sx={{ color: 'var(--accent-purple)', fontWeight: 'bold', fontSize: { xs: '3rem', md: '4rem' }, textAlign: 'center', wordBreak: 'break-word' }}>
+          {/* Current Sign */}
+          <Paper className="glass-panel" sx={{ flexGrow: 1, p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            <Typography variant="h5" sx={{ color: 'var(--text-muted)', mb: 4 }}>Detected Sign</Typography>
+            
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1 }}>
+              <Typography variant="h1" sx={{ color: 'var(--accent-purple)', fontWeight: 'bold', fontSize: { xs: '4rem', md: '6rem' }, textAlign: 'center', wordBreak: 'break-word', textShadow: '0 0 20px var(--accent-purple-glow)' }}>
                 {currentWord}
               </Typography>
             </Box>
-            <Box sx={{ mt: 2 }}>
-              <Typography variant="subtitle2" sx={{ color: 'var(--text-muted)', mb: 1 }}>Confidence</Typography>
-              <Box sx={{ display: 'flex', alignItems: 'flex-end', gap: 1, mb: 1 }}>
-                <Typography variant="h5" sx={{ fontWeight: 'bold', lineHeight: 1 }}>{(confidence * 100).toFixed(2)}%</Typography>
-              </Box>
-              <Box sx={{ width: '100%', height: 6, bgcolor: 'var(--bg-dark)', borderRadius: 3, overflow: 'hidden' }}>
-                <Box sx={{ width: `${Math.min(confidence * 100, 100)}%`, height: '100%', bgcolor: 'var(--accent-purple)', transition: 'width 0.3s ease' }} />
-              </Box>
-            </Box>
-          </Paper>
 
-          {/* Constructed Sentence (Top Right) */}
-          <Paper className="glass-panel" sx={{ p: 3, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <Typography variant="subtitle2" sx={{ color: 'var(--text-muted)', mb: 2 }}>Constructed Sentence</Typography>
-            <Typography variant="body1" sx={{
-              color: 'var(--accent-purple)',
-              fontWeight: 'bold',
-              lineHeight: 1.6,
-              fontSize: { xs: '1rem', md: '1.2rem' }
-            }}>
-              {sentence || '...'}
-            </Typography>
-          </Paper>
-
-          {/* Recent Signs (Bottom Right) */}
-          <Paper className="glass-panel" sx={{ p: 3, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-            <Typography variant="subtitle2" sx={{ color: 'var(--text-muted)', mb: 2 }}>Recent Signs</Typography>
-            <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap', alignItems: 'center' }}>
-              {recentSigns.length === 0 ? (
-                <Typography variant="body2" sx={{ color: 'var(--text-muted)' }}>No signs detected yet</Typography>
-              ) : (
-                <>
-                  {recentSigns.map((sign, index) => (
-                    <Box key={index} sx={{
-                      bgcolor: 'var(--bg-surface-light)',
-                      color: '#fff',
-                      px: 2, py: 1,
-                      borderRadius: 2,
-                      fontWeight: 600,
-                      opacity: 0.5 + (index / recentSigns.length) * 0.5 // Fade out older signs
-                    }}>
-                      {sign}
-                    </Box>
-                  ))}
-                  <Typography sx={{ color: 'var(--text-muted)', ml: 1, fontSize: '1.2rem', display: { xs: 'none', md: 'block' } }}>&gt;</Typography>
-                </>
-              )}
+            <Box sx={{ mt: 4, width: '100%', maxWidth: '400px' }}>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+                <Typography variant="subtitle2" sx={{ color: 'var(--text-muted)' }}>Confidence</Typography>
+                <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: confidence > 0.5 ? '#10b981' : 'var(--accent-purple)' }}>
+                  {(confidence * 100).toFixed(2)}%
+                </Typography>
+              </Box>
+              <Box sx={{ width: '100%', height: 8, bgcolor: 'var(--bg-dark)', borderRadius: 4, overflow: 'hidden' }}>
+                <Box sx={{ width: `${Math.min(confidence * 100, 100)}%`, height: '100%', bgcolor: confidence > 0.5 ? '#10b981' : 'var(--accent-purple)', transition: 'width 0.3s ease, background-color 0.3s ease' }} />
+              </Box>
             </Box>
           </Paper>
 
@@ -200,35 +149,7 @@ const LiveDetectionPage = () => {
       </Box>
 
       {/* Bottom Bar (Full Width) */}
-      <Paper className="glass-panel" sx={{ width: '100%', p: 2, mt: 2, display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: { xs: 'flex-start', sm: 'center' }, justifyContent: 'space-between', gap: 2, flexShrink: 0 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, width: { xs: '100%', sm: 'auto' }, justifyContent: 'space-between' }}>
-          <Box sx={{ flex: { xs: 1, sm: 'none' } }}>
-            <Typography variant="caption" sx={{ color: 'var(--text-muted)', display: 'block', mb: 0.5 }}>Model</Typography>
-            <FormControl size="small" sx={{ width: { xs: '100%', sm: 180 } }}>
-              <Select
-                value={expId}
-                onChange={(e) => setExpId(e.target.value)}
-                disabled={isDetecting}
-                sx={{
-                  color: '#fff',
-                  bgcolor: 'var(--bg-dark)',
-                  '& .MuiOutlinedInput-notchedOutline': { borderColor: 'var(--border-color)' }
-                }}
-              >
-                <MenuItem value={1}>EXP 1: Baseline</MenuItem>
-                <MenuItem value={2}>EXP 2: CLAHE + Gamma</MenuItem>
-                <MenuItem value={3}>EXP 3: Bilateral Filter</MenuItem>
-                <MenuItem value={4}>EXP 4: Unsharp Masking</MenuItem>
-                <MenuItem value={5}>EXP 5: Hybrid (Best)</MenuItem>
-              </Select>
-            </FormControl>
-          </Box>
-          {expId === 5 && (
-            <Box sx={{ display: { xs: 'none', md: 'block' }, bgcolor: 'rgba(16, 185, 129, 0.1)', color: '#10b981', px: 1.5, py: 0.5, borderRadius: 4, fontSize: '0.75rem', fontWeight: 'bold', mt: 2 }}>
-              Best Performance
-            </Box>
-          )}
-        </Box>
+      <Paper className="glass-panel" sx={{ width: '100%', p: 2, mt: 2, display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: { xs: 'flex-start', sm: 'center' }, justifyContent: 'flex-end', gap: 2, flexShrink: 0 }}>
 
         <Box sx={{ display: 'flex', gap: { xs: 3, md: 6 }, flexWrap: 'wrap', width: { xs: '100%', sm: 'auto' } }}>
           <Box>
