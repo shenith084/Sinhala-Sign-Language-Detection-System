@@ -3,8 +3,6 @@ import { Paper, BottomNavigation, BottomNavigationAction } from '@mui/material';
 import { useLocation, useNavigate } from 'react-router-dom';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
-import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
-import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
 
 const MobileNav = () => {
   const location = useLocation();
@@ -42,8 +40,6 @@ const MobileNav = () => {
       >
         <BottomNavigationAction label="Home" value="/" icon={<HomeOutlinedIcon />} />
         <BottomNavigationAction label="Live" value="/live" icon={<VideocamOutlinedIcon />} />
-        <BottomNavigationAction label="Models" value="/models" icon={<AutoGraphOutlinedIcon />} />
-        <BottomNavigationAction label="Results" value="/results" icon={<TimelineOutlinedIcon />} />
       </BottomNavigation>
     </Paper>
   );

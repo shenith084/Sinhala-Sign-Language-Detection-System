@@ -6,9 +6,6 @@ import Sidebar from './components/Sidebar';
 import MobileNav from './components/MobileNav';
 import HomePage from './pages/HomePage';
 import LiveDetectionPage from './pages/LiveDetectionPage';
-import ModelsPage from './pages/ModelsPage';
-import ResultsPage from './pages/ResultsPage';
-import AboutPage from './pages/AboutPage';
 
 const darkTheme = createTheme({
   palette: {
@@ -56,9 +53,6 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/live" element={<LiveDetectionPage />} />
-              <Route path="/models" element={<ModelsPage />} />
-              <Route path="/results" element={<ResultsPage />} />
-              <Route path="/about" element={<AboutPage />} />
             </Routes>
           </Box>
           

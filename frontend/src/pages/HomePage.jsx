@@ -62,20 +62,6 @@ const HomePage = () => {
             >
               Start Live Detection
             </Button>
-            <Button 
-              component={Link} 
-              to="/models" 
-              variant="outlined" 
-              sx={{ 
-                borderColor: 'var(--border-color)', 
-                color: 'var(--text-main)', 
-                px: 3, py: 1, 
-                fontSize: '1rem',
-                '&:hover': { borderColor: 'var(--accent-purple)' }
-              }}
-            >
-              View Models
-            </Button>
           </Box>
         </Box>
 
@@ -116,11 +102,10 @@ const HomePage = () => {
           </Typography>
         </Box>
         
-        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: 'repeat(2, 1fr)', sm: 'repeat(4, 1fr)' }, gap: 1.5, flex: 1.5, minWidth: 0 }}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)' }, gap: 1.5, flex: 1.5, minWidth: 0 }}>
           <StatBox title="8" subtitle="Classes" />
-          <StatBox title="1279+" subtitle="Training Videos" />
-          <StatBox title="Deep Learning" subtitle="MoViNet-A2" />
-          <StatBox title="Real-time" subtitle="Prediction" />
+          <StatBox title="98%" subtitle="Top Accuracy" />
+          <StatBox title="EfficientNet" subtitle="Architecture" />
         </Box>
       </Box>
 

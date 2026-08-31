@@ -3,9 +3,6 @@ import { Box, Typography, List, ListItem, ListItemIcon, ListItemText, ListItemBu
 import { useLocation, useNavigate } from 'react-router-dom';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
-import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
-import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import PanToolIcon from '@mui/icons-material/PanTool'; // For the hand logo
 
 const Sidebar = () => {
@@ -14,10 +11,7 @@ const Sidebar = () => {
 
   const menuItems = [
     { text: 'Home', icon: <HomeOutlinedIcon />, path: '/' },
-    { text: 'Live Detection', icon: <VideocamOutlinedIcon />, path: '/live' },
-    { text: 'Models', icon: <AutoGraphOutlinedIcon />, path: '/models' },
-    { text: 'Results', icon: <TimelineOutlinedIcon />, path: '/results' },
-    { text: 'About', icon: <InfoOutlinedIcon />, path: '/about' }
+    { text: 'Live Detection', icon: <VideocamOutlinedIcon />, path: '/live' }
   ];
 
   return (
